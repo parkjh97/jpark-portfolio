@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { Icon } from "./Icon";
 import type { IconName } from "../../types/content";
 
+import "./SectionTitle.css";
+
 interface SectionTitleProps {
   title: string;
   accentColor?: string;

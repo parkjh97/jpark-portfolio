@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { SectionTitle } from "../components/common/SectionTitle";
 import { Icon } from "../components/common/Icon";
+import { SectionTitle } from "../components/common/SectionTitle";
 import { projectEntries } from "../data/content";
+
+import "./ProjectsSection.css";
 
 interface ProjectCopy {
   name: string;

@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import type { SupportedLocale } from "../../i18n/resources";
 
+import "./LanguageSwitcher.css";
+
 interface LanguageOption {
   value: SupportedLocale;
   label: string;

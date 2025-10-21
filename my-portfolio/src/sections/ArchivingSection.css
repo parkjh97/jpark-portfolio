@@ -1,0 +1,53 @@
+.archiving-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.archiving-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  color: inherit;
+}
+
+.archiving-card:hover,
+.archiving-card:focus-visible {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.archiving-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.archiving-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.archiving-card__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.archiving-card__description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+}
+
+.archiving-card__arrow {
+  color: rgba(255, 255, 255, 0.7);
+}

@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 
-import { SectionTitle } from "../components/common/SectionTitle";
 import { Icon } from "../components/common/Icon";
+import { SectionTitle } from "../components/common/SectionTitle";
 import { skillGroups } from "../data/content";
+
+import "./SkillsSection.css";
 
 export function SkillsSection() {
   const { t } = useTranslation();

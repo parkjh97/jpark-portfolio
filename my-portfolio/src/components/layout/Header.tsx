@@ -6,6 +6,8 @@ import { useScrollToSection } from "../../hooks/useScrollToSection";
 import { Icon } from "../common/Icon";
 import { LanguageSwitcher } from "../common/LanguageSwitcher";
 
+import "./Header.css";
+
 export function Header() {
   const { t } = useTranslation();
   const scrollToSection = useScrollToSection(80);

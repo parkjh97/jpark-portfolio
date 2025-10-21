@@ -17,26 +17,32 @@ const ko = {
   },
   navToggle: "메뉴 열기/닫기",
   masthead: {
-    title: "- 최덕경 -",
-    subtitle: "프론트 엔드 개발자 포트폴리오",
-    intro: [
-      "안녕하세요.",
-      "본질에 집중하는 프론트 엔드 개발자",
-      "최덕경입니다.",
-    ],
+    badge1: "FULLSTACK DEVELOPER",
+    badge2: "FRONTEND DEVELOPER",
+    badge3: "BACKEND DEVELOPER",
+    title: "- 박정현 -",
+    subtitle: "풀스택 개발자 포트폴리오",
+    intro: ["안녕하세요.", "본질에 집중하는 풀스택 개발자", "박정현입니다."],
+    description:
+      "사용자의 흐름을 안정적으로 설계하고 팀이 신뢰할 수 있는 풀스택 환경을 구축합니다. 반복 가능한 구조와 세심한 UI 디테일이 만나는 지점을 꾸준히 고민합니다.",
     cta: "더 알아보기 ↓",
+    highlights: [
+      { label: "경력", value: "3년 이상" },
+      { label: "전문 분야", value: "React / Next.js / Spring / RDBMS" },
+      { label: "협업 방식", value: "프로덕트 팀 / 하이브리드" },
+    ],
   },
   about: {
     title: "ABOUT ME",
     fields: {
-      name: { label: "이름", value: "최덕경" },
-      birth: { label: "생년월일", value: "1997.01.17" },
-      location: { label: "위치", value: "서울특별시 관악구" },
-      phone: { label: "연락처", value: "010-4582-5037" },
-      email: { label: "이메일", value: "hjcdg197@gmail.com" },
+      name: { label: "이름", value: "박정현" },
+      birth: { label: "생년월일", value: "1997.05.06" },
+      location: { label: "위치", value: "경기도 시흥시" },
+      phone: { label: "연락처", value: "010-6428-5059" },
+      email: { label: "이메일", value: "vlrnrhd02@naver.com" },
       education: {
         label: "학력",
-        value: "서울대학교 (컴퓨터공학부)",
+        value: "방송통신대학교 (통계학과)",
       },
     },
   },
@@ -44,7 +50,7 @@ const ko = {
     title: "SKILLS",
     groups: {
       language: { title: "Language" },
-      frontend: { title: "Frontend" },
+      FULLSTACK: { title: "FULLSTACK" },
       backend: { title: "Backend" },
       devops: { title: "DevOps" },
     },
@@ -118,7 +124,8 @@ const ko = {
       whatToSing: {
         name: "무슨 노래 부르지?",
         period: "2022.10 (1人 개인 프로젝트)",
-        summary: "노래방을 즐기는 사람이 자주 부르는 노래를 간편하게 관리하는 웹사이트",
+        summary:
+          "노래방을 즐기는 사람이 자주 부르는 노래를 간편하게 관리하는 웹사이트",
         details: [
           "노래방을 갈 때마다 무슨 노래를 부를지 고민하지 않기 위해 개발",
           "OAuth 2.0 기반의 Firebase Auth를 활용하여 소셜 로그인 구현",
@@ -184,7 +191,7 @@ const ko = {
         details: [
           "Django 풀 스택을 React와 Django의 조합으로 마이그레이션",
           "Redux, Redux-Thunk, Redux-Saga를 활용한 전역 상태 관리 및 API 요청 처리",
-          "프론트 엔드와 백 엔드가 분리된 AWS 배포 환경 수동 구축",
+          "풀스택와 백 엔드가 분리된 AWS 배포 환경 수동 구축",
         ],
       },
       haetbongWikiDjango: {
@@ -216,11 +223,11 @@ const ko = {
     title: "CAREER",
     companies: {
       daangn: {
-        logoText: "DAANGN",
-        period: "2024.11 - (재직 중)",
-        description: "\"이웃과 더 가까워지는 따뜻한 동네를 만들어요\"",
+        logoText: "큐빅웨어",
+        period: "2022.10 - (재직 중)",
+        description: '"이웃과 더 가까워지는 따뜻한 동네를 만들어요"',
         roles: {
-          frontend: "Frontend 개발",
+          FULLSTACK: "FULLSTACK 개발",
           backend: "Backend 개발",
         },
         highlights: {
@@ -228,19 +235,19 @@ const ko = {
             title: "비즈프로필 기반의 당근 3탭 서비스 개발",
             period: "2025년 상반기 - (진행 중)",
             description:
-              "당근 3탭(동네지도)의 유입 확보를 위한 비즈프로필 기반의 서비스 개발 (Frontend, Backend)",
+              "당근 3탭(동네지도)의 유입 확보를 위한 비즈프로필 기반의 서비스 개발 (FULLSTACK, Backend)",
           },
           webviewPlatform: {
             title: "비즈프로필 웹뷰의 플랫폼 개발",
             period: "2024년 상반기",
             description:
-              "비즈프로필 웹뷰의 생산성, 안정성, 성능을 개선하기 위한 플랫폼 개발 (Frontend)",
+              "비즈프로필 웹뷰의 생산성, 안정성, 성능을 개선하기 위한 플랫폼 개발 (FULLSTACK)",
           },
           localBusiness: {
             title: "지역 동네 업체 정보(비즈프로필) 관련 개발",
             period: "2024년 하반기",
             description:
-              "이웃의 사장님들과 고객님들을 효과적으로 연결하기 위한 비즈프로필 관련 기능 개발 (Frontend)",
+              "이웃의 사장님들과 고객님들을 효과적으로 연결하기 위한 비즈프로필 관련 기능 개발 (FULLSTACK)",
           },
         },
       },
@@ -290,7 +297,7 @@ const ko = {
     },
   },
   footer: {
-    caption: "© 2021. Choi Deok Gyeong. All rights reserved.",
+    caption: "© 2025. Park Jeong Hyeon. All rights reserved.",
   },
 };
 

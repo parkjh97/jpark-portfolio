@@ -17,6 +17,7 @@ const en = {
   },
   navToggle: "Toggle navigation",
   masthead: {
+    badge: "FRONTEND ENGINEER",
     title: "- Choi Deok Gyeong -",
     subtitle: "Front-end Developer Portfolio",
     intro: [
@@ -24,7 +25,14 @@ const en = {
       "I'm Choi Deok Gyeong, a front-end developer",
       "who focuses on what truly matters.",
     ],
+    description:
+      "I design dependable product journeys and ship interfaces that teams can scale with confidence. Crafting repeatable systems with attentive UI detail is the core of my work.",
     cta: "Discover more ↓",
+    highlights: [
+      { label: "Experience", value: "6+ years" },
+      { label: "Focus", value: "React / Next.js / UI Engineering" },
+      { label: "Collaboration", value: "Product squads / Hybrid" },
+    ],
   },
   about: {
     title: "ABOUT ME",
