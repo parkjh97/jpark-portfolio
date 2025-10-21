@@ -57,6 +57,8 @@ export interface ProjectEntry {
   url?: string;
   repoUrl?: string;
   imageGalleryUrl?: string;
+  readmeKey?: TranslationKey;
+  imagesKey?: TranslationKey;
   techStack: string[];
   isFeatured?: boolean;
 }
@@ -66,6 +68,28 @@ export interface ProjectCopy {
   period: string;
   summary: string;
   details: string[];
+}
+
+export interface ProjectReadmeSection {
+  heading: string;
+  bullets: string[];
+}
+
+export interface ProjectReadmeContent {
+  title: string;
+  intro: string[];
+  sections: ProjectReadmeSection[];
+  links?: Array<{ label: string; href: string }>;
+}
+
+export interface ProjectImageItem {
+  src: string;
+  caption?: string;
+}
+
+export interface ProjectImageGallery {
+  title: string;
+  items: ProjectImageItem[];
 }
 
 export interface CareerHighlight {

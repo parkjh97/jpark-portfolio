@@ -131,12 +131,18 @@ export const projectEntries: ProjectEntry[] = [
   {
     id: "reactBulkForm",
     url: "https://www.npmjs.com/package/react-bulk-form",
+    repoUrl: "https://github.com/hjcdg1/react-bulk-form",
+    readmeKey: "projects.readmes.reactBulkForm",
+    imagesKey: "projects.images.reactBulkForm",
     techStack: ["TypeScript", "React"],
     isFeatured: true,
   },
   {
     id: "itEldorado",
     url: "https://it-eldorado.com",
+    repoUrl: "https://github.com/hjcdg1/it-eldorado-blog",
+    readmeKey: "projects.readmes.itEldorado",
+    imagesKey: "projects.images.itEldorado",
     techStack: [
       "TypeScript",
       "Next.js",
@@ -150,6 +156,8 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "fosslightHubLite",
+    repoUrl: "https://github.com/opensourceway/FOSSLight-Hub",
+    readmeKey: "projects.readmes.fosslightHubLite",
     techStack: [
       "TypeScript",
       "Next.js",
@@ -163,6 +171,9 @@ export const projectEntries: ProjectEntry[] = [
   {
     id: "mapleAuctionAlarm",
     url: "https://maplealimi.com",
+    repoUrl: "https://github.com/hjcdg1/maple-alimi",
+    readmeKey: "projects.readmes.mapleAuctionAlarm",
+    imagesKey: "projects.images.mapleAuctionAlarm",
     techStack: [
       "TypeScript",
       "Next.js",
@@ -178,6 +189,8 @@ export const projectEntries: ProjectEntry[] = [
   {
     id: "whatToSing",
     url: "https://what-to-sing.kr",
+    repoUrl: "https://github.com/hjcdg1/what-to-sing",
+    readmeKey: "projects.readmes.whatToSing",
     techStack: [
       "TypeScript",
       "Next.js",

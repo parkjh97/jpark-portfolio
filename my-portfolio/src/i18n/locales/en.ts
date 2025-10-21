@@ -217,6 +217,174 @@ const en = {
         ],
       },
     },
+    readmes: {
+      reactBulkForm: {
+        title: "react-bulk-form",
+        intro: [
+          "A lightweight helper that standardises how we manage complex form state in React projects.",
+          "It removes repetitive boilerplate so teams can focus on crafting the right experience.",
+        ],
+        sections: [
+          {
+            heading: "Highlights",
+            bullets: [
+              "Centralised registry that tracks field values and validation errors together",
+              "Granular subscriptions at form/field level to keep renders predictable",
+              "Framework-agnostic design that plays nicely with React Hook Form, Formik, or custom setups",
+            ],
+          },
+          {
+            heading: "Why it exists",
+            bullets: [
+              "Internal projects required dynamic, deeply nested forms that quickly became hard to maintain",
+              "Packaging shared hooks as a distributable library made it easier to roll out across teams",
+            ],
+          },
+        ],
+        links: [
+          { label: "NPM", href: "https://www.npmjs.com/package/react-bulk-form" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/react-bulk-form" },
+        ],
+      },
+      itEldorado: {
+        title: "IT Eldorado (Blog)",
+        intro: [
+          "A Notion-powered personal tech blog that automates both content management and deployment.",
+        ],
+        sections: [
+          {
+            heading: "Implementation Notes",
+            bullets: [
+              "Notion Database sync via Next.js 13 App Router server components",
+              "SEO tuning with Open Graph and structured data",
+              "Automated weekly deploy pipeline with custom traffic/visit dashboards",
+            ],
+          },
+          {
+            heading: "Outcome",
+            bullets: [
+              "Migrated 40+ posts with a refreshed category/tag structure",
+              "Cut publishing time to under five minutes end-to-end",
+            ],
+          },
+        ],
+        links: [
+          { label: "Live site", href: "https://it-eldorado.com" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/it-eldorado-blog" },
+        ],
+      },
+      fosslightHubLite: {
+        title: "FOSSLight Hub Lite",
+        intro: [
+          "A user-focused, streamlined experience for LG Electronics' open-source licence management platform.",
+        ],
+        sections: [
+          {
+            heading: "Role",
+            bullets: [
+              "Led the Next.js frontend build",
+              "Defined Swagger-backed API specs and integration test scenarios",
+            ],
+          },
+          {
+            heading: "Result",
+            bullets: [
+              "Reimagined sorting, filtering, and modal flows for non-admin users",
+              "Designed a coexistence deployment plan to minimise migration risk",
+            ],
+          },
+        ],
+        links: [{ label: "GitHub", href: "https://github.com/opensourceway/FOSSLight-Hub" }],
+      },
+      mapleAuctionAlarm: {
+        title: "Maple Auction Notifier",
+        intro: [
+          "Tracks MapleStory auction listings that match custom criteria and pushes Discord notifications in near real time.",
+        ],
+        sections: [
+          {
+            heading: "Key Work",
+            bullets: [
+              "Used the Next.js server as a reverse proxy to bypass CORS issues when calling the auction API",
+              "Applied React Query caching to minimise duplicate traffic",
+              "Designed a UX that lets players combine multiple alert rules with ease",
+            ],
+          },
+          {
+            heading: "Operations",
+            bullets: [
+              "Added retry/backoff when Discord webhook responses were delayed",
+              "Documented daily alert traffic metrics for monitoring",
+            ],
+          },
+        ],
+        links: [
+          { label: "Live site", href: "https://maplealimi.com" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
+        ],
+      },
+      whatToSing: {
+        title: "What Should I Sing?",
+        intro: [
+          "A Firebase-powered app that keeps favourite karaoke tracks handy with social login and realtime sync.",
+        ],
+        sections: [
+          {
+            heading: "Key Features",
+            bullets: [
+              "Supports Google and Kakao login via Firebase Auth",
+              "Automatic ordering for favourites and recently sung tracks",
+              "Responsive UI styled entirely with Tailwind CSS",
+            ],
+          },
+        ],
+        links: [
+          { label: "Live site", href: "https://what-to-sing.kr" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+        ],
+      },
+    },
+    images: {
+      reactBulkForm: {
+        title: "react-bulk-form Screens",
+        items: [
+          {
+            src: "https://placehold.co/960x600?text=Form+State+Panel",
+            caption: "Inspecting form state and validation at a glance",
+          },
+          {
+            src: "https://placehold.co/960x600?text=TypeScript+API",
+            caption: "Type-safe hooks and helpers exposed by the library",
+          },
+        ],
+      },
+      itEldorado: {
+        title: "IT Eldorado Blog Screens",
+        items: [
+          {
+            src: "https://placehold.co/960x600?text=Landing+Hero",
+            caption: "Landing hero with highlights and featured posts",
+          },
+          {
+            src: "https://placehold.co/960x600?text=Article+Detail",
+            caption: "Article detail page with SEO-friendly layout",
+          },
+        ],
+      },
+      mapleAuctionAlarm: {
+        title: "Maple Auction Notifier Screens",
+        items: [
+          {
+            src: "https://placehold.co/960x600?text=Condition+Builder",
+            caption: "Building multi-step alert rules for auction items",
+          },
+          {
+            src: "https://placehold.co/960x600?text=Discord+Alert",
+            caption: "Discord webhook notification example",
+          },
+        ],
+      },
+    },
   },
   career: {
     title: "CAREER",

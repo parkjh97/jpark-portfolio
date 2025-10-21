@@ -218,6 +218,174 @@ const ko = {
         ],
       },
     },
+    readmes: {
+      reactBulkForm: {
+        title: "react-bulk-form",
+        intro: [
+          "React 프로젝트에서 복잡한 Form 상태를 일관된 패턴으로 관리하기 위한 경량 유틸리티입니다.",
+          "다수의 필드와 검증 규칙을 다룰 때 필요한 반복 로직을 추상화해 개발자가 핵심 UX에 집중할 수 있도록 돕습니다.",
+        ],
+        sections: [
+          {
+            heading: "핵심 기능",
+            bullets: [
+              "필드 값과 오류 상태를 일괄적으로 추적할 수 있는 중앙 저장소 제공",
+              "필드/폼 단위의 상태 구독을 통해 리렌더링 최소화",
+              "기존 React Hook Form, Formik 등과 병행 사용이 가능한 가벼운 설계",
+            ],
+          },
+          {
+            heading: "개발 배경",
+            bullets: [
+              "Form 구조가 동적으로 변화하는 사내 프로젝트에서 상태 관리 복잡도가 크게 증가",
+              "재사용 가능한 커스텀 훅을 팀 단위로 공유하기 위해 라이브러리 형태로 재구성",
+            ],
+          },
+        ],
+        links: [
+          { label: "NPM", href: "https://www.npmjs.com/package/react-bulk-form" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/react-bulk-form" },
+        ],
+      },
+      itEldorado: {
+        title: "IT 엘도라도 (블로그)",
+        intro: [
+          "Notion API를 기반으로 구축한 개인 기술 블로그로, 컨텐츠 관리와 배포 자동화를 동시에 제공하는 것이 목표였습니다.",
+        ],
+        sections: [
+          {
+            heading: "구현 포인트",
+            bullets: [
+              "Notion Database ↔ Next.js 13 App Router 기반의 서버 컴포넌트를 이용한 데이터 동기화",
+              "Open Graph/Schema Markup 등 SEO 메타 태그 세부 튜닝",
+              "주간 배포 파이프라인 자동화 및 방문·조회 집계 대시보드 구성",
+            ],
+          },
+          {
+            heading: "결과",
+            bullets: [
+              "주요 기술 문서 40+편 이전 및 카테고리/태그 구조 재정비",
+              "글 작성부터 배포까지 5분 이내로 단축",
+            ],
+          },
+        ],
+        links: [
+          { label: "서비스", href: "https://it-eldorado.com" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/it-eldorado-blog" },
+        ],
+      },
+      fosslightHubLite: {
+        title: "FOSSLight Hub Lite",
+        intro: [
+          "LG전자에서 운영하는 오픈소스 라이선스 관리 플랫폼의 사용자 전용 경량 버전입니다.",
+        ],
+        sections: [
+          {
+            heading: "역할",
+            bullets: [
+              "Next.js 기반 프론트엔드 개발 총괄",
+              "Swagger 기반 API 문서화와 통합 테스트 시나리오 수립",
+            ],
+          },
+          {
+            heading: "성과",
+            bullets: [
+              "정렬/필터/모달 등 사용자 중심의 핵심 UX 시나리오 재정립",
+              "기존 프로젝트와의 공존 배포 전략 수립으로 마이그레이션 비용 최소화",
+            ],
+          },
+        ],
+        links: [{ label: "GitHub", href: "https://github.com/opensourceway/FOSSLight-Hub" }],
+      },
+      mapleAuctionAlarm: {
+        title: "메이플 경매장 알리미",
+        intro: [
+          "메이플스토리 경매장에 등록되는 아이템을 조건에 맞춰 실시간으로 추적하고, Discord Webhook으로 알림을 전송하는 서비스입니다.",
+        ],
+        sections: [
+          {
+            heading: "주요 구현",
+            bullets: [
+              "Next.js 서버를 프록시로 활용해 경매장 API 호출 시 발생하는 CORS 문제 해결",
+              "React Query 기반의 캐시 전략으로 동일 조건 조회 시 트래픽 최소화",
+              "알림 조건을 다중으로 조합할 수 있는 폼 UX 설계",
+            ],
+          },
+          {
+            heading: "운영 경험",
+            bullets: [
+              "Discord 알림 지연 발생 시 리트라이 백오프 전략 도입",
+              "일일 알림 트래픽을 기준으로 모니터링 지표 작성",
+            ],
+          },
+        ],
+        links: [
+          { label: "서비스", href: "https://maplealimi.com" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
+        ],
+      },
+      whatToSing: {
+        title: "무슨 노래 부르지?",
+        intro: [
+          "Firebase 기반 소셜 로그인과 실시간 DB를 활용하여 즐겨 부르는 곡을 간편히 관리할 수 있는 서비스입니다.",
+        ],
+        sections: [
+          {
+            heading: "주요 기능",
+            bullets: [
+              "Firebase Auth로 카카오/구글 로그인 지원",
+              "곡 즐겨찾기/최근 부른 곡 자동 정렬",
+              "Tailwind CSS만으로 반응형 UI 구성",
+            ],
+          },
+        ],
+        links: [
+          { label: "서비스", href: "https://what-to-sing.kr" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+        ],
+      },
+    },
+    images: {
+      reactBulkForm: {
+        title: "react-bulk-form 화면",
+        items: [
+          {
+            src: "https://placehold.co/960x600?text=Demo+Form+State",
+            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+          },
+          {
+            src: "https://placehold.co/960x600?text=TypeScript+API",
+            caption: "타입 정의와 훅 인터페이스",
+          },
+        ],
+      },
+      itEldorado: {
+        title: "IT 엘도라도 블로그 화면",
+        items: [
+          {
+            src: "https://placehold.co/960x600?text=Landing+Hero",
+            caption: "히어로 영역과 최신 포스트 영역",
+          },
+          {
+            src: "https://placehold.co/960x600?text=Article+Page",
+            caption: "SEO 최적화된 포스트 상세 페이지",
+          },
+        ],
+      },
+      mapleAuctionAlarm: {
+        title: "메이플 경매장 알리미 UI",
+        items: [
+          {
+            src: "https://placehold.co/960x600?text=Condition+Builder",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "https://placehold.co/960x600?text=Discord+Webhook",
+            caption: "실시간 Discord 알림 예시",
+          },
+        ],
+      },
+    },
   },
   career: {
     title: "CAREER",
