@@ -24,7 +24,10 @@ type ProjectCardData = (typeof projectEntries)[number] & {
 export function ProjectsSection() {
   const { t } = useTranslation();
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
-  const [modal, setModal] = useState<{ type: ModalType; projectId: string } | null>(null);
+  const [modal, setModal] = useState<{
+    type: ModalType;
+    projectId: string;
+  } | null>(null);
 
   const projects = useMemo<ProjectCardData[]>(() => {
     const source = showFeaturedOnly
@@ -36,7 +39,9 @@ export function ProjectsSection() {
       }) as ProjectCopy;
 
       const readme = project.readmeKey
-        ? (t(project.readmeKey, { returnObjects: true }) as ProjectReadmeContent)
+        ? (t(project.readmeKey, {
+            returnObjects: true,
+          }) as ProjectReadmeContent)
         : undefined;
       const images = project.imagesKey
         ? (t(project.imagesKey, { returnObjects: true }) as ProjectImageGallery)
@@ -46,16 +51,20 @@ export function ProjectsSection() {
     });
   }, [showFeaturedOnly, t]);
 
-  const activeProject = modal ? projects.find((project) => project.id === modal.projectId) : null;
+  const activeProject = modal
+    ? projects.find((project) => project.id === modal.projectId)
+    : null;
 
   return (
-    <section id="projects" className="section section--muted">
+    <section id="projects" className="section section--projects">
       <div className="section__container">
         <SectionTitle title={t("projects.title")} />
         <div className="projects-toolbar">
           <button
             type="button"
-            className={`projects-toolbar__filter${showFeaturedOnly ? " is-active" : ""}`}
+            className={`projects-toolbar__filter${
+              showFeaturedOnly ? " is-active" : ""
+            }`}
             onClick={() => setShowFeaturedOnly((prev) => !prev)}
           >
             <Icon name="filter" size={18} />
@@ -70,7 +79,9 @@ export function ProjectsSection() {
               <article key={project.id} className="project-card">
                 <header className="project-card__header">
                   <h4>{project.copy.name}</h4>
-                  <span className="project-card__period">{project.copy.period}</span>
+                  <span className="project-card__period">
+                    {project.copy.period}
+                  </span>
                 </header>
                 <div className="project-card__summary">
                   <h5>{project.copy.summary}</h5>
@@ -97,7 +108,9 @@ export function ProjectsSection() {
                     type="button"
                     className={hasReadme ? "is-active" : undefined}
                     onClick={() =>
-                      hasReadme ? setModal({ type: "readme", projectId: project.id }) : undefined
+                      hasReadme
+                        ? setModal({ type: "readme", projectId: project.id })
+                        : undefined
                     }
                     disabled={!hasReadme}
                   >
@@ -107,7 +120,9 @@ export function ProjectsSection() {
                     type="button"
                     className={hasImages ? "is-active" : undefined}
                     onClick={() =>
-                      hasImages ? setModal({ type: "images", projectId: project.id }) : undefined
+                      hasImages
+                        ? setModal({ type: "images", projectId: project.id })
+                        : undefined
                     }
                     disabled={!hasImages}
                   >
@@ -144,7 +159,12 @@ export function ProjectsSection() {
             {activeProject.readme.links?.length ? (
               <div className="project-readme__links">
                 {activeProject.readme.links.map((link) => (
-                  <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {link.label}
                   </a>
                 ))}
@@ -154,14 +174,23 @@ export function ProjectsSection() {
         </Modal>
       ) : null}
       {modal?.type === "images" && activeProject?.images ? (
-        <Modal title={activeProject.images.title} onClose={() => setModal(null)} width="wide">
+        <Modal
+          title={activeProject.images.title}
+          onClose={() => setModal(null)}
+          width="wide"
+        >
           <div className="project-images">
             <div className="project-images__grid">
               {activeProject.images.items.map((item) => (
                 <figure className="project-images__item" key={item.src}>
-                  <img src={item.src} alt={item.caption ?? activeProject.copy.name} />
+                  <img
+                    src={item.src}
+                    alt={item.caption ?? activeProject.copy.name}
+                  />
                   {item.caption ? (
-                    <figcaption className="project-images__caption">{item.caption}</figcaption>
+                    <figcaption className="project-images__caption">
+                      {item.caption}
+                    </figcaption>
                   ) : null}
                 </figure>
               ))}

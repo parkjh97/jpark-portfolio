@@ -17,14 +17,18 @@ export function CareerSection() {
           {careerCompanies.map((company) => (
             <article key={company.id} className="career-card">
               <div className="career-card__logo">
-                <span>{t(`career.companies.${company.id}.logoText`)}</span>
+                {/* <span>{t(`career.companies.${company.id}.logoText`)}</span> */}
               </div>
               <div className="career-card__details">
                 <header>
                   <h4>{t(`career.companies.${company.id}.logoText`)}</h4>
-                  <span className="career-card__period">{t(company.periodKey)}</span>
+                  <span className="career-card__period">
+                    {t(company.periodKey)}
+                  </span>
                 </header>
-                <p className="career-card__description">{t(company.descriptionKey)}</p>
+                <p className="career-card__description">
+                  {t(company.descriptionKey)}
+                </p>
                 <div className="career-card__roles">
                   {company.rolesKeys.map((roleKey) => (
                     <span key={roleKey}>{t(roleKey)}</span>
@@ -35,7 +39,7 @@ export function CareerSection() {
                     <div key={highlight.id} className="career-card__highlight">
                       <div className="career-card__highlight-heading">
                         <Icon name="stack" size={16} />
-                        <h5>{t(highlight.titleKey)}</h5>
+                        <span>{t(highlight.titleKey)}</span>
                       </div>
                       <span className="career-card__highlight-period">
                         {t(highlight.periodKey)}

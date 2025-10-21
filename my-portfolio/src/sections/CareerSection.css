@@ -83,6 +83,7 @@
   align-items: center;
   gap: 8px;
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .career-card__highlight-period {

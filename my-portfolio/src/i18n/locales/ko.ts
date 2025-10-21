@@ -466,7 +466,7 @@
         period: "2022.10 - (재직 중)",
         description: '"이웃과 더 가까워지는 따뜻한 동네를 만들어요"',
         roles: {
-          FULLSTACK: "FULLSTACK 개발",
+          frontend: "Frontend 개발",
           backend: "Backend 개발",
         },
         highlights: {
