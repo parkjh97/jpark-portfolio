@@ -1,5 +1,5 @@
 ﻿const en = {
-  brand: "CDG's Portfolio",
+  brand: "Jpark's Portfolio",
   language: {
     current: "English",
     switchLabel: "Change language",
@@ -17,31 +17,47 @@
   },
   navToggle: "Toggle navigation",
   masthead: {
-    badges: ["FULLSTACK DEVELOPER", "FRONTEND ARCHITECT", "TEAM STORYTELLER"],
-    title: "- Park Jeong Hyeon -",
-    subtitle: "Full-stack Developer Portfolio",
-    summary: [
-      "I put real users at the centre of every problem I solve.",
-      "Technology and narrative work together when the whole team shares the same context.",
-    ],
-    overviewTitle: "Hello, I'm Park Jeong Hyeon.",
-    overviewBody:
-      "From planning the first sentence of a feature to revisiting it after deployment, I stay close to the customer. With a full-stack mindset I pinpoint the core problem, design predictable flows, and document the path so the entire team can move quickly and safely.",
-    narrativeTitle: "How I Work",
-    narrative: [
-      "My very first campus project showed me how inspiring it is to watch people use the things I build. Since then I've worked across commerce, communities, and internal platforms, learning to balance deep technical work with tangible user value. I keep validating whether each release still reflects the product's promise.",
-      "At Daangn I designed business-profile experiences that bridge local business owners and neighbours. I led the map-tab traffic strategy, rebuilt webview platforms for performance and maintainability, and set up monitoring pipelines so the team can trust every deployment.",
-      "The best compliment I can receive is when teammates quickly grasp context through my code and docs. Small, consistent improvements shape tomorrow's team culture—so I capture learnings, share them openly, and keep moving forward together.",
+    keyLine:
+      "Full-stack builder weaving dependable product stories from the very first sentence to every release.",
+    profile: {
+      photo: {
+        alt: "Portrait photo of Park Jeong Hyeon",
+        initials: "PJH",
+      },
+      fields: [
+        { label: "Name", value: "Park Jeong Hyeon" },
+        { label: "Date of birth", value: "1997.05.06" },
+        {
+          label: "Address",
+          value: "Siheung-si, Gyeonggi-do, Republic of Korea",
+        },
+        {
+          label: "Education",
+          value: "Korea National Open University (Statistics)",
+        },
+        { label: "E-mail", value: "vlrnrhd02@naver.com" },
+        { label: "Phone", value: "+82 10-6428-5059" },
+      ],
+    },
+    detailHeading: "A closer look",
+    detail: [
+      "From planning the first sentence of a feature to revisiting it after deployment, I stay close to the customer. With a full-stack mindset I pinpoint the core problem, design predictable flows, and document the path so the entire team can move quickly and safely. My very first campus project showed me how inspiring it is to watch people use the things I build, and I have kept that curiosity ever since.",
+      "Since then I've worked across commerce, communities, and internal platforms, learning to balance deep technical work with tangible user value. I keep validating whether each release still reflects the product's promise so that business goals, team rituals, and user delight stay aligned.",
+      "At Daangn I designed business-profile experiences that bridge local business owners and neighbours. I led the map-tab traffic strategy, rebuilt webview platforms for performance and maintainability, and set up monitoring pipelines so the team can trust every deployment. The best compliment I can receive is when teammates quickly grasp context through my code and docs—small, consistent improvements shape tomorrow's team culture, so I capture learnings, share them openly, and keep moving forward together.",
     ],
     cta: "Discover more ↓",
-  },  about: {
+  },
+  about: {
     title: "ABOUT ME",
     fields: {
       name: { label: "Name", value: "Choi Deok Gyeong" },
       birth: { label: "Birthday", value: "1997.01.17" },
-      location: { label: "Location", value: "Gwanak-gu, Seoul, Republic of Korea" },
+      location: {
+        label: "Location",
+        value: "Gwanak-gu, Seoul, Republic of Korea",
+      },
       phone: { label: "Phone", value: "+82 10-4582-5037" },
-      email: { label: "Email", value: "hjcdg197@gmail.com" },
+      email: { label: "Email", value: "Jpark197@gmail.com" },
       education: {
         label: "Education",
         value: "Seoul National University (Computer Science and Engineering)",
@@ -61,7 +77,7 @@
     title: "ARCHIVING",
     items: {
       github: {
-        title: "github.com/hjcdg1",
+        title: "github.com/Jpark1",
         description: "Primary source-code repository",
       },
       blog: {
@@ -102,7 +118,8 @@
       fosslightHubLite: {
         name: "FOSSLight Hub Lite",
         period: "2023.09 - 2023.12 (2-person team)",
-        summary: "A streamlined user-facing remake of LG Electronics' FOSSLight Hub",
+        summary:
+          "A streamlined user-facing remake of LG Electronics' FOSSLight Hub",
         details: [
           "Commissioned to deliver a simplified experience for non-admin users",
           "Integrated into the existing FOSSLight Hub environment to preserve accessibility",
@@ -242,8 +259,14 @@
           },
         ],
         links: [
-          { label: "NPM", href: "https://www.npmjs.com/package/react-bulk-form" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/react-bulk-form" },
+          {
+            label: "NPM",
+            href: "https://www.npmjs.com/package/react-bulk-form",
+          },
+          {
+            label: "GitHub",
+            href: "https://github.com/Jpark1/react-bulk-form",
+          },
         ],
       },
       itEldorado: {
@@ -270,7 +293,10 @@
         ],
         links: [
           { label: "Live site", href: "https://it-eldorado.com" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/it-eldorado-blog" },
+          {
+            label: "GitHub",
+            href: "https://github.com/Jpark1/it-eldorado-blog",
+          },
         ],
       },
       fosslightHubLite: {
@@ -294,7 +320,12 @@
             ],
           },
         ],
-        links: [{ label: "GitHub", href: "https://github.com/opensourceway/FOSSLight-Hub" }],
+        links: [
+          {
+            label: "GitHub",
+            href: "https://github.com/opensourceway/FOSSLight-Hub",
+          },
+        ],
       },
       mapleAuctionAlarm: {
         title: "Maple Auction Notifier",
@@ -320,7 +351,7 @@
         ],
         links: [
           { label: "Live site", href: "https://maplealimi.com" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
+          { label: "GitHub", href: "https://github.com/Jpark1/maple-alimi" },
         ],
       },
       whatToSing: {
@@ -340,7 +371,7 @@
         ],
         links: [
           { label: "Live site", href: "https://what-to-sing.kr" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+          { label: "GitHub", href: "https://github.com/Jpark1/what-to-sing" },
         ],
       },
     },
@@ -392,7 +423,8 @@
       daangn: {
         logoText: "DAANGN",
         period: "Nov 2024 - Present",
-        description: "\"Building warmer neighborhoods by bringing neighbors closer\"",
+        description:
+          '"Building warmer neighborhoods by bringing neighbors closer"',
         roles: {
           frontend: "Frontend development",
           backend: "Backend development",

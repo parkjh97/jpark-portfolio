@@ -61,11 +61,19 @@ export const skillGroups: SkillGroup[] = [
     icon: "language",
     titleKey: "skills.groups.language.title",
     chips: [
-      { id: "typescript", label: "TypeScript", background: "#1f6feb", color: "#ffffff" },
-      { id: "javascript", label: "JavaScript", background: "#f7df1e", color: "#111111" },
-      { id: "python", label: "Python", background: "#36659c", color: "#ffffff" },
+      {
+        id: "typescript",
+        label: "TypeScript",
+        background: "#1f6feb",
+        color: "#ffffff",
+      },
+      {
+        id: "javascript",
+        label: "JavaScript",
+        background: "#f7df1e",
+        color: "#111111",
+      },
       { id: "java", label: "Java", background: "#d13b28", color: "#ffffff" },
-      { id: "kotlin", label: "Kotlin", background: "#7f52ff", color: "#ffffff" },
     ],
   },
   {
@@ -73,15 +81,55 @@ export const skillGroups: SkillGroup[] = [
     icon: "frontend",
     titleKey: "skills.groups.frontend.title",
     chips: [
-      { id: "next-react", label: "Next.js / React", background: "#111111", color: "#ffffff" },
-      { id: "zustand", label: "Zustand", background: "#5d4037", color: "#ffffff" },
-      { id: "recoil", label: "Recoil", background: "#0ea5e9", color: "#ffffff" },
-      { id: "react-query", label: "React Query", background: "#f97316", color: "#ffffff" },
-      { id: "apollo", label: "Apollo Client", background: "#311b92", color: "#ffffff" },
-      { id: "react-hook-form", label: "React Hook Form", background: "#111827", color: "#ffffff" },
+      {
+        id: "next-react",
+        label: "Next.js / React",
+        background: "#111111",
+        color: "#ffffff",
+      },
+      {
+        id: "zustand",
+        label: "Zustand",
+        background: "#5d4037",
+        color: "#ffffff",
+      },
+      {
+        id: "recoil",
+        label: "Recoil",
+        background: "#0ea5e9",
+        color: "#ffffff",
+      },
+      {
+        id: "react-router",
+        label: "React Router",
+        background: "#f97316",
+        color: "#ffffff",
+      },
+      {
+        id: "apollo",
+        label: "Apollo Client",
+        background: "#311b92",
+        color: "#ffffff",
+      },
+      {
+        id: "react-hook-form",
+        label: "React Hook Form",
+        background: "#111827",
+        color: "#ffffff",
+      },
       { id: "sass", label: "Sass", background: "#cc6699", color: "#ffffff" },
-      { id: "tailwind", label: "Tailwind CSS", background: "#0ea5e9", color: "#ffffff" },
-      { id: "emotion", label: "Emotion", background: "#d946ef", color: "#ffffff" },
+      {
+        id: "tailwind",
+        label: "Tailwind CSS",
+        background: "#0ea5e9",
+        color: "#ffffff",
+      },
+      {
+        id: "emotion",
+        label: "Emotion",
+        background: "#d946ef",
+        color: "#ffffff",
+      },
       { id: "vite", label: "Vite", background: "#8b5cf6", color: "#ffffff" },
     ],
   },
@@ -90,11 +138,36 @@ export const skillGroups: SkillGroup[] = [
     icon: "backend",
     titleKey: "skills.groups.backend.title",
     chips: [
-      { id: "django", label: "Django", background: "#092e20", color: "#ffffff" },
-      { id: "spring", label: "Spring (Boot)", background: "#6db33f", color: "#ffffff" },
-      { id: "gradle", label: "Gradle", background: "#02303a", color: "#ffffff" },
-      { id: "firebase", label: "Firebase", background: "#ffca28", color: "#111111" },
-      { id: "supabase", label: "Supabase", background: "#3ecf8e", color: "#ffffff" },
+      {
+        id: "django",
+        label: "Django",
+        background: "#092e20",
+        color: "#ffffff",
+      },
+      {
+        id: "spring",
+        label: "Spring (Boot)",
+        background: "#6db33f",
+        color: "#ffffff",
+      },
+      {
+        id: "gradle",
+        label: "Gradle",
+        background: "#02303a",
+        color: "#ffffff",
+      },
+      {
+        id: "firebase",
+        label: "Firebase",
+        background: "#ffca28",
+        color: "#111111",
+      },
+      {
+        id: "supabase",
+        label: "Supabase",
+        background: "#3ecf8e",
+        color: "#ffffff",
+      },
     ],
   },
   {
@@ -102,12 +175,37 @@ export const skillGroups: SkillGroup[] = [
     icon: "devops",
     titleKey: "skills.groups.devops.title",
     chips: [
-      { id: "docker", label: "Docker", background: "#0db7ed", color: "#ffffff" },
-      { id: "aws", label: "AWS (ECS, EB)", background: "#f97316", color: "#ffffff" },
-      { id: "kubernetes", label: "Kubernetes", background: "#326ce5", color: "#ffffff" },
+      {
+        id: "docker",
+        label: "Docker",
+        background: "#0db7ed",
+        color: "#ffffff",
+      },
+      {
+        id: "aws",
+        label: "AWS (ECS, EB)",
+        background: "#f97316",
+        color: "#ffffff",
+      },
+      {
+        id: "kubernetes",
+        label: "Kubernetes",
+        background: "#326ce5",
+        color: "#ffffff",
+      },
       { id: "redis", label: "Redis", background: "#dc2626", color: "#ffffff" },
-      { id: "elasticsearch", label: "Elastic Search", background: "#059669", color: "#ffffff" },
-      { id: "vercel", label: "Vercel", background: "#111111", color: "#ffffff" },
+      {
+        id: "elasticsearch",
+        label: "Elastic Search",
+        background: "#059669",
+        color: "#ffffff",
+      },
+      {
+        id: "vercel",
+        label: "Vercel",
+        background: "#111111",
+        color: "#ffffff",
+      },
     ],
   },
 ];
@@ -241,11 +339,24 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "haetbongWikiDjango",
-    techStack: ["Django", "Vanilla JS", "jQuery", "PostgreSQL", "AWS (Elastic Beanstalk)"],
+    techStack: [
+      "Django",
+      "Vanilla JS",
+      "jQuery",
+      "PostgreSQL",
+      "AWS (Elastic Beanstalk)",
+    ],
   },
   {
     id: "snuMoyeo",
-    techStack: ["React", "Redux", "Redux Saga", "Django REST Framework", "SQLite3", "AWS (EC2)"],
+    techStack: [
+      "React",
+      "Redux",
+      "Redux Saga",
+      "Django REST Framework",
+      "SQLite3",
+      "AWS (EC2)",
+    ],
   },
 ];
 
@@ -260,13 +371,15 @@ const daangnHighlights: CareerHighlight[] = [
     id: "daangnWebviewPlatform",
     titleKey: "career.companies.daangn.highlights.webviewPlatform.title",
     periodKey: "career.companies.daangn.highlights.webviewPlatform.period",
-    descriptionKey: "career.companies.daangn.highlights.webviewPlatform.description",
+    descriptionKey:
+      "career.companies.daangn.highlights.webviewPlatform.description",
   },
   {
     id: "daangnLocalBusiness",
     titleKey: "career.companies.daangn.highlights.localBusiness.title",
     periodKey: "career.companies.daangn.highlights.localBusiness.period",
-    descriptionKey: "career.companies.daangn.highlights.localBusiness.description",
+    descriptionKey:
+      "career.companies.daangn.highlights.localBusiness.description",
   },
 ];
 
@@ -275,31 +388,36 @@ const opengalleryHighlights: CareerHighlight[] = [
     id: "opengalleryArtistSite",
     titleKey: "career.companies.opengallery.highlights.artistSite.title",
     periodKey: "career.companies.opengallery.highlights.artistSite.period",
-    descriptionKey: "career.companies.opengallery.highlights.artistSite.description",
+    descriptionKey:
+      "career.companies.opengallery.highlights.artistSite.description",
   },
   {
     id: "opengalleryDeploy",
     titleKey: "career.companies.opengallery.highlights.deploy.title",
     periodKey: "career.companies.opengallery.highlights.deploy.period",
-    descriptionKey: "career.companies.opengallery.highlights.deploy.description",
+    descriptionKey:
+      "career.companies.opengallery.highlights.deploy.description",
   },
   {
     id: "opengalleryCleanup",
     titleKey: "career.companies.opengallery.highlights.cleanup.title",
     periodKey: "career.companies.opengallery.highlights.cleanup.period",
-    descriptionKey: "career.companies.opengallery.highlights.cleanup.description",
+    descriptionKey:
+      "career.companies.opengallery.highlights.cleanup.description",
   },
   {
     id: "opengalleryBeyondDev",
     titleKey: "career.companies.opengallery.highlights.beyondDev.title",
     periodKey: "career.companies.opengallery.highlights.beyondDev.period",
-    descriptionKey: "career.companies.opengallery.highlights.beyondDev.description",
+    descriptionKey:
+      "career.companies.opengallery.highlights.beyondDev.description",
   },
   {
     id: "opengalleryBackoffice",
     titleKey: "career.companies.opengallery.highlights.backoffice.title",
     periodKey: "career.companies.opengallery.highlights.backoffice.period",
-    descriptionKey: "career.companies.opengallery.highlights.backoffice.description",
+    descriptionKey:
+      "career.companies.opengallery.highlights.backoffice.description",
   },
 ];
 
