@@ -1,4 +1,4 @@
-const en = {
+﻿const en = {
   brand: "CDG's Portfolio",
   language: {
     current: "English",
@@ -17,24 +17,24 @@ const en = {
   },
   navToggle: "Toggle navigation",
   masthead: {
-    badge: "FRONTEND ENGINEER",
-    title: "- Choi Deok Gyeong -",
-    subtitle: "Front-end Developer Portfolio",
-    intro: [
-      "Hello.",
-      "I'm Choi Deok Gyeong, a front-end developer",
-      "who focuses on what truly matters.",
+    badges: ["FULLSTACK DEVELOPER", "FRONTEND ARCHITECT", "TEAM STORYTELLER"],
+    title: "- Park Jeong Hyeon -",
+    subtitle: "Full-stack Developer Portfolio",
+    summary: [
+      "I put real users at the centre of every problem I solve.",
+      "Technology and narrative work together when the whole team shares the same context.",
     ],
-    description:
-      "I design dependable product journeys and ship interfaces that teams can scale with confidence. Crafting repeatable systems with attentive UI detail is the core of my work.",
+    overviewTitle: "Hello, I'm Park Jeong Hyeon.",
+    overviewBody:
+      "From planning the first sentence of a feature to revisiting it after deployment, I stay close to the customer. With a full-stack mindset I pinpoint the core problem, design predictable flows, and document the path so the entire team can move quickly and safely.",
+    narrativeTitle: "How I Work",
+    narrative: [
+      "My very first campus project showed me how inspiring it is to watch people use the things I build. Since then I've worked across commerce, communities, and internal platforms, learning to balance deep technical work with tangible user value. I keep validating whether each release still reflects the product's promise.",
+      "At Daangn I designed business-profile experiences that bridge local business owners and neighbours. I led the map-tab traffic strategy, rebuilt webview platforms for performance and maintainability, and set up monitoring pipelines so the team can trust every deployment.",
+      "The best compliment I can receive is when teammates quickly grasp context through my code and docs. Small, consistent improvements shape tomorrow's team culture—so I capture learnings, share them openly, and keep moving forward together.",
+    ],
     cta: "Discover more ↓",
-    highlights: [
-      { label: "Experience", value: "6+ years" },
-      { label: "Focus", value: "React / Next.js / UI Engineering" },
-      { label: "Collaboration", value: "Product squads / Hybrid" },
-    ],
-  },
-  about: {
+  },  about: {
     title: "ABOUT ME",
     fields: {
       name: { label: "Name", value: "Choi Deok Gyeong" },
