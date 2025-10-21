@@ -10,9 +10,9 @@ function App() {
     <SiteLayout>
       <AboutSection />
       <SkillsSection />
-      <ArchivingSection />
-      <ProjectsSection />
+      {/* <ArchivingSection /> */}
       <CareerSection />
+      <ProjectsSection />
     </SiteLayout>
   );
 }

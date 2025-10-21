@@ -31,18 +31,17 @@ export interface AboutField {
   valueKey: TranslationKey;
 }
 
-export interface SkillChip {
+export interface SkillListItem {
   id: string;
-  label: string;
-  background: string;
-  color: string;
+  titleKey: TranslationKey;
+  descriptionKey: TranslationKey;
 }
 
 export interface SkillGroup {
   id: string;
   icon: IconName;
   titleKey: TranslationKey;
-  chips: SkillChip[];
+  items: SkillListItem[];
 }
 
 export interface ArchiveLink {

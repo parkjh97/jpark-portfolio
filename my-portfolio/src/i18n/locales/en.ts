@@ -67,10 +67,59 @@
   skills: {
     title: "SKILLS",
     groups: {
-      language: { title: "Language" },
-      frontend: { title: "Frontend" },
-      backend: { title: "Backend" },
-      devops: { title: "DevOps" },
+      frontend: {
+        title: "Front-End",
+        items: {
+          htmlCssJs: {
+            title: "Markup & Language",
+            description:
+              "HTML, CSS(SCSS, Tailwind CSS), JavaScript (ES6), TypeScript",
+          },
+          reactNext: {
+            title: "Application Frameworks",
+            description: "React.js, Next.js",
+          },
+          visualization: {
+            title: "State & Data Visualization",
+            description: "Zustand, Apache ECharts, D3.js, deck.gl, OpenLayers",
+          },
+          tooling: {
+            title: "Build & Tooling",
+            description: "Vite, Webpack, npm",
+          },
+        },
+      },
+      backendDb: {
+        title: "Back-End & DB",
+        items: {
+          spring: {
+            title: "Spring Ecosystem",
+            description:
+              "Spring Framework (Java 11), Spring Boot (Java 21)",
+          },
+          mybatis: {
+            title: "Persistence Layer",
+            description: "MyBatis",
+          },
+          databases: {
+            title: "Databases",
+            description: "PostgreSQL, MySQL",
+          },
+        },
+      },
+      etc: {
+        title: "ETC",
+        items: {
+          collaboration: {
+            title: "Collaboration",
+            description: "Git, Notion",
+          },
+          infra: {
+            title: "Ops & Infra",
+            description: "Docker, Jenkins, Nginx, Apache",
+          },
+        },
+      },
     },
   },
   archiving: {

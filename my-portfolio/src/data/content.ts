@@ -57,154 +57,69 @@ export const aboutFields: AboutField[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    id: "language",
-    icon: "language",
-    titleKey: "skills.groups.language.title",
-    chips: [
-      {
-        id: "typescript",
-        label: "TypeScript",
-        background: "#1f6feb",
-        color: "#ffffff",
-      },
-      {
-        id: "javascript",
-        label: "JavaScript",
-        background: "#f7df1e",
-        color: "#111111",
-      },
-      { id: "java", label: "Java", background: "#d13b28", color: "#ffffff" },
-    ],
-  },
-  {
     id: "frontend",
     icon: "frontend",
     titleKey: "skills.groups.frontend.title",
-    chips: [
+    items: [
       {
-        id: "next-react",
-        label: "Next.js / React",
-        background: "#111111",
-        color: "#ffffff",
+        id: "html-css-js",
+        titleKey: "skills.groups.frontend.items.htmlCssJs.title",
+        descriptionKey: "skills.groups.frontend.items.htmlCssJs.description",
       },
       {
-        id: "zustand",
-        label: "Zustand",
-        background: "#5d4037",
-        color: "#ffffff",
+        id: "react-next",
+        titleKey: "skills.groups.frontend.items.reactNext.title",
+        descriptionKey: "skills.groups.frontend.items.reactNext.description",
       },
       {
-        id: "recoil",
-        label: "Recoil",
-        background: "#0ea5e9",
-        color: "#ffffff",
+        id: "visualization",
+        titleKey: "skills.groups.frontend.items.visualization.title",
+        descriptionKey:
+          "skills.groups.frontend.items.visualization.description",
       },
       {
-        id: "react-router",
-        label: "React Router",
-        background: "#f97316",
-        color: "#ffffff",
+        id: "tooling",
+        titleKey: "skills.groups.frontend.items.tooling.title",
+        descriptionKey: "skills.groups.frontend.items.tooling.description",
       },
-      {
-        id: "apollo",
-        label: "Apollo Client",
-        background: "#311b92",
-        color: "#ffffff",
-      },
-      {
-        id: "react-hook-form",
-        label: "React Hook Form",
-        background: "#111827",
-        color: "#ffffff",
-      },
-      { id: "sass", label: "Sass", background: "#cc6699", color: "#ffffff" },
-      {
-        id: "tailwind",
-        label: "Tailwind CSS",
-        background: "#0ea5e9",
-        color: "#ffffff",
-      },
-      {
-        id: "emotion",
-        label: "Emotion",
-        background: "#d946ef",
-        color: "#ffffff",
-      },
-      { id: "vite", label: "Vite", background: "#8b5cf6", color: "#ffffff" },
     ],
   },
   {
-    id: "backend",
+    id: "backendDb",
     icon: "backend",
-    titleKey: "skills.groups.backend.title",
-    chips: [
-      {
-        id: "django",
-        label: "Django",
-        background: "#092e20",
-        color: "#ffffff",
-      },
+    titleKey: "skills.groups.backendDb.title",
+    items: [
       {
         id: "spring",
-        label: "Spring (Boot)",
-        background: "#6db33f",
-        color: "#ffffff",
+        titleKey: "skills.groups.backendDb.items.spring.title",
+        descriptionKey: "skills.groups.backendDb.items.spring.description",
       },
       {
-        id: "gradle",
-        label: "Gradle",
-        background: "#02303a",
-        color: "#ffffff",
+        id: "mybatis",
+        titleKey: "skills.groups.backendDb.items.mybatis.title",
+        descriptionKey: "skills.groups.backendDb.items.mybatis.description",
       },
       {
-        id: "firebase",
-        label: "Firebase",
-        background: "#ffca28",
-        color: "#111111",
-      },
-      {
-        id: "supabase",
-        label: "Supabase",
-        background: "#3ecf8e",
-        color: "#ffffff",
+        id: "databases",
+        titleKey: "skills.groups.backendDb.items.databases.title",
+        descriptionKey: "skills.groups.backendDb.items.databases.description",
       },
     ],
   },
   {
-    id: "devops",
-    icon: "devops",
-    titleKey: "skills.groups.devops.title",
-    chips: [
+    id: "etc",
+    icon: "stack",
+    titleKey: "skills.groups.etc.title",
+    items: [
       {
-        id: "docker",
-        label: "Docker",
-        background: "#0db7ed",
-        color: "#ffffff",
+        id: "collaboration",
+        titleKey: "skills.groups.etc.items.collaboration.title",
+        descriptionKey: "skills.groups.etc.items.collaboration.description",
       },
       {
-        id: "aws",
-        label: "AWS (ECS, EB)",
-        background: "#f97316",
-        color: "#ffffff",
-      },
-      {
-        id: "kubernetes",
-        label: "Kubernetes",
-        background: "#326ce5",
-        color: "#ffffff",
-      },
-      { id: "redis", label: "Redis", background: "#dc2626", color: "#ffffff" },
-      {
-        id: "elasticsearch",
-        label: "Elastic Search",
-        background: "#059669",
-        color: "#ffffff",
-      },
-      {
-        id: "vercel",
-        label: "Vercel",
-        background: "#111111",
-        color: "#ffffff",
+        id: "infra",
+        titleKey: "skills.groups.etc.items.infra.title",
+        descriptionKey: "skills.groups.etc.items.infra.description",
       },
     ],
   },
@@ -360,26 +275,26 @@ export const projectEntries: ProjectEntry[] = [
   },
 ];
 
-const daangnHighlights: CareerHighlight[] = [
+const qbicwareHighlights: CareerHighlight[] = [
   {
-    id: "daangnThreeTab",
-    titleKey: "career.companies.daangn.highlights.threeTab.title",
-    periodKey: "career.companies.daangn.highlights.threeTab.period",
-    descriptionKey: "career.companies.daangn.highlights.threeTab.description",
+    id: "qbicwareThreeTab",
+    titleKey: "career.companies.qbicware.highlights.threeTab.title",
+    periodKey: "career.companies.qbicware.highlights.threeTab.period",
+    descriptionKey: "career.companies.qbicware.highlights.threeTab.description",
   },
   {
-    id: "daangnWebviewPlatform",
-    titleKey: "career.companies.daangn.highlights.webviewPlatform.title",
-    periodKey: "career.companies.daangn.highlights.webviewPlatform.period",
+    id: "qbicwareWebviewPlatform",
+    titleKey: "career.companies.qbicware.highlights.webviewPlatform.title",
+    periodKey: "career.companies.qbicware.highlights.webviewPlatform.period",
     descriptionKey:
-      "career.companies.daangn.highlights.webviewPlatform.description",
+      "career.companies.qbicware.highlights.webviewPlatform.description",
   },
   {
-    id: "daangnLocalBusiness",
-    titleKey: "career.companies.daangn.highlights.localBusiness.title",
-    periodKey: "career.companies.daangn.highlights.localBusiness.period",
+    id: "qbicwareLocalBusiness",
+    titleKey: "career.companies.qbicware.highlights.localBusiness.title",
+    periodKey: "career.companies.qbicware.highlights.localBusiness.period",
     descriptionKey:
-      "career.companies.daangn.highlights.localBusiness.description",
+      "career.companies.qbicware.highlights.localBusiness.description",
   },
 ];
 
@@ -423,26 +338,26 @@ const opengalleryHighlights: CareerHighlight[] = [
 
 export const careerCompanies: CareerCompany[] = [
   {
-    id: "daangn",
-    logoTextKey: "career.companies.daangn.logoText",
-    periodKey: "career.companies.daangn.period",
-    descriptionKey: "career.companies.daangn.description",
+    id: "qbicware",
+    logoTextKey: "career.companies.qbicware.logoText",
+    periodKey: "career.companies.qbicware.period",
+    descriptionKey: "career.companies.qbicware.description",
     rolesKeys: [
-      "career.companies.daangn.roles.frontend",
-      "career.companies.daangn.roles.backend",
+      "career.companies.qbicware.roles.frontend",
+      "career.companies.qbicware.roles.backend",
     ],
-    highlights: daangnHighlights,
+    highlights: qbicwareHighlights,
   },
-  {
-    id: "opengallery",
-    logoTextKey: "career.companies.opengallery.logoText",
-    periodKey: "career.companies.opengallery.period",
-    descriptionKey: "career.companies.opengallery.description",
-    rolesKeys: [
-      "career.companies.opengallery.roles.development",
-      "career.companies.opengallery.roles.techLead",
-      "career.companies.opengallery.roles.backoffice",
-    ],
-    highlights: opengalleryHighlights,
-  },
+  // {
+  //   id: "opengallery",
+  //   logoTextKey: "career.companies.opengallery.logoText",
+  //   periodKey: "career.companies.opengallery.period",
+  //   descriptionKey: "career.companies.opengallery.description",
+  //   rolesKeys: [
+  //     "career.companies.opengallery.roles.development",
+  //     "career.companies.opengallery.roles.techLead",
+  //     "career.companies.opengallery.roles.backoffice",
+  //   ],
+  //   highlights: opengalleryHighlights,
+  // },
 ];

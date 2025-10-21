@@ -34,9 +34,10 @@
     },
     detailHeading: "세부 소개",
     detail: [
-      "기획 테이블에서 서비스의 첫 줄을 맞추고, 배포 이후에는 사용자의 목소리로 다시 문장을 다듬습니다. 프론트엔드와 백엔드를 모두 이해하는 시야로 문제의 본질을 짚어내고, 사용자 경험이 자연스럽게 이어지도록 환경을 설계합니다. 팀이 안심하고 개발할 수 있도록 문서화와 자동화를 습관화하고 있으며, 작은 습관이 곧 조직의 속도와 품질을 지켜 준다고 믿습니다. 첫 팀 서비스였던 대학 시절 프로젝트를 시작으로, 고객이 직접 사용하는 화면이 어떻게 살아 움직이는지 지켜보며 개발자의 길을 다졌습니다. 이후 커머스, 커뮤니티, 사내 플랫폼 등 다양한 도메인을 경험하며 기술적인 완성도와 사용자 경험을 동시에 관리하는 방법을 배웠습니다.",
-      "기능을 출시하는 것에 그치지 않고, 서비스가 지향하는 가치가 고객에게 잘 전달되고 있는지 꾸준히 검증하는 것을 무엇보다 중요하게 생각합니다. 당근마켓에서는 비즈프로필 기반 기능을 통해 동네 사장님과 고객이 만나는 경험을 설계했습니다. 지도 경험의 유입 전략을 세우고, 웹뷰 플랫폼을 개편하여 성능과 운영 효율을 끌어올렸으며, 프론트엔드 모듈화와 API 설계, 데이터 파이프라인, 모니터링 체계 등을 직접 구축하며 팀 전체가 신뢰할 수 있는 개발 환경을 마련했습니다.",
-      "제가 좋은 개발자라고 느끼는 순간은 팀 구성원들이 제 코드와 문서를 통해 빠르게 맥락을 이해하고 다음 결정을 내릴 수 있을 때입니다. 오늘의 작은 개선이 내일의 팀 문화를 만든다고 믿으며, 성장의 순간을 기록하고 공유하는 습관으로 팀과 함께 앞으로 나아가고자 합니다.",
+      "3년 동안 여러 프로젝트를 거치며 가장 확신하게 된 건, 정답이 기술 안에만 있지는 않다는 사실이었습니다. 초반에는 JS와 CSS, 문자열 템플릿으로 몸으로 부딪히며 빠르게 만들어 보았고, 그 과정에서 브라우저가 어떻게 움직이고 사용자가 어디서 멈추는지를 가까이에서 배웠습니다. 이후에는 필요에 따라 React와 Next.js, Tailwind, Spring Boot 같은 도구들을 도입하며 제품을 더 단단하게 키웠습니다. 저에게 기술은 멋진 선택지가 아니라 지금의 문제를 가장 깔끔하게 푸는 수단입니다.",
+      "프로젝트를 시작할 때 저는 먼저 “이게 정말 고객에게 필요한가?”를 묻습니다. 가설을 세우고 가장 가벼운 방법으로 실험해 본 뒤, 데이터와 사용자 피드백으로 방향을 조정합니다. 확신이 들면 구조를 키우고, 재사용을 늘리고, 운영과 배포까지 흐름을 정리합니다. 사내 ERP를 만들 때도 같은 방식이었습니다. 부서별 요구를 사용자 여정으로 엮어 우선순위를 정했고, 전체 기능 중 상당 부분을 직접 설계·구현하면서도 “빨리 보여주고, 빨리 고치는” 리듬을 유지했습니다. 덕분에 회의실이 아닌 실제 업무 현장에서 답을 찾을 수 있었고, 결과적으로 팀이 믿고 맡길 수 있는 흐름을 만들 수 있었습니다.",
+      "협업에서는 ‘번역가’ 같은 역할을 자주 합니다. 비즈니스의 언어를 개발의 언어로, 개발의 제약을 고객 가치로 다시 설명하며 같은 목표를 바라보게 만드는 일을 좋아합니다. 논쟁이 생기면 개인 취향보다 근거를, 속도와 품질 사이에선 지금 단계에 맞는 균형을 선택합니다. 필요하면 가볍게 시작하고, 근거가 쌓이면 과감하게 바꾸는 태도—그게 제가 흔들리지 않게 일하는 방식입니다.",
+      "앞으로도 저는 기술을 목적화하지 않겠습니다. 제품과 고객을 먼저 생각하고, 그다음에 가장 경제적인 방법을 고르는 개발자로 남고 싶습니다. 환경이 바뀌어도, 제약이 생겨도, 다양한 경험을 바탕으로 문제를 구조화하고 실행으로 답을 찾는 사람—그게 제가 되고 싶은, 그리고 지금도 매일 훈련하고 있는 개발자의 모습입니다.",
     ],
     cta: "더 알아보기 ↓",
   },
@@ -57,10 +58,58 @@
   skills: {
     title: "SKILLS",
     groups: {
-      language: { title: "Language" },
-      frontend: { title: "frontend" },
-      backend: { title: "Backend" },
-      devops: { title: "DevOps" },
+      frontend: {
+        title: "Front-End",
+        items: {
+          htmlCssJs: {
+            title: "Markup & Language",
+            description:
+              "HTML, CSS(SCSS, Tailwind CSS), JavaScript(ES6), TypeScript",
+          },
+          reactNext: {
+            title: "Application Frameworks",
+            description: "React.js, Next.js",
+          },
+          visualization: {
+            title: "State & Data Visualization",
+            description: "Zustand, Apache ECharts, D3.js, deck.gl, OpenLayers",
+          },
+          tooling: {
+            title: "Build & Tooling",
+            description: "Vite, Webpack, npm",
+          },
+        },
+      },
+      backendDb: {
+        title: "Back-End & DB",
+        items: {
+          spring: {
+            title: "Spring Ecosystem",
+            description: "Spring Framework (Java 11), Spring Boot (Java 21)",
+          },
+          mybatis: {
+            title: "Persistence Layer",
+            description: "MyBatis",
+          },
+          databases: {
+            title: "Databases",
+            description: "PostgreSQL, MySQL",
+          },
+        },
+      },
+      etc: {
+        title: "ETC",
+        items: {
+          collaboration: {
+            title: "Collaboration",
+            description: "Git, Notion",
+          },
+          infra: {
+            title: "Ops & Infra",
+            description: "Docker, Jenkins, Nginx, Apache",
+          },
+        },
+      },
     },
   },
   archiving: {
@@ -412,7 +461,7 @@
   career: {
     title: "CAREER",
     companies: {
-      daangn: {
+      qbicware: {
         logoText: "큐빅웨어",
         period: "2022.10 - (재직 중)",
         description: '"이웃과 더 가까워지는 따뜻한 동네를 만들어요"',
