@@ -33,12 +33,12 @@
 .masthead__photo {
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  /* border-radius: 50%;
   background: linear-gradient(
     135deg,
     rgba(29, 78, 216, 0.16),
     rgba(191, 219, 254, 0.45)
-  );
+  ); */
   border: 4px solid rgba(255, 255, 255, 0.8);
   display: grid;
   place-items: center;
@@ -52,7 +52,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
 
 .masthead__fields {

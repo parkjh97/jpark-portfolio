@@ -21,7 +21,8 @@
     profile: {
       photo: {
         alt: "박정현 증명 사진 자리",
-        initials: "PJH",
+        initials: "Jpark",
+        src: "./img/profile/jpark.webp",
       },
       fields: [
         { label: "이름", value: "박정현" },

@@ -346,6 +346,7 @@ export const careerCompanies: CareerCompany[] = [
       "career.companies.qbicware.roles.frontend",
       "career.companies.qbicware.roles.backend",
     ],
+    logoSrc: "./img/logo/qbicware_ci.svg",
     highlights: qbicwareHighlights,
   },
   // {

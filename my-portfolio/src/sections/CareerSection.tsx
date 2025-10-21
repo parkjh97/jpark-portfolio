@@ -17,11 +17,23 @@ export function CareerSection() {
           {careerCompanies.map((company) => (
             <article key={company.id} className="career-card">
               <div className="career-card__logo">
-                {/* <span>{t(`career.companies.${company.id}.logoText`)}</span> */}
+                {company.logoSrc ? (
+                  <img
+                    src={company.logoSrc}
+                    alt={
+                      company.logoAltKey
+                        ? t(company.logoAltKey)
+                        : t(company.logoTextKey ?? company.descriptionKey)
+                    }
+                    loading="lazy"
+                  />
+                ) : (
+                  <span>{t(company.logoTextKey ?? company.descriptionKey)}</span>
+                )}
               </div>
               <div className="career-card__details">
                 <header>
-                  <h4>{t(`career.companies.${company.id}.logoText`)}</h4>
+                  <h4>{t(company.logoTextKey ?? company.descriptionKey)}</h4>
                   <span className="career-card__period">
                     {t(company.periodKey)}
                   </span>
