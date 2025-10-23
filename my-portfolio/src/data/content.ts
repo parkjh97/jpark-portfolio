@@ -142,12 +142,19 @@ export const archiveLinks: ArchiveLink[] = [
 
 export const projectEntries: ProjectEntry[] = [
   {
-    id: "reactBulkForm",
+    id: "erp",
     url: "https://www.npmjs.com/package/react-bulk-form",
     repoUrl: "https://github.com/hjcdg1/react-bulk-form",
-    readmeKey: "projects.readmes.reactBulkForm",
-    imagesKey: "projects.images.reactBulkForm",
-    techStack: ["TypeScript", "React"],
+    readmeKey: "projects.readmes.erp",
+    imagesKey: "projects.images.erp",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind css",
+      "zustand",
+      "Next-auth",
+      "PostgreSQL",
+    ],
     isFeatured: true,
   },
   {
@@ -278,16 +285,15 @@ export const projectEntries: ProjectEntry[] = [
 const qbicwareHighlights: CareerHighlight[] = [
   {
     id: "qbicwareThreeTab",
-    titleKey: "career.companies.qbicware.highlights.threeTab.title",
-    periodKey: "career.companies.qbicware.highlights.threeTab.period",
-    descriptionKey: "career.companies.qbicware.highlights.threeTab.description",
+    titleKey: "career.companies.qbicware.highlights.erp.title",
+    periodKey: "career.companies.qbicware.highlights.erp.period",
+    descriptionKey: "career.companies.qbicware.highlights.erp.description",
   },
   {
-    id: "qbicwareWebviewPlatform",
-    titleKey: "career.companies.qbicware.highlights.webviewPlatform.title",
-    periodKey: "career.companies.qbicware.highlights.webviewPlatform.period",
-    descriptionKey:
-      "career.companies.qbicware.highlights.webviewPlatform.description",
+    id: "qbicwareviewT",
+    titleKey: "career.companies.qbicware.highlights.viewT.title",
+    periodKey: "career.companies.qbicware.highlights.viewT.period",
+    descriptionKey: "career.companies.qbicware.highlights.viewT.description",
   },
   {
     id: "qbicwareLocalBusiness",
