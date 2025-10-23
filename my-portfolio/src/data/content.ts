@@ -231,11 +231,11 @@ export const projectEntries: ProjectEntry[] = [
     techStack: [
       "TypeScript",
       "Next.js",
-      "Recoil",
-      "Sass",
-      "Tailwind CSS",
-      "Firebase",
-      "Vercel",
+      "TypeScript",
+      "TailwindCSS",
+      "Zustand",
+      "react-apexcharts",
+      "MySQL",
     ],
   },
   {

@@ -200,10 +200,16 @@ const ko = {
         name: "빅데이터 가공 로그 대시보드",
         period: "2024.11 ~ 2025.01",
         summary:
-          "복잡한 N빵 상황에 누가 누구에게 얼마를 보내야 하는지 계산해주는 모바일 앱",
+          "Hadoop/YARN과 MySQL 기반 교통 데이터 수집·가공 파이프라인의 현황/진행률을 시각화한 대시보드",
         details: [
-          "Android Native를 React-Native로 마이그레이션하여 개선 후 출시",
-          "Recoil을 활용하여 React와 유사한 방식으로 전역 상태 관리",
+          "Next.js App Router + API Routes로 프론트/백엔드 단일 리포 구성",
+          "MySQL 저장 프로시저 기반 집계와 스키마 메타(information_schema)로 조건/라벨 자동 생성",
+          "Hadoop/YARN REST 연동으로 작업 진행률·완료 Job 추적 및 타임아웃 처리",
+          "연/월/일 단위 동적 집계와 네트워크별 필터, 평균 처리시간 산출",
+          "ApexCharts 멀티 시리즈 차트 + 비율 보기 토글로 추세 비교",
+          "커스텀 테이블: 정렬/CSV 다운로드/한글 초성 검색(hangul‑js) 지원",
+          "경량 상태관리(Zustand), Tailwind로 반응형 UI 구성",
+          "서브패스 배포(basePath=/note/log)와 환경변수 분리로 운영 환경 대응",
         ],
       },
       personalityByFriends: {
@@ -423,7 +429,9 @@ const ko = {
 
       viewTLog: {
         title: "빅데이터 가공 로그 대시보드",
-        intro: ["교통카드 데이터를 바탕으로 대중교통을 분석하는 시스템."],
+        intro: [
+          "Hadoop/YARN과 MySQL 기반 교통 데이터 수집·가공 파이프라인의 현황/진행률을 시각화한 대시보드",
+        ],
         sections: [
           {
             heading: "주요 기능",
