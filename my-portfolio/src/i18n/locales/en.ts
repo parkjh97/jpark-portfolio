@@ -94,8 +94,7 @@
         items: {
           spring: {
             title: "Spring Ecosystem",
-            description:
-              "Spring Framework (Java 11), Spring Boot (Java 21)",
+            description: "Spring Framework (Java 11), Spring Boot (Java 21)",
           },
           mybatis: {
             title: "Persistence Layer",
@@ -147,7 +146,7 @@
       next: "Next image",
     },
     items: {
-      reactBulkForm: {
+      erp: {
         name: "react-bulk-form",
         period: "2025.03",
         summary: "A lightweight React utility for bulk form-state management",
@@ -157,7 +156,7 @@
           "Minimize extra UI layers by abstracting form-state driven UX",
         ],
       },
-      itEldorado: {
+      viewTexportX: {
         name: "IT Eldorado (Blog)",
         period: "2024.09 (Solo project)",
         summary: "Personal blog powered by the Notion API and database",
@@ -168,7 +167,7 @@
           "Implemented infinite scroll, visit and view tracking, comments, and reactions",
         ],
       },
-      fosslightHubLite: {
+      viewT: {
         name: "FOSSLight Hub Lite",
         period: "2023.09 - 2023.12 (2-person team)",
         summary:
@@ -180,7 +179,7 @@
           "Redesigned UI and UX end to end to improve overall usability",
         ],
       },
-      mapleAuctionAlarm: {
+      hs: {
         name: "Maple Auction Notifier",
         period: "2023.08 - 2023.09 (2-person team)",
         summary:
@@ -192,7 +191,7 @@
           "Used Next.js as a reverse proxy to hide IPs and resolve CORS issues",
         ],
       },
-      whatToSing: {
+      si: {
         name: "What Should I Sing?",
         period: "2022.10 (Solo project)",
         summary: "Web app for organizing go-to karaoke songs",
@@ -322,7 +321,7 @@
           },
         ],
       },
-      itEldorado: {
+      viewTexportX: {
         title: "IT Eldorado (Blog)",
         intro: [
           "A Notion-powered personal tech blog that automates both content management and deployment.",
@@ -352,7 +351,7 @@
           },
         ],
       },
-      fosslightHubLite: {
+      viewT: {
         title: "FOSSLight Hub Lite",
         intro: [
           "A user-focused, streamlined experience for LG Electronics' open-source licence management platform.",
@@ -380,7 +379,7 @@
           },
         ],
       },
-      mapleAuctionAlarm: {
+      hs: {
         title: "Maple Auction Notifier",
         intro: [
           "Tracks MapleStory auction listings that match custom criteria and pushes Discord notifications in near real time.",
@@ -407,7 +406,7 @@
           { label: "GitHub", href: "https://github.com/Jpark1/maple-alimi" },
         ],
       },
-      whatToSing: {
+      si: {
         title: "What Should I Sing?",
         intro: [
           "A Firebase-powered app that keeps favourite karaoke tracks handy with social login and realtime sync.",
@@ -442,7 +441,7 @@
           },
         ],
       },
-      itEldorado: {
+      viewTexportX: {
         title: "IT Eldorado Blog Screens",
         items: [
           {
@@ -455,7 +454,7 @@
           },
         ],
       },
-      mapleAuctionAlarm: {
+      hs: {
         title: "Maple Auction Notifier Screens",
         items: [
           {

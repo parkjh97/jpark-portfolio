@@ -1,4 +1,4 @@
-﻿const ko = {
+const ko = {
   brand: "Jpark's Portfolio",
   language: {
     current: "한국어",
@@ -149,34 +149,35 @@
           "canvas 기반 문서 pdf 파일 변환, database 자동 백업 batch script 등 부가 기능 개발",
         ],
       },
-      itEldorado: {
-        name: "IT 엘도라도 (블로그)",
-        period: "2024.09 (1人 개인 프로젝트)",
-        summary: "Notion API/DB와 연동하여 개발한 개인 블로그",
+      viewTexportX: {
+        name: "교통·공간 데이터 웹 분석 서비스",
+        period: "2025.04 ~ 2025.05",
+        summary:
+          "도로/행정구역 단위 지표(환경 지표, 교통량 지표 등)를 시각화·분석하는 대화형 웹 서비스",
         details: [
-          "티스토리 플랫폼에서의 불편함을 해소하고자 직접 개발",
-          "별도의 데이터베이스 서버 없이 Notion API/DB와 연동하여 개발",
-          "검색 엔진 최적화(SEO) 고도화 및 검색 엔진 마이그레이션",
-          "무한 스크롤, 방문/조회 수 추적, 댓글/좋아요 등의 커뮤니티 기능 개발",
+          "프런트엔드 아키텍처 설계 및 구현: React 19 + TypeScript + Vite, Zustand 상태관리, DnD Kit로 레이어 정렬/모달 드래그 UX 구축",
+          "GeoServer + 사내 지도엔진(XqbMap) 연동으로 WMS/VectorTile 동적 갱신, 링크/행정구역(view) 토글 지원",
+          "지표 지원: 추정 교통량, VKT, 평균속도, 혼잡(빈도/시간)·혼잡비용, 배출량(CO/NOx/PM/VOC) 등",
+          // "분석 옵션 → 파라미터 자동 조합(buildParsingParam) → 내부 API 호출 → 지도 레이어/범례 자동 생성 흐름 설계",
+          // "레이어 카드 UI: 조건 요약, 보이기/숨기기, 삭제, 드래그 정렬, 스타일(색상 5단계·표출범위·라벨/두께) 즉시 적용",
+          // "다중 맵 비교 토글, 맵별 토스트 알림/전역 로딩 오버레이, SCSS 디자인 토큰으로 일관된 UI 구현",
         ],
       },
-      fosslightHubLite: {
-        name: "FOSSLight Hub Lite",
-        period: "2023.09 - 2023.12 (2人 팀 프로젝트)",
+      viewT: {
+        name: "viewT (교통·공간 데이터 웹 분석 서비스) 유지보수",
+        period: "2024.01 ~ 2025.10",
         summary:
-          "LG 전자의 FOSSLight Hub 웹사이트를 사용자 기능 중심으로 리모델링한 웹사이트",
+          "네비게이션, 휴대푠, 교통카드 빅데이터를 기반으로 분석환경을 제공하는 서비스",
         details: [
-          "LG 전자에서 관리자가 아닌 사용자를 위한 간소화 버전의 웹사이트 개발을 요청",
-          "기존 FOSSLight Hub 프로젝트의 환경에 통합시켜 기존 사용자들의 접근성 확보",
-          "URL 쿼리 파라미터에 연동되는 정렬/필터 기능 및 모달 열기/닫기 기능 구현",
-          "전반적인 UI/UX를 새롭게 설계하여 종합적인 사용성 개선",
+          "년도별 신규 데이터 갱신 프로세스 자동화 및 적용",
+          "OpenLayers + GeoServer 기반의 지도 시각화 유지보수",
+          "신규 데이터 분석 모듈 test 진행",
         ],
       },
-      mapleAuctionAlarm: {
-        name: "메이플 경매장 알리미",
-        period: "2023.08 - 2023.09 (2人 팀 프로젝트)",
-        summary:
-          "메이플스토리의 아이템이 원하는 조건으로 경매장에 올라왔을 때 알림을 받아보기 위한 웹사이트",
+      hs: {
+        name: "화성시 신호 모니터링 시스템",
+        period: "2022.12 - 2023.04",
+        summary: "화성시의 신호 모니터링 시스템 UI 개발 및 유지보수",
         details: [
           "메이플스토리를 좋아하는 한 친구의 아이디어에 착안하여 개발",
           "최신 기술인 React 18 기반의 Next.js 13 학습 및 적용",
@@ -184,11 +185,10 @@
           "Next.js 서버를 리버스 프록시로 활용하여 IP 노출 및 CORS 문제 해결",
         ],
       },
-      whatToSing: {
-        name: "무슨 노래 부르지?",
-        period: "2022.10 (1人 개인 프로젝트)",
-        summary:
-          "노래방을 즐기는 사람이 자주 부르는 노래를 간편하게 관리하는 웹사이트",
+      si: {
+        name: "시흥시 대중교통 분석 시스템",
+        period: "2023.07 ~ 2023.12",
+        summary: "key word 를 작성해 주세요",
         details: [
           "노래방을 갈 때마다 무슨 노래를 부를지 고민하지 않기 위해 개발",
           "OAuth 2.0 기반의 Firebase Auth를 활용하여 소셜 로그인 구현",
@@ -196,9 +196,9 @@
           "Tailwind CSS를 활용하여 별도의 CSS 파일 없이 스타일링",
         ],
       },
-      smartDutchPay: {
-        name: "똑똑하게 N빵하기 (React-Native)",
-        period: "2022.02 (1人 개인 프로젝트)",
+      viewTLog: {
+        name: "빅데이터 가공 로그 대시보드",
+        period: "2024.11 ~ 2025.01",
         summary:
           "복잡한 N빵 상황에 누가 누구에게 얼마를 보내야 하는지 계산해주는 모바일 앱",
         details: [
@@ -316,7 +316,7 @@
           },
         ],
       },
-      itEldorado: {
+      viewTexportX: {
         title: "IT 엘도라도 (블로그)",
         intro: [
           "Notion API를 기반으로 구축한 개인 기술 블로그로, 컨텐츠 관리와 배포 자동화를 동시에 제공하는 것이 목표였습니다.",
@@ -346,8 +346,8 @@
           },
         ],
       },
-      fosslightHubLite: {
-        title: "FOSSLight Hub Lite",
+      viewT: {
+        title: "viewT",
         intro: [
           "LG전자에서 운영하는 오픈소스 라이선스 관리 플랫폼의 사용자 전용 경량 버전입니다.",
         ],
@@ -374,8 +374,8 @@
           },
         ],
       },
-      mapleAuctionAlarm: {
-        title: "메이플 경매장 알리미",
+      hs: {
+        title: "화성시 신호 모니터링 시스템",
         intro: [
           "메이플스토리 경매장에 등록되는 아이템을 조건에 맞춰 실시간으로 추적하고, Discord Webhook으로 알림을 전송하는 서비스입니다.",
         ],
@@ -401,11 +401,29 @@
           { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
         ],
       },
-      whatToSing: {
-        title: "무슨 노래 부르지?",
-        intro: [
-          "Firebase 기반 소셜 로그인과 실시간 DB를 활용하여 즐겨 부르는 곡을 간편히 관리할 수 있는 서비스입니다.",
+
+      si: {
+        title: "시흥시 대중교통 분석 시스템",
+        intro: ["교통카드 데이터를 바탕으로 대중교통을 분석하는 시스템."],
+        sections: [
+          {
+            heading: "주요 기능",
+            bullets: [
+              "Firebase Auth로 카카오/구글 로그인 지원",
+              "곡 즐겨찾기/최근 부른 곡 자동 정렬",
+              "Tailwind CSS만으로 반응형 UI 구성",
+            ],
+          },
         ],
+        links: [
+          { label: "서비스", href: "https://what-to-sing.kr" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+        ],
+      },
+
+      viewTLog: {
+        title: "빅데이터 가공 로그 대시보드",
+        intro: ["교통카드 데이터를 바탕으로 대중교통을 분석하는 시스템."],
         sections: [
           {
             heading: "주요 기능",
@@ -449,29 +467,89 @@
           },
         ],
       },
-      itEldorado: {
-        title: "IT 엘도라도 블로그 화면",
+      viewTexportX: {
+        title: "교통·공간 데이터 웹 분석 서비스 화면",
         items: [
           {
-            src: "https://placehold.co/960x600?text=Landing+Hero",
+            src: "./img/project/view-t-new/view-t-new-001.webp",
             caption: "히어로 영역과 최신 포스트 영역",
           },
           {
-            src: "https://placehold.co/960x600?text=Article+Page",
-            caption: "SEO 최적화된 포스트 상세 페이지",
+            src: "./img/project/view-t-new/view-t-new-002.webp",
+            caption: "히어로 영역과 최신 포스트 영역",
+          },
+          {
+            src: "./img/project/view-t-new/view-t-new-003.webp",
+            caption: "히어로 영역과 최신 포스트 영역",
+          },
+          {
+            src: "./img/project/view-t-new/view-t-new-004.webp",
+            caption: "히어로 영역과 최신 포스트 영역",
           },
         ],
       },
-      mapleAuctionAlarm: {
-        title: "메이플 경매장 알리미 UI",
+      viewT: {
+        title: "교통·공간 데이터 웹 분석 서비스 화면",
         items: [
           {
-            src: "https://placehold.co/960x600?text=Condition+Builder",
+            src: "./img/project/view-t/view-t-001.webp",
+            caption: "히어로 영역과 최신 포스트 영역",
+          },
+          {
+            src: "./img/project/view-t/view-t-002.webp",
+            caption: "히어로 영역과 최신 포스트 영역",
+          },
+          {
+            src: "./img/project/view-t/view-t-003.webp",
+            caption: "히어로 영역과 최신 포스트 영역",
+          },
+        ],
+      },
+      hs: {
+        title: "화성시 신호 모니터링 시스템 UI",
+        items: [
+          {
+            src: "./img/project/hs/hs001.webp",
             caption: "조건 조합과 다중 알림 설정 화면",
           },
           {
-            src: "https://placehold.co/960x600?text=Discord+Webhook",
-            caption: "실시간 Discord 알림 예시",
+            src: "./img/project/hs/hs002.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/hs/hs003.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+        ],
+      },
+      si: {
+        title: "시흥시 대중교통 분석 시스템",
+        items: [
+          {
+            src: "./img/project/si/si001.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si002.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si003.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+        ],
+      },
+
+      viewTLog: {
+        title: "빅데이터 가공 로그 대시보드",
+        items: [
+          {
+            src: "./img/project/view-t-log/view-t-log-001.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/view-t-log/view-t-log-002.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
           },
         ],
       },
