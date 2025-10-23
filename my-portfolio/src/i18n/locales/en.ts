@@ -142,6 +142,10 @@
       readme: "README",
       images: "Images",
     },
+    imageControls: {
+      prev: "Previous image",
+      next: "Next image",
+    },
     items: {
       reactBulkForm: {
         name: "react-bulk-form",

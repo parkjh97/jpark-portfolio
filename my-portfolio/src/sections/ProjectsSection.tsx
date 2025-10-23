@@ -28,6 +28,11 @@ export function ProjectsSection() {
     type: ModalType;
     projectId: string;
   } | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const handleModalClose = () => {
+    setModal(null);
+    setCurrentImageIndex(0);
+  };
 
   const projects = useMemo<ProjectCardData[]>(() => {
     const source = showFeaturedOnly
@@ -54,6 +59,18 @@ export function ProjectsSection() {
   const activeProject = modal
     ? projects.find((project) => project.id === modal.projectId)
     : null;
+  const totalImages =
+    modal?.type === "images" && activeProject?.images
+      ? activeProject.images.items.length
+      : 0;
+  const safeImageIndex = totalImages
+    ? Math.min(currentImageIndex, totalImages - 1)
+    : 0;
+  const currentImage =
+    modal?.type === "images" && totalImages && activeProject?.images
+      ? activeProject.images.items[safeImageIndex]
+      : null;
+  const canNavigateImages = totalImages > 1;
 
   return (
     <section id="projects" className="section section--projects">
@@ -119,11 +136,13 @@ export function ProjectsSection() {
                   <button
                     type="button"
                     className={hasImages ? "is-active" : undefined}
-                    onClick={() =>
-                      hasImages
-                        ? setModal({ type: "images", projectId: project.id })
-                        : undefined
-                    }
+                    onClick={() => {
+                      if (!hasImages) {
+                        return;
+                      }
+                      setCurrentImageIndex(0);
+                      setModal({ type: "images", projectId: project.id });
+                    }}
                     disabled={!hasImages}
                   >
                     {t("projects.ctas.images")}
@@ -137,7 +156,7 @@ export function ProjectsSection() {
       {modal?.type === "readme" && activeProject?.readme ? (
         <Modal
           title={`${activeProject.copy.name} README`}
-          onClose={() => setModal(null)}
+          onClose={handleModalClose}
           width="wide"
         >
           <div className="project-readme">
@@ -173,27 +192,66 @@ export function ProjectsSection() {
           </div>
         </Modal>
       ) : null}
-      {modal?.type === "images" && activeProject?.images ? (
+      {modal?.type === "images" && activeProject?.images && currentImage ? (
         <Modal
           title={activeProject.images.title}
-          onClose={() => setModal(null)}
+          onClose={handleModalClose}
           width="wide"
         >
           <div className="project-images">
-            <div className="project-images__grid">
-              {activeProject.images.items.map((item) => (
-                <figure className="project-images__item" key={item.src}>
-                  <img
-                    src={item.src}
-                    alt={item.caption ?? activeProject.copy.name}
-                  />
-                  {item.caption ? (
-                    <figcaption className="project-images__caption">
-                      {item.caption}
-                    </figcaption>
-                  ) : null}
-                </figure>
-              ))}
+            <div className="project-images__slider">
+              <button
+                type="button"
+                className="project-images__nav project-images__nav--prev"
+                onClick={() =>
+                  setCurrentImageIndex((prev) => {
+                    if (!canNavigateImages) {
+                      return prev;
+                    }
+                    return prev === 0 ? totalImages - 1 : prev - 1;
+                  })
+                }
+                disabled={!canNavigateImages}
+                aria-label={t("projects.imageControls.prev", {
+                  defaultValue: "이전 이미지",
+                })}
+              >
+                {"<"}
+              </button>
+              <figure className="project-images__item">
+                <img
+                  src={currentImage.src}
+                  alt={currentImage.caption ?? activeProject.copy.name}
+                />
+                {currentImage.caption ? (
+                  <figcaption className="project-images__caption">
+                    {currentImage.caption}
+                  </figcaption>
+                ) : null}
+              </figure>
+              <button
+                type="button"
+                className="project-images__nav project-images__nav--next"
+                onClick={() =>
+                  setCurrentImageIndex((prev) => {
+                    if (!canNavigateImages) {
+                      return prev;
+                    }
+                    return prev === totalImages - 1 ? 0 : prev + 1;
+                  })
+                }
+                disabled={!canNavigateImages}
+                aria-label={t("projects.imageControls.next", {
+                  defaultValue: "다음 이미지",
+                })}
+              >
+                {">"}
+              </button>
+            </div>
+            <div className="project-images__controls">
+              <span className="project-images__counter">
+                {safeImageIndex + 1} / {totalImages}
+              </span>
             </div>
           </div>
         </Modal>

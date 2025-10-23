@@ -133,6 +133,10 @@
       readme: "자세히보기",
       images: "이미지",
     },
+    imageControls: {
+      prev: "이전 이미지",
+      next: "다음 이미지",
+    },
     items: {
       erp: {
         name: "사내 자체 ERP 시스템",
@@ -278,7 +282,7 @@
       },
     },
     readmes: {
-      reactBulkForm: {
+      erp: {
         title: "react-bulk-form",
         intro: [
           "React 프로젝트에서 복잡한 Form 상태를 일관된 패턴으로 관리하기 위한 경량 유틸리티입니다.",
@@ -418,6 +422,7 @@
         ],
       },
     },
+
     images: {
       erp: {
         title: "사내 erp 화면",
