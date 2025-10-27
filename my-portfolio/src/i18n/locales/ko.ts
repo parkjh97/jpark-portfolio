@@ -473,6 +473,10 @@ const ko = {
             src: "./img/project/erp/erp005.webp",
             caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
           },
+          {
+            src: "./img/project/erp/erp006.webp",
+            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+          },
         ],
       },
       viewTexportX: {
@@ -543,6 +547,26 @@ const ko = {
           },
           {
             src: "./img/project/si/si003.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si004.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si005.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si006.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si007.webp",
+            caption: "조건 조합과 다중 알림 설정 화면",
+          },
+          {
+            src: "./img/project/si/si008.webp",
             caption: "조건 조합과 다중 알림 설정 화면",
           },
         ],
