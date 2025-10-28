@@ -188,7 +188,7 @@ const ko = {
       si: {
         name: "시흥시 대중교통 분석 시스템",
         period: "2023.07 ~ 2023.12",
-        summary: "key word 를 작성해 주세요",
+        summary: "교통카드 빅데이터를 기반으로 한 시흥시 대중교통 분석 시스템",
         details: [
           "노래방을 갈 때마다 무슨 노래를 부를지 고민하지 않기 위해 개발",
           "OAuth 2.0 기반의 Firebase Auth를 활용하여 소셜 로그인 구현",
@@ -205,11 +205,11 @@ const ko = {
           "Next.js App Router + API Routes로 프론트/백엔드 단일 리포 구성",
           "MySQL 저장 프로시저 기반 집계와 스키마 메타(information_schema)로 조건/라벨 자동 생성",
           "Hadoop/YARN REST 연동으로 작업 진행률·완료 Job 추적 및 타임아웃 처리",
-          "연/월/일 단위 동적 집계와 네트워크별 필터, 평균 처리시간 산출",
+          // "연/월/일 단위 동적 집계와 네트워크별 필터, 평균 처리시간 산출",
           "ApexCharts 멀티 시리즈 차트 + 비율 보기 토글로 추세 비교",
-          "커스텀 테이블: 정렬/CSV 다운로드/한글 초성 검색(hangul‑js) 지원",
-          "경량 상태관리(Zustand), Tailwind로 반응형 UI 구성",
-          "서브패스 배포(basePath=/note/log)와 환경변수 분리로 운영 환경 대응",
+          // "커스텀 테이블: 정렬/CSV 다운로드/한글 초성 검색(hangul‑js) 지원",
+          // "경량 상태관리(Zustand), Tailwind로 반응형 UI 구성",
+          // "서브패스 배포(basePath=/note/log)와 환경변수 분리로 운영 환경 대응",
         ],
       },
       personalityByFriends: {
@@ -592,7 +592,7 @@ const ko = {
     companies: {
       qbicware: {
         logoText: "큐빅웨어",
-        period: "2022.10 - (재직 중)",
+        period: "2022.10 - 2025.10 (3년)",
         description:
           '"교통 빅데이터와 GIS를 활용해 교통 솔루션을 개발하는 IT 기업"',
         roles: {
