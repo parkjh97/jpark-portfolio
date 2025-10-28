@@ -17,7 +17,7 @@ const ko = {
   },
   navToggle: "메뉴 열기/닫기",
   masthead: {
-    keyLine: "사용자의 문제를 정확히 짚어내고 풀스택 사고로 팀의.",
+    keyLine: "기술보다 문제를,기능보다 가치를 추구합니다.",
     profile: {
       photo: {
         alt: "박정현 증명 사진 자리",
