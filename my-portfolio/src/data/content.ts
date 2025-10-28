@@ -316,43 +316,43 @@ const qbicwareHighlights: CareerHighlight[] = [
   },
 ];
 
-const opengalleryHighlights: CareerHighlight[] = [
-  {
-    id: "opengalleryArtistSite",
-    titleKey: "career.companies.opengallery.highlights.artistSite.title",
-    periodKey: "career.companies.opengallery.highlights.artistSite.period",
-    descriptionKey:
-      "career.companies.opengallery.highlights.artistSite.description",
-  },
-  {
-    id: "opengalleryDeploy",
-    titleKey: "career.companies.opengallery.highlights.deploy.title",
-    periodKey: "career.companies.opengallery.highlights.deploy.period",
-    descriptionKey:
-      "career.companies.opengallery.highlights.deploy.description",
-  },
-  {
-    id: "opengalleryCleanup",
-    titleKey: "career.companies.opengallery.highlights.cleanup.title",
-    periodKey: "career.companies.opengallery.highlights.cleanup.period",
-    descriptionKey:
-      "career.companies.opengallery.highlights.cleanup.description",
-  },
-  {
-    id: "opengalleryBeyondDev",
-    titleKey: "career.companies.opengallery.highlights.beyondDev.title",
-    periodKey: "career.companies.opengallery.highlights.beyondDev.period",
-    descriptionKey:
-      "career.companies.opengallery.highlights.beyondDev.description",
-  },
-  {
-    id: "opengalleryBackoffice",
-    titleKey: "career.companies.opengallery.highlights.backoffice.title",
-    periodKey: "career.companies.opengallery.highlights.backoffice.period",
-    descriptionKey:
-      "career.companies.opengallery.highlights.backoffice.description",
-  },
-];
+// const opengalleryHighlights: CareerHighlight[] = [
+//   {
+//     id: "opengalleryArtistSite",
+//     titleKey: "career.companies.opengallery.highlights.artistSite.title",
+//     periodKey: "career.companies.opengallery.highlights.artistSite.period",
+//     descriptionKey:
+//       "career.companies.opengallery.highlights.artistSite.description",
+//   },
+//   {
+//     id: "opengalleryDeploy",
+//     titleKey: "career.companies.opengallery.highlights.deploy.title",
+//     periodKey: "career.companies.opengallery.highlights.deploy.period",
+//     descriptionKey:
+//       "career.companies.opengallery.highlights.deploy.description",
+//   },
+//   {
+//     id: "opengalleryCleanup",
+//     titleKey: "career.companies.opengallery.highlights.cleanup.title",
+//     periodKey: "career.companies.opengallery.highlights.cleanup.period",
+//     descriptionKey:
+//       "career.companies.opengallery.highlights.cleanup.description",
+//   },
+//   {
+//     id: "opengalleryBeyondDev",
+//     titleKey: "career.companies.opengallery.highlights.beyondDev.title",
+//     periodKey: "career.companies.opengallery.highlights.beyondDev.period",
+//     descriptionKey:
+//       "career.companies.opengallery.highlights.beyondDev.description",
+//   },
+//   {
+//     id: "opengalleryBackoffice",
+//     titleKey: "career.companies.opengallery.highlights.backoffice.title",
+//     periodKey: "career.companies.opengallery.highlights.backoffice.period",
+//     descriptionKey:
+//       "career.companies.opengallery.highlights.backoffice.description",
+//   },
+// ];
 
 export const careerCompanies: CareerCompany[] = [
   {

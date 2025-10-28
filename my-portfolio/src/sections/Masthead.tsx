@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useScrollToSection } from "../hooks/useScrollToSection";
 
 import "./Masthead.css";
-import { SectionTitle } from "../components/common/SectionTitle";
+//import { SectionTitle } from "../components/common/SectionTitle";
 
 type MastheadProfileField = {
   label: string;

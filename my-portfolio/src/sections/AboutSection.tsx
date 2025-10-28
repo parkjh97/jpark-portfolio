@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { useScrollToSection } from "../hooks/useScrollToSection";
+//import { useScrollToSection } from "../hooks/useScrollToSection";
 import "./AboutSection.css";
 import { SectionTitle } from "../components/common/SectionTitle";
 type MastheadProfileField = {
@@ -19,7 +19,7 @@ type MastheadProfile = {
 
 export function AboutSection() {
   const { t } = useTranslation();
-  const scrollToAbout = useScrollToSection(80);
+  //const scrollToAbout = useScrollToSection(80);
   const keyLine = t("masthead.keyLine");
   const profileRaw = t("masthead.profile", {
     returnObjects: true,
@@ -40,7 +40,7 @@ export function AboutSection() {
   ).filter(
     (paragraph) => typeof paragraph === "string" && paragraph.trim().length > 0
   );
-  const ctaLabel = t("masthead.cta");
+  //const ctaLabel = t("masthead.cta");
 
   return (
     <section id="about-me" className="section">
