@@ -216,7 +216,19 @@ export function ProjectsSection() {
                   defaultValue: "이전 이미지",
                 })}
               >
-                {"<"}
+                <svg
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
               </button>
               <figure className="project-images__item">
                 <img
@@ -245,7 +257,19 @@ export function ProjectsSection() {
                   defaultValue: "다음 이미지",
                 })}
               >
-                {">"}
+                <svg
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m9 6 6 6-6 6" />
+                </svg>
               </button>
             </div>
             <div className="project-images__controls">

@@ -220,6 +220,10 @@
   box-shadow: none;
 }
 
+.project-images__nav svg {
+  display: block;
+}
+
 .project-images__item {
   margin: 0;
   width: 100%;
