@@ -133,9 +133,13 @@ const ko = {
   projects: {
     title: "PROJECTS",
     filterLabel: "주요 프로젝트만 보기",
+    printTitle: "프로젝트 포트폴리오",
+    printDateLabel: "일시",
+    printTocTitle: "목차",
     ctas: {
       readme: "자세히 보기",
       images: "이미지",
+      pdf: "PDF 다운로드",
     },
     imageControls: {
       prev: "이전 이미지",

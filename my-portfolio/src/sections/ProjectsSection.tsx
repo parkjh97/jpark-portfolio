@@ -12,6 +12,7 @@ import type {
 } from "../types/content";
 
 import "./ProjectsSection.css";
+import "./ProjectsPrint.css";
 
 type ModalType = "readme" | "images";
 
@@ -22,13 +23,17 @@ type ProjectCardData = (typeof projectEntries)[number] & {
 };
 
 export function ProjectsSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const printDate = new Date().toLocaleDateString(i18n.language);
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
   const [modal, setModal] = useState<{
     type: ModalType;
     projectId: string;
   } | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const handlePdfExport = () => {
+    window.print();
+  };
   const handleModalClose = () => {
     setModal(null);
     setCurrentImageIndex(0);
@@ -86,6 +91,13 @@ export function ProjectsSection() {
           >
             <Icon name="filter" size={18} />
             <span>{t("projects.filterLabel")}</span>
+          </button>
+          <button
+            type="button"
+            className="projects-toolbar__pdf"
+            onClick={handlePdfExport}
+          >
+            {t("projects.ctas.pdf")}
           </button>
         </div>
         <div className="projects-grid">
@@ -149,6 +161,106 @@ export function ProjectsSection() {
                   </button>
                 </div>
               </article>
+            );
+          })}
+        </div>
+        <div className="projects-print">
+          <header className="projects-print__header">
+            <div>
+              <h2 className="projects-print__title">
+                {t("projects.printTitle", { defaultValue: "Projects Portfolio" })}
+              </h2>
+              <span className="projects-print__date">
+                {t("projects.printDateLabel", { defaultValue: "Date" })}: {printDate}
+              </span>
+            </div>
+          </header>
+          <section className="projects-print__toc">
+            <h3>{t("projects.printTocTitle", { defaultValue: "Contents" })}</h3>
+            <ol>
+              {projects.map((project, index) => (
+                <li key={`toc-${project.id}`}>
+                  {index + 1}. {project.copy.name}
+                </li>
+              ))}
+            </ol>
+          </section>
+          {projects.map((project, index) => {
+            const printImages = project.images?.items.slice(0, 4) ?? [];
+            return (
+              <article key={`print-${project.id}`} className="project-print-card">
+              <header className="project-print-card__header">
+                <h3 className="project-print-card__title">
+                  {index + 1}. {project.copy.name}
+                </h3>
+                <span className="project-print-card__period">
+                  {project.copy.period}
+                </span>
+              </header>
+              <p className="project-print-card__summary">
+                {project.copy.summary}
+              </p>
+              <ul className="project-print-card__details">
+                {project.copy.details.map((detail) => (
+                  <li key={detail}>{detail}</li>
+                ))}
+              </ul>
+              {printImages.length ? (
+                <section className="project-print-card__images">
+                  <h4 className="project-print-card__section-title">
+                    {project.images?.title}
+                  </h4>
+                  <div className="project-print-card__image-grid">
+                    {printImages.map((image) => (
+                      <figure
+                        key={`${project.id}-${image.src}`}
+                        className="project-print-card__image"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.caption ?? project.copy.name}
+                        />
+                        {image.caption ? (
+                          <figcaption>{image.caption}</figcaption>
+                        ) : null}
+                      </figure>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+              {project.readme ? (
+                <section className="project-print-card__readme">
+                  {project.readme.sections.map((section) => (
+                    <div
+                      key={`${project.id}-${section.heading}`}
+                      className="project-print-card__readme-section"
+                    >
+                      <h4 className="project-print-card__section-title">
+                        {section.heading}
+                      </h4>
+                      <ul>
+                        {section.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  {project.readme.links?.length ? (
+                    <div className="project-print-card__links">
+                      {project.readme.links.map((link) => (
+                        <div
+                          key={`${project.id}-${link.href}`}
+                          className="project-print-card__link"
+                        >
+                          <span>{link.label}</span>
+                          <span>{link.href}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                </section>
+              ) : null}
+            </article>
             );
           })}
         </div>

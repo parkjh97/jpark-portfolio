@@ -129,9 +129,13 @@ const en = {
   projects: {
     title: "PROJECTS",
     filterLabel: "Show featured projects only",
+    printTitle: "Projects Portfolio",
+    printDateLabel: "Date",
+    printTocTitle: "Contents",
     ctas: {
       readme: "Read more",
       images: "Images",
+      pdf: "Download PDF",
     },
     imageControls: {
       prev: "Previous image",
