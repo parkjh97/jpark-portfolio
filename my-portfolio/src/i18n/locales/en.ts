@@ -1,4 +1,4 @@
-﻿const en = {
+const en = {
   brand: "Jpark's Portfolio",
   language: {
     current: "English",
@@ -17,50 +17,42 @@
   },
   navToggle: "Toggle navigation",
   masthead: {
-    keyLine:
-      "Full-stack builder weaving dependable product stories from the very first sentence to every release.",
+    keyLine: "I pursue problems over technology, and value over features.",
     profile: {
       photo: {
         alt: "Portrait photo of Park Jeong Hyeon",
-        initials: "PJH",
+        initials: "Jpark",
+        src: "./img/profile/jpark.webp",
       },
       fields: [
         { label: "Name", value: "Park Jeong Hyeon" },
         { label: "Date of birth", value: "1997.05.06" },
-        {
-          label: "Address",
-          value: "Siheung-si, Gyeonggi-do, Republic of Korea",
-        },
-        {
-          label: "Education",
-          value: "Korea National Open University (Statistics)",
-        },
+        { label: "Address", value: "Siheung-si, Gyeonggi-do" },
+        { label: "Education", value: "Korea National Open University (Statistics)" },
         { label: "E-mail", value: "vlrnrhd02@naver.com" },
-        { label: "Phone", value: "+82 10-6428-5059" },
+        { label: "Phone", value: "010-6428-5059" },
       ],
     },
     detailHeading: "A closer look",
     detail: [
-      "From planning the first sentence of a feature to revisiting it after deployment, I stay close to the customer. With a full-stack mindset I pinpoint the core problem, design predictable flows, and document the path so the entire team can move quickly and safely. My very first campus project showed me how inspiring it is to watch people use the things I build, and I have kept that curiosity ever since.",
-      "Since then I've worked across commerce, communities, and internal platforms, learning to balance deep technical work with tangible user value. I keep validating whether each release still reflects the product's promise so that business goals, team rituals, and user delight stay aligned.",
-      "At Daangn I designed business-profile experiences that bridge local business owners and neighbours. I led the map-tab traffic strategy, rebuilt webview platforms for performance and maintainability, and set up monitoring pipelines so the team can trust every deployment. The best compliment I can receive is when teammates quickly grasp context through my code and docs—small, consistent improvements shape tomorrow's team culture, so I capture learnings, share them openly, and keep moving forward together.",
+      "Over three years across multiple projects, I became most convinced that answers do not live only inside the technology. I started by building fast with JS, CSS, and string templates, learning how browsers behave and where users pause. Later I adopted tools like React, Next.js, Tailwind, and Spring Boot as needed to make products sturdier. For me, technology is not the goal; it is the most efficient way to solve today's problem.",
+      "When starting a project, I first ask, \"Is this truly needed by customers?\" I form a hypothesis, test it in the lightest way, and adjust direction using data and feedback. When confident, I scale the structure, increase reuse, and organize operations and deployment. I followed the same approach for our in-house ERP. By mapping departmental requests into user journeys, I prioritized work and directly designed and implemented much of the system while keeping a rhythm of \"show fast, fix fast.\" That helped us find answers in real workplaces rather than conference rooms, and build a flow the team could trust.",
+      "In collaboration, I often act as a \"translator.\" I translate business language into development language, and development constraints back into customer value so everyone can aim at the same goal. When debates arise, I choose evidence over preference, and I pick the right balance between speed and quality for the current stage. Starting light, then changing boldly when evidence accumulates, this is how I stay steady.",
+      "I will keep technology from becoming the objective itself. I want to remain a developer who puts product and customers first, then chooses the most economical method. Even when environments change or constraints appear, I want to be the person who structures problems and delivers answers through execution—this is the developer I strive to be every day.",
     ],
     cta: "Discover more ↓",
   },
   about: {
     title: "ABOUT ME",
     fields: {
-      name: { label: "Name", value: "Choi Deok Gyeong" },
-      birth: { label: "Birthday", value: "1997.01.17" },
-      location: {
-        label: "Location",
-        value: "Gwanak-gu, Seoul, Republic of Korea",
-      },
-      phone: { label: "Phone", value: "+82 10-4582-5037" },
-      email: { label: "Email", value: "Jpark197@gmail.com" },
+      name: { label: "Name", value: "Park Jeong Hyeon" },
+      birth: { label: "Date of birth", value: "1997.05.06" },
+      location: { label: "Location", value: "Siheung-si, Gyeonggi-do" },
+      phone: { label: "Phone", value: "010-6428-5059" },
+      email: { label: "Email", value: "vlrnrhd02@naver.com" },
       education: {
         label: "Education",
-        value: "Seoul National University (Computer Science and Engineering)",
+        value: "Korea National Open University (Statistics)",
       },
     },
   },
@@ -73,7 +65,7 @@
           htmlCssJs: {
             title: "Markup & Language",
             description:
-              "HTML, CSS(SCSS, Tailwind CSS), JavaScript (ES6), TypeScript",
+              "HTML, CSS(SCSS, Tailwind CSS), JavaScript(ES6), TypeScript",
           },
           reactNext: {
             title: "Application Frameworks",
@@ -125,12 +117,12 @@
     title: "ARCHIVING",
     items: {
       github: {
-        title: "github.com/Jpark1",
-        description: "Primary source-code repository",
+        title: "github.com/hjcdg1",
+        description: "Source code repository",
       },
       blog: {
         title: "it-eldorado.com",
-        description: "Blog for sharing learnings and insights",
+        description: "Blog for studying and sharing knowledge",
       },
     },
   },
@@ -138,7 +130,7 @@
     title: "PROJECTS",
     filterLabel: "Show featured projects only",
     ctas: {
-      readme: "README",
+      readme: "Read more",
       images: "Images",
     },
     imageControls: {
@@ -147,166 +139,168 @@
     },
     items: {
       erp: {
-        name: "react-bulk-form",
-        period: "2025.03",
-        summary: "A lightweight React utility for bulk form-state management",
+        name: "In-house ERP system",
+        period: "2024.11 ~ 2025.01",
+        summary:
+          "Built an in-house ERP on Next.js 14 (App Router) with approvals, attendance, and admin modules",
         details: [
-          "Manage form field values and validation errors together with declarative rules",
-          "Track form or field-level status changes at a glance",
-          "Minimize extra UI layers by abstracting form-state driven UX",
+          "Led the entire lifecycle from requirements analysis to design, development, and deployment",
+          "Developed modules including HR (attendance, leave, time tracking), approvals, and webhook alerts",
+          "Built extras such as canvas-based PDF export and database auto-backup batch scripts",
         ],
       },
       viewTexportX: {
-        name: "IT Eldorado (Blog)",
-        period: "2024.09 (Solo project)",
-        summary: "Personal blog powered by the Notion API and database",
+        name: "Traffic and spatial data web analytics service",
+        period: "2025.04 ~ 2025.05",
+        summary:
+          "Interactive web service that visualizes and analyzes indicators by road and administrative unit",
         details: [
-          "Built to resolve the limitations of my previous Tistory-powered blog",
-          "Eliminated the need for a dedicated DB server by integrating directly with Notion",
-          "Strengthened SEO and executed a search-engine migration plan",
-          "Implemented infinite scroll, visit and view tracking, comments, and reactions",
+          "Designed and implemented frontend architecture: React 19 + TypeScript + Vite, Zustand state, DnD Kit for layer sorting and draggable modals",
+          "Integrated GeoServer with in-house map engine (XqbMap) for dynamic WMS/VectorTile updates and link/administrative view toggles",
+          "Supported indicators such as estimated traffic, VKT, average speed, congestion (frequency/time) and cost, emissions (CO/NOx/PM/VOC)",
         ],
       },
       viewT: {
-        name: "FOSSLight Hub Lite",
-        period: "2023.09 - 2023.12 (2-person team)",
+        name: "viewT maintenance (traffic and spatial data analytics)",
+        period: "2024.01 ~ 2025.10",
         summary:
-          "A streamlined user-facing remake of LG Electronics' FOSSLight Hub",
+          "Service providing an analytics environment based on navigation, mobile, and transit card big data",
         details: [
-          "Commissioned to deliver a simplified experience for non-admin users",
-          "Integrated into the existing FOSSLight Hub environment to preserve accessibility",
-          "Implemented sorting and filtering synchronized with URL query parameters plus modal UX",
-          "Redesigned UI and UX end to end to improve overall usability",
+          "Automated annual data refresh processes and applied new datasets",
+          "Maintained OpenLayers + GeoServer-based map visualization",
+          "Ran tests for new data analysis modules",
         ],
       },
       hs: {
-        name: "Maple Auction Notifier",
-        period: "2023.08 - 2023.09 (2-person team)",
-        summary:
-          "Web app that alerts users when MapleStory auction listings match desired conditions",
+        name: "Hwaseong City signal monitoring system",
+        period: "2022.12 - 2023.04",
+        summary: "UI development and maintenance for Hwaseong City signal monitoring",
         details: [
-          "Inspired by a friend's idea as an avid MapleStory player",
-          "Adopted Next.js 13 on React 18 to explore the latest frontend stack",
-          "Handled API calls and forms with React Query and React Hook Form",
-          "Used Next.js as a reverse proxy to hide IPs and resolve CORS issues",
+          "Built from an idea by a friend who loves MapleStory",
+          "Adopted Next.js 13 on React 18 to learn and apply the latest stack",
+          "Handled API requests and forms with React Query and React Hook Form",
+          "Used the Next.js server as a reverse proxy to hide IPs and resolve CORS issues",
         ],
       },
       si: {
-        name: "What Should I Sing?",
-        period: "2022.10 (Solo project)",
-        summary: "Web app for organizing go-to karaoke songs",
+        name: "Siheung City public transit analytics system",
+        period: "2023.07 ~ 2023.12",
+        summary: "Public transit analytics system based on transit card big data",
         details: [
-          "Created to eliminate the recurring dilemma of choosing karaoke tracks",
+          "Built to avoid the recurring dilemma about what to sing whenever going to karaoke",
           "Implemented social login with Firebase Auth (OAuth 2.0)",
-          "Built queries on top of Firebase Realtime Database's NoSQL model",
-          "Styled the entire experience with Tailwind CSS without separate stylesheets",
+          "Authored queries on Firebase Realtime Database (NoSQL)",
+          "Styled without separate CSS files using Tailwind CSS",
         ],
       },
-      smartDutchPay: {
-        name: "Smart Dutch Pay (React Native)",
-        period: "2022.02 (Solo project)",
+      viewTLog: {
+        name: "Big data processing log dashboard",
+        period: "2024.11 ~ 2025.01",
         summary:
-          "Mobile app that calculates who owes what in complex cost-splitting scenarios",
+          "Dashboard visualizing status and progress of a Hadoop/YARN + MySQL traffic data pipeline",
         details: [
-          "Ported an existing Android native app to React Native for a better UX",
-          "Managed global state with Recoil using React-friendly patterns",
+          "Monorepo with Next.js App Router + API Routes for frontend and backend",
+          "Auto-generated conditions/labels with MySQL stored procedures and schema metadata (information_schema)",
+          "Tracked job progress and handled timeouts via Hadoop/YARN REST integration",
+          "Compared trends using ApexCharts multi-series charts and ratio toggles",
         ],
       },
       personalityByFriends: {
-        name: "How Do Friends See Me?",
+        name: "How do friends see my personality?",
         period: "2021.05 - 2021.06 (2-person team)",
-        summary: "Web app comparing self vs. friend perceptions of personality",
+        summary:
+          "Website that compares how I see my personality vs. how friends see it",
         details: [
-          "Born from the idea of exchanging MBTI tests with friends",
-          "First collaboration with clearly split frontend and backend roles",
-          "Crafted background animation and pentagon charts with requestAnimationFrame and Canvas",
-          "Combined CSR, SSR, and SSG in Next.js to balance performance with UX",
+          "Built from the idea of doing MBTI tests for each other",
+          "First collaboration with clearly split backend roles",
+          "Implemented background animation and pentagon charts with requestAnimationFrame and Canvas",
+          "Designed pages with CSR/SSR/SSG in Next.js to balance usability",
         ],
       },
       onepick: {
-        name: "Onepick Landing Page",
+        name: "Onepick homepage",
         period: "2021.03 (Solo project)",
-        summary: "Marketing site for the Onepick personal training center",
+        summary: "Homepage for the Onepick PT center",
         details: [
-          "Built to support my brother's work at the training center",
-          "Planned UX and SEO to improve local search exposure",
-          "Surfaced fresh blog posts automatically via RSS integration",
+          "Built to support a brother working at the PT center",
+          "Planned SEO and UI/UX for promotional purposes",
+          "Surfaced latest blog posts via RSS",
         ],
       },
       portfolioNext: {
-        name: "Portfolio Website (Next.js)",
+        name: "Portfolio website (Next.js)",
         period: "2021.01 (Solo project)",
-        summary: "Personal portfolio site",
+        summary: "Portfolio website",
         details: [
-          "Migrated from React to Next.js for server-side rendering and better SEO",
-          "Implemented modal history handling with the History API",
+          "Migrated React to Next.js to enable SSR and improve SEO",
+          "Implemented modal back-navigation with the History API",
         ],
       },
       portfolioReact: {
-        name: "Portfolio Website (React)",
+        name: "Portfolio website (React)",
         period: "2021.01 (Solo project)",
-        summary: "Personal portfolio site",
+        summary: "Portfolio website",
         details: [
-          "First dedicated portfolio built from the ground up",
+          "Built a personal portfolio website",
           "Implemented an infinite carousel with vanilla JavaScript only",
         ],
       },
       haetbongWikiReact: {
-        name: "Haetbong Wiki (React & Django)",
+        name: "Haetbong Wiki (React, Django)",
         period: "2020.08 - 2020.11 (Solo project)",
         summary:
-          "Knowledge base for the SNU Haetbit volunteer club, rebuilt with a modern stack",
+          "Website documenting information about the SNU Haetbit volunteer club",
         details: [
-          "Migrated the original Django full-stack app to a React and Django REST combo",
-          "Handled global state and API requests with Redux, Redux Thunk, and Redux Saga",
-          "Manually configured a split frontend/backend deployment on AWS",
+          "Migrated a Django full-stack app to a React + Django combo",
+          "Used Redux, Redux-Thunk, and Redux-Saga for global state and API requests",
+          "Manually built an AWS deployment environment with split frontend/backend",
         ],
       },
       haetbongWikiDjango: {
         name: "Haetbong Wiki (Django full stack)",
         period: "2020.05 - 2020.06 (Solo project)",
         summary:
-          "Knowledge base for the SNU Haetbit volunteer club, delivered as a full-stack app",
+          "Website documenting information about the SNU Haetbit volunteer club",
         details: [
-          "Built because the club lacked a proper archiving website despite its long history",
-          "Gained deeper understanding of the technologies and environment used at work",
-          "Recognized the value of Docker, which later became part of my daily toolkit",
+          "Built because the club lacked a proper archiving site relative to its history and scale",
+          "Deepened understanding of technologies and environments used at work",
+          "Realized the need for Docker, now widely used",
         ],
       },
       snuMoyeo: {
         name: "SNU Moyeo",
         period: "2019.03 - 2019.06 (4-person team)",
         summary:
-          "Campus service that helps SNU students form short or long-term groups effortlessly",
+          "Web service that helps SNU students form and join short- or long-term groups",
         details: [
-          "Created to make it easy to find peers for shared goals within the university",
-          "First ever web development experience (HTML, CSS, JS, React, Django)",
-          "First team project using Git for collaboration",
-          "The pivotal project that set me on the path of web development",
+          "Built to help students find peers for shared goals",
+          "First web development experience (HTML, CSS, JS, React, Django)",
+          "First collaboration experience (Git)",
+          "The pivotal moment that set me on the web development path",
         ],
       },
     },
     readmes: {
-      reactBulkForm: {
+      erp: {
         title: "react-bulk-form",
         intro: [
-          "A lightweight helper that standardises how we manage complex form state in React projects.",
-          "It removes repetitive boilerplate so teams can focus on crafting the right experience.",
+          "A lightweight utility to manage complex form state in React with consistent patterns.",
+          "It abstracts repetitive logic for many fields and validations so developers can focus on core UX.",
         ],
         sections: [
           {
-            heading: "Highlights",
+            heading: "Key features",
             bullets: [
-              "Centralised registry that tracks field values and validation errors together",
-              "Granular subscriptions at form/field level to keep renders predictable",
-              "Framework-agnostic design that plays nicely with React Hook Form, Formik, or custom setups",
+              "Central store to track field values and error states together",
+              "Minimized re-renders through field/form-level subscriptions",
+              "Lightweight design that can be used alongside React Hook Form or Formik",
             ],
           },
           {
-            heading: "Why it exists",
+            heading: "Why it was built",
             bullets: [
-              "Internal projects required dynamic, deeply nested forms that quickly became hard to maintain",
-              "Packaging shared hooks as a distributable library made it easier to roll out across teams",
+              "Form complexity grew rapidly in internal projects with dynamic structures",
+              "Repackaged shared custom hooks into a library for team-wide reuse",
             ],
           },
         ],
@@ -317,58 +311,58 @@
           },
           {
             label: "GitHub",
-            href: "https://github.com/Jpark1/react-bulk-form",
+            href: "https://github.com/hjcdg1/react-bulk-form",
           },
         ],
       },
       viewTexportX: {
         title: "IT Eldorado (Blog)",
         intro: [
-          "A Notion-powered personal tech blog that automates both content management and deployment.",
+          "Personal tech blog built on the Notion API, aimed at automating both content management and deployment.",
         ],
         sections: [
           {
-            heading: "Implementation Notes",
+            heading: "Implementation highlights",
             bullets: [
               "Notion Database sync via Next.js 13 App Router server components",
-              "SEO tuning with Open Graph and structured data",
-              "Automated weekly deploy pipeline with custom traffic/visit dashboards",
+              "SEO tuning with Open Graph and Schema markup",
+              "Automated weekly deploy pipeline and visit/view dashboards",
             ],
           },
           {
             heading: "Outcome",
             bullets: [
-              "Migrated 40+ posts with a refreshed category/tag structure",
-              "Cut publishing time to under five minutes end-to-end",
+              "Migrated 40+ major documents and reorganized categories/tags",
+              "Reduced end-to-end publishing to under five minutes",
             ],
           },
         ],
         links: [
-          { label: "Live site", href: "https://it-eldorado.com" },
+          { label: "Service", href: "https://it-eldorado.com" },
           {
             label: "GitHub",
-            href: "https://github.com/Jpark1/it-eldorado-blog",
+            href: "https://github.com/hjcdg1/it-eldorado-blog",
           },
         ],
       },
       viewT: {
-        title: "FOSSLight Hub Lite",
+        title: "viewT",
         intro: [
-          "A user-focused, streamlined experience for LG Electronics' open-source licence management platform.",
+          "A lightweight, user-focused version of LG Electronics' open-source license management platform.",
         ],
         sections: [
           {
             heading: "Role",
             bullets: [
-              "Led the Next.js frontend build",
-              "Defined Swagger-backed API specs and integration test scenarios",
+              "Led Next.js-based frontend development",
+              "Defined Swagger-backed API documentation and integration test scenarios",
             ],
           },
           {
-            heading: "Result",
+            heading: "Results",
             bullets: [
-              "Reimagined sorting, filtering, and modal flows for non-admin users",
-              "Designed a coexistence deployment plan to minimise migration risk",
+              "Redefined key UX flows such as sorting, filtering, and modals",
+              "Minimized migration costs by planning coexistence with the existing project",
             ],
           },
         ],
@@ -380,90 +374,203 @@
         ],
       },
       hs: {
-        title: "Maple Auction Notifier",
+        title: "Hwaseong City signal monitoring system",
         intro: [
-          "Tracks MapleStory auction listings that match custom criteria and pushes Discord notifications in near real time.",
+          "A service that tracks MapleStory auction listings in real time and sends Discord webhook alerts.",
         ],
         sections: [
           {
-            heading: "Key Work",
+            heading: "Key implementation",
             bullets: [
-              "Used the Next.js server as a reverse proxy to bypass CORS issues when calling the auction API",
-              "Applied React Query caching to minimise duplicate traffic",
-              "Designed a UX that lets players combine multiple alert rules with ease",
+              "Resolved CORS issues by using the Next.js server as a proxy for auction API calls",
+              "Reduced traffic with React Query caching for identical conditions",
+              "Designed a form UX that supports multi-condition alert rules",
             ],
           },
           {
-            heading: "Operations",
+            heading: "Operational experience",
             bullets: [
-              "Added retry/backoff when Discord webhook responses were delayed",
-              "Documented daily alert traffic metrics for monitoring",
+              "Added retry/backoff when Discord alerts were delayed",
+              "Authored monitoring metrics based on daily alert traffic",
             ],
           },
         ],
         links: [
-          { label: "Live site", href: "https://maplealimi.com" },
-          { label: "GitHub", href: "https://github.com/Jpark1/maple-alimi" },
+          { label: "Service", href: "https://maplealimi.com" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
         ],
       },
       si: {
-        title: "What Should I Sing?",
-        intro: [
-          "A Firebase-powered app that keeps favourite karaoke tracks handy with social login and realtime sync.",
-        ],
+        title: "Siheung City public transit analytics system",
+        intro: ["A system that analyzes public transit based on transit card data."],
         sections: [
           {
-            heading: "Key Features",
+            heading: "Key features",
             bullets: [
-              "Supports Google and Kakao login via Firebase Auth",
-              "Automatic ordering for favourites and recently sung tracks",
-              "Responsive UI styled entirely with Tailwind CSS",
+              "Supports Kakao and Google login via Firebase Auth",
+              "Auto-sorts favorites and recently sung songs",
+              "Responsive UI built entirely with Tailwind CSS",
             ],
           },
         ],
         links: [
-          { label: "Live site", href: "https://what-to-sing.kr" },
-          { label: "GitHub", href: "https://github.com/Jpark1/what-to-sing" },
+          { label: "Service", href: "https://what-to-sing.kr" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+        ],
+      },
+      viewTLog: {
+        title: "Big data processing log dashboard",
+        intro: [
+          "Dashboard visualizing status and progress of a Hadoop/YARN + MySQL traffic data pipeline.",
+        ],
+        sections: [
+          {
+            heading: "Key features",
+            bullets: [
+              "Supports Kakao and Google login via Firebase Auth",
+              "Auto-sorts favorites and recently sung songs",
+              "Responsive UI built entirely with Tailwind CSS",
+            ],
+          },
+        ],
+        links: [
+          { label: "Service", href: "https://what-to-sing.kr" },
+          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
         ],
       },
     },
     images: {
-      reactBulkForm: {
-        title: "react-bulk-form Screens",
+      erp: {
+        title: "In-house ERP screens",
         items: [
           {
-            src: "https://placehold.co/960x600?text=Form+State+Panel",
-            caption: "Inspecting form state and validation at a glance",
+            src: "./img/project/erp/erp001.webp",
+            caption: "Check field values and errors at a glance in the status panel",
           },
           {
-            src: "https://placehold.co/960x600?text=TypeScript+API",
-            caption: "Type-safe hooks and helpers exposed by the library",
+            src: "./img/project/erp/erp002.webp",
+            caption: "Check field values and errors at a glance in the status panel",
+          },
+          {
+            src: "./img/project/erp/erp003.webp",
+            caption: "Check field values and errors at a glance in the status panel",
+          },
+          {
+            src: "./img/project/erp/erp004.webp",
+            caption: "Check field values and errors at a glance in the status panel",
+          },
+          {
+            src: "./img/project/erp/erp005.webp",
+            caption: "Check field values and errors at a glance in the status panel",
+          },
+          {
+            src: "./img/project/erp/erp006.webp",
+            caption: "Check field values and errors at a glance in the status panel",
           },
         ],
       },
       viewTexportX: {
-        title: "IT Eldorado Blog Screens",
+        title: "Traffic and spatial data analytics screens",
         items: [
           {
-            src: "https://placehold.co/960x600?text=Landing+Hero",
-            caption: "Landing hero with highlights and featured posts",
+            src: "./img/project/view-t-new/view-t-new-001.webp",
+            caption: "Hero area and latest posts section",
           },
           {
-            src: "https://placehold.co/960x600?text=Article+Detail",
-            caption: "Article detail page with SEO-friendly layout",
+            src: "./img/project/view-t-new/view-t-new-002.webp",
+            caption: "Hero area and latest posts section",
+          },
+          {
+            src: "./img/project/view-t-new/view-t-new-003.webp",
+            caption: "Hero area and latest posts section",
+          },
+          {
+            src: "./img/project/view-t-new/view-t-new-004.webp",
+            caption: "Hero area and latest posts section",
+          },
+        ],
+      },
+      viewT: {
+        title: "Traffic and spatial data analytics screens",
+        items: [
+          {
+            src: "./img/project/view-t/view-t-001.webp",
+            caption: "Hero area and latest posts section",
+          },
+          {
+            src: "./img/project/view-t/view-t-002.webp",
+            caption: "Hero area and latest posts section",
+          },
+          {
+            src: "./img/project/view-t/view-t-003.webp",
+            caption: "Hero area and latest posts section",
           },
         ],
       },
       hs: {
-        title: "Maple Auction Notifier Screens",
+        title: "Hwaseong City signal monitoring UI",
         items: [
           {
-            src: "https://placehold.co/960x600?text=Condition+Builder",
-            caption: "Building multi-step alert rules for auction items",
+            src: "./img/project/hs/hs001.webp",
+            caption: "Condition builder and multi-alert settings screen",
           },
           {
-            src: "https://placehold.co/960x600?text=Discord+Alert",
-            caption: "Discord webhook notification example",
+            src: "./img/project/hs/hs002.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/hs/hs003.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+        ],
+      },
+      si: {
+        title: "Siheung City public transit analytics system",
+        items: [
+          {
+            src: "./img/project/si/si001.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si002.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si003.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si004.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si005.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si006.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si007.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/si/si008.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+        ],
+      },
+      viewTLog: {
+        title: "Big data processing log dashboard",
+        items: [
+          {
+            src: "./img/project/view-t-log/view-t-log-001.webp",
+            caption: "Condition builder and multi-alert settings screen",
+          },
+          {
+            src: "./img/project/view-t-log/view-t-log-002.webp",
+            caption: "Condition builder and multi-alert settings screen",
           },
         ],
       },
@@ -472,83 +579,40 @@
   career: {
     title: "CAREER",
     companies: {
-      daangn: {
-        logoText: "DAANGN",
-        period: "Nov 2024 - Present",
+      qbicware: {
+        logoText: "Qbicware",
+        period: "2022.10 - 2025.10 (3 years)",
         description:
-          '"Building warmer neighborhoods by bringing neighbors closer"',
+          '"An IT company developing traffic solutions using transportation big data and GIS"',
         roles: {
           frontend: "Frontend development",
           backend: "Backend development",
         },
         highlights: {
-          threeTab: {
-            title: "Daangn 3-tab service built on business profiles",
-            period: "1H 2025 - Ongoing",
+          erp: {
+            title: "In-house ERP system development",
+            period: "2H 2024 - 1H 2025",
             description:
-              "Developing services that drive traffic to the map tab using business profile data (Frontend & Backend)",
+              "Developed an in-house ERP system (approvals, HR, attendance) (FULLSTACK)",
           },
-          webviewPlatform: {
-            title: "Business profile webview platform",
-            period: "1H 2024",
+          viewT: {
+            title: "View-T system maintenance",
+            period: "1H 2024 ~ 1H 2025",
             description:
-              "Improved productivity, stability, and performance of the business profile webview platform (Frontend)",
+              "Big data processing monitoring solution and annual data refresh (FULLSTACK)",
           },
           localBusiness: {
-            title: "Local business experience improvements",
-            period: "2H 2024",
+            title: "Traffic big-data visualization solution",
+            period: "2H 2022 ~ 2H 2025",
             description:
-              "Built features that connect local owners with neighbors more effectively through business profiles (Frontend)",
-          },
-        },
-      },
-      opengallery: {
-        logoText: "OPEN GALLERY",
-        period: "Aug 2019 - Sep 2023 (4 yrs 1 mo)",
-        description:
-          "Art rental platform connecting customers who rent artwork with the artists who create it",
-        roles: {
-          development: "Next.js & Django development",
-          techLead: "Technical leadership",
-          backoffice: "Back-office planning",
-        },
-        highlights: {
-          artistSite: {
-            title: "Artist website revamp (Next.js)",
-            period: "1H 2022",
-            description:
-              "Migrated the artist microsite from a Django full-stack app to a Next.js + Django REST architecture",
-          },
-          deploy: {
-            title: "Deployment platform migration (AWS ECS)",
-            period: "2H 2021",
-            description:
-              "Moved deployments from AWS Elastic Beanstalk to Dockerized AWS ECS and aligned local environments",
-          },
-          cleanup: {
-            title: "Large-scale server cleanup initiative",
-            period: "Mid 2020 - Mid 2021",
-            description:
-              "Led a company-wide cleanup to refactor and stabilize the entire backend codebase",
-          },
-          beyondDev: {
-            title: "Responsibilities beyond feature work",
-            period: "Mid 2020 - Departure",
-            description:
-              "Handled hiring, mentoring, and code reviews while fostering documentation and knowledge sharing",
-          },
-          backoffice: {
-            title: "Back-office ownership",
-            period: "Late 2019 - Departure",
-            description:
-              "Redesigned and implemented the Django-based back office to dramatically improve operational efficiency",
+              "Developed signal monitoring and public transit monitoring systems (FULLSTACK)",
           },
         },
       },
     },
   },
   footer: {
-    caption: "© 2021. Choi Deok Gyeong. All rights reserved.",
+    caption: "© 2025. Park Jeong Hyeon. All rights reserved.",
   },
 };
 

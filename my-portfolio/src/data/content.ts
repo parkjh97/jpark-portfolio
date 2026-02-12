@@ -11,9 +11,9 @@ import type {
 export const navigationLinks: NavigationLink[] = [
   { id: "about", labelKey: "nav.about", targetId: "about-me" },
   { id: "skills", labelKey: "nav.skills", targetId: "skills" },
-  { id: "archiving", labelKey: "nav.archiving", targetId: "archiving" },
-  { id: "projects", labelKey: "nav.projects", targetId: "projects" },
+  //{ id: "archiving", labelKey: "nav.archiving", targetId: "archiving" },
   { id: "career", labelKey: "nav.career", targetId: "career" },
+  { id: "projects", labelKey: "nav.projects", targetId: "projects" },
 ];
 
 export const aboutFields: AboutField[] = [
@@ -143,7 +143,7 @@ export const archiveLinks: ArchiveLink[] = [
 export const projectEntries: ProjectEntry[] = [
   {
     id: "erp",
-    url: "https://www.npmjs.com/package/react-bulk-form",
+    url: "",//"https://www.npmjs.com/package/react-bulk-form",,
     repoUrl: "https://github.com/hjcdg1/react-bulk-form",
     readmeKey: "projects.readmes.erp",
     imagesKey: "projects.images.erp",
