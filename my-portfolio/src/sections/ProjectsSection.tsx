@@ -107,6 +107,7 @@ export function ProjectsSection() {
         </div>
         <div className="projects-grid">
           {projects.map((project) => {
+            /**ReadMe 주석 */
             const hasReadme = Boolean(project.readme);
             const hasImages = Boolean(project.images);
             return (

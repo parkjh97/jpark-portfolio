@@ -467,27 +467,27 @@ const ko = {
         items: [
           {
             src: "./img/project/erp/erp001.webp",
-            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+            caption: "erp 시스템 메인 화면",
           },
           {
             src: "./img/project/erp/erp002.webp",
-            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+            caption: "회원별 연차정보 확인 화면",
           },
           {
             src: "./img/project/erp/erp003.webp",
-            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+            caption: "회원별 근태정보 확인 화면",
           },
           {
             src: "./img/project/erp/erp004.webp",
-            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+            caption: "결재 문서 작성 화면",
           },
           {
             src: "./img/project/erp/erp005.webp",
-            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+            caption: "결제 문서 양식 설정 화면",
           },
           {
             src: "./img/project/erp/erp006.webp",
-            caption: "상태 패널을 통해 필드별 값과 오류를 한 눈에 확인",
+            caption: "휴일 설정 화면",
           },
         ],
       },
@@ -496,19 +496,19 @@ const ko = {
         items: [
           {
             src: "./img/project/view-t-new/view-t-new-001.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "분석조건별 주제도 표출 화면",
           },
           {
             src: "./img/project/view-t-new/view-t-new-002.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "클릭한 도로의 세부정보 표출 화면",
           },
           {
             src: "./img/project/view-t-new/view-t-new-003.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "듀얼맵 비교 화면",
           },
           {
             src: "./img/project/view-t-new/view-t-new-004.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "분석 지표 선택 화면",
           },
         ],
       },
@@ -517,15 +517,15 @@ const ko = {
         items: [
           {
             src: "./img/project/view-t/view-t-001.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "view-T 메인 페이지",
           },
           {
             src: "./img/project/view-t/view-t-002.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "분석조건별 주제도 표출 화면",
           },
           {
             src: "./img/project/view-t/view-t-003.webp",
-            caption: "히어로 영역과 최신 포스트 영역",
+            caption: "Light-T 분석 페이지",
           },
         ],
       },
@@ -534,15 +534,15 @@ const ko = {
         items: [
           {
             src: "./img/project/hs/hs001.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "스마트 교차로 모니터링 대시보드 화면",
           },
           {
             src: "./img/project/hs/hs002.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "실시간 데이터 업로드 현황 분석 화면",
           },
           {
             src: "./img/project/hs/hs003.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "스마트 교차로 모니터링 분석 화면",
           },
         ],
       },
@@ -551,35 +551,31 @@ const ko = {
         items: [
           {
             src: "./img/project/si/si001.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "운영 및 이용현황 대시보드 화면",
           },
           {
             src: "./img/project/si/si002.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "수익금 정보 대시보드 화면",
           },
           {
             src: "./img/project/si/si003.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "수요 공급 분석 대시보드 화면",
           },
-          {
-            src: "./img/project/si/si004.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
-          },
-          {
-            src: "./img/project/si/si005.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
-          },
+          // {
+          //   src: "./img/project/si/si004.webp",
+          //   caption: "조건 조합과 다중 알림 설정 화면",
+          // },
+          // {
+          //   src: "./img/project/si/si005.webp",
+          //   caption: "조건 조합과 다중 알림 설정 화면",
+          // },
           {
             src: "./img/project/si/si006.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "대중교통 통합 검색 분석 화면",
           },
           {
             src: "./img/project/si/si007.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
-          },
-          {
-            src: "./img/project/si/si008.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
+            caption: "선택 지역을 경유하는 노선 분석 화면",
           },
         ],
       },
