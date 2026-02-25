@@ -406,40 +406,52 @@ const en = {
       },
       si: {
         title: "Siheung City public transit analytics system",
-        intro: ["A system that analyzes public transit based on transit card data."],
+        intro: [
+          "A web system that analyzes and visualizes public transit status in Siheung City based on transit card big data.",
+          "Supports transport policy decision-making by presenting boarding/alighting data by route, stop, and time slot on maps and charts.",
+        ],
         sections: [
           {
-            heading: "Key features",
+            heading: "Key implementations",
             bullets: [
-              "Supports Kakao and Google login via Firebase Auth",
-              "Auto-sorts favorites and recently sung songs",
-              "Responsive UI built entirely with Tailwind CSS",
+              "Built a visualization system for 10+ transit indicators (traffic volume, boarding/alighting by time slot and route) using transit card big data",
+              "Rendered large-scale GeoJSON (up to 20,000 features) map layers using Deck.gl",
+              "Processed and integrated ~106 routes, 3,000 stops, and ~10,000 boarding/alighting records into the dashboard",
             ],
           },
-        ],
-        links: [
-          { label: "Service", href: "https://what-to-sing.kr" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+          {
+            heading: "Technical highlights",
+            bullets: [
+              "Developed data query APIs with Spring + MyBatis for large-scale transit datasets",
+              "Integrated GeoServer WMS/WFS for dynamic spatial data layer rendering on the map",
+              "Interactive map visualization using Deck.gl ScatterplotLayer and PathLayer",
+            ],
+          },
         ],
       },
       viewTLog: {
         title: "Big data processing log dashboard",
         intro: [
-          "Dashboard visualizing status and progress of a Hadoop/YARN + MySQL traffic data pipeline.",
+          "A real-time monitoring dashboard that visualizes the status and progress of a Hadoop/YARN + MySQL traffic data pipeline.",
+          "Built as a single repository combining frontend and backend using Next.js App Router.",
         ],
         sections: [
           {
-            heading: "Key features",
+            heading: "Key implementations",
             bullets: [
-              "Supports Kakao and Google login via Firebase Auth",
-              "Auto-sorts favorites and recently sung songs",
-              "Responsive UI built entirely with Tailwind CSS",
+              "Single-repo setup combining frontend and backend with Next.js App Router + API Routes",
+              "Automated condition/label generation using MySQL stored procedures and information_schema metadata",
+              "Real-time job progress tracking and timeout handling via Hadoop/YARN REST API integration",
             ],
           },
-        ],
-        links: [
-          { label: "Service", href: "https://what-to-sing.kr" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+          {
+            heading: "Technical highlights",
+            bullets: [
+              "Multi-series chart with ratio-view toggle using ApexCharts for pipeline trend comparison",
+              "Global dashboard filter state management with Zustand",
+              "Responsive layout built with Tailwind CSS",
+            ],
+          },
         ],
       },
     },
