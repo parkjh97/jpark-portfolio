@@ -143,8 +143,8 @@ export const archiveLinks: ArchiveLink[] = [
 export const projectEntries: ProjectEntry[] = [
   {
     id: "erp",
-    url: "",//"https://www.npmjs.com/package/react-bulk-form",,
-    repoUrl: "https://github.com/hjcdg1/react-bulk-form",
+    //url: "",//"https://www.npmjs.com/package/react-bulk-form",,
+    //repoUrl: "https://github.com/hjcdg1/react-bulk-form",
     readmeKey: "projects.readmes.erp",
     imagesKey: "projects.images.erp",
     techStack: [
@@ -159,7 +159,7 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "si",
-    url: "http://103.7.190.62:8083/",
+    //url: "http://103.7.190.62:8083/",
     readmeKey: "projects.readmes.si",
     imagesKey: "projects.images.si",
     techStack: [
@@ -175,8 +175,8 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "viewT",
-    url: "https://viewt.ktdb.go.kr/cong/map/page.do",
-    repoUrl: "https://github.com/opensourceway/FOSSLight-Hub",
+    //url: "https://viewt.ktdb.go.kr/cong/map/page.do",
+    //repoUrl: "https://github.com/opensourceway/FOSSLight-Hub",
     readmeKey: "projects.readmes.viewT",
     imagesKey: "projects.images.viewT",
     techStack: [
@@ -193,8 +193,8 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "hs",
-    url: "https://maplealimi.com",
-    repoUrl: "https://github.com/hjcdg1/maple-alimi",
+    url: "",
+    //repoUrl: "https://github.com/hjcdg1/maple-alimi",
     readmeKey: "projects.readmes.hs",
     imagesKey: "projects.images.hs",
     techStack: [
@@ -210,7 +210,7 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "viewTexportX",
-    url: "https://it-eldorado.com",
+    //url: "https://it-eldorado.com",
     repoUrl: "https://github.com/hjcdg1/it-eldorado-blog",
     readmeKey: "projects.readmes.viewTexportX",
     imagesKey: "projects.images.viewTexportX",
@@ -226,7 +226,7 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "viewTLog",
-    url: "https://viewt.ktdb.go.kr/note/log/main",
+    //url: "https://viewt.ktdb.go.kr/note/log/main",
     readmeKey: "projects.readmes.viewTLog",
     imagesKey: "projects.images.viewTLog",
     techStack: [

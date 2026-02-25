@@ -35,7 +35,7 @@ const ko = {
     },
     detailHeading: "세부 소개",
     detail: [
-      "3년 동안 여러 프로젝트를 거치며 확신하게 된 건, 정답이 기술 안에만 있지는 않다는 사실이었습니다.", 
+      "여러 프로젝트를 거치며 확신하게 된 건, 정답이 기술 안에만 있지는 않다는 사실이었습니다.", 
       "프로젝트 경험이 쌓일수록 느낀 것은, 문제는 코드만으로 해결되지 않는다는 사실이었습니다.",
       "고객의 요구를 이해하고, 동료들과 같은 그림을 그리며, 때로는 단순한 UX 수정 하나로 더 큰 문제를 풀어내는 과정이 중요했습니다.",
       "기술은 그 과정에서 선택되는 도구일 뿐이며, 저는 항상 팀과 사용자 사이의 공통 언어를 만드는 데 집중해 왔습니다.",
@@ -154,7 +154,7 @@ const ko = {
         details: [
           "요구사항 분석부터 설계·개발·배포까지 전 단계 주도",
           "인사 관리 (출퇴, 휴가, 근태), 전자 결재, webhook 알림 등 다양한 모듈 개발",
-          "canvas 기반 문서 pdf 파일 변환, database 자동 백업 스케줄러 등 부가 기능 개발",
+          "Next.auth 를 사용한 유저별 Session 관리, WebHook을 사용하여 사내 메세지툴 알림 연동 경험",
         ],
       },
       viewTexportX: {
@@ -177,9 +177,9 @@ const ko = {
         summary:
           "네비게이션, 휴대폰, 교통카드 빅데이터를 기반으로 분석환경을 제공하는 서비스",
         details: [
-          "신규 데이터 갱신 프로세스 자동화 모듈 개발",
-          "OpenLayers + GeoServer 기반의 지도 시각화 유지보수",
-          "신규 데이터 분석 모듈 test 진행",
+          "연도별 대용량 공간 데이터 수집·정제 파이프라인 개선 및 MyBatis 기반 Batch Insert 최적화를 통한 DB 처리 성능 개선",
+          "OpenLayers + GeoServer 기반 지도 시각화 로직 유지보수 및 WMS/WFS 레이어 렌더링 최적화",
+          "기존 JavaScript 기반 UI 기능 개선 및 CSS 리팩토링",
         ],
       },
       hs: {
@@ -189,11 +189,6 @@ const ko = {
         details: [
           "주요 교차로 교통량 및 속도, 신호 주기 데이터 조회 api 개발 및 시각화",
           "실시간 스마트 교차로 데이터 업로드 현황 모니터링 대시보드 개발",
-          "",
-          // "메이플스토리를 좋아하는 한 친구의 아이디어에 착안하여 개발",
-          // "최신 기술인 React 18 기반의 Next.js 13 학습 및 적용",
-          // "React-Query, React-Hook-Form을 활용하여 API 요청 및 입력 폼 처리",
-          // "Next.js 서버를 리버스 프록시로 활용하여 IP 노출 및 CORS 문제 해결",
         ],
       },
       si: {
@@ -201,10 +196,9 @@ const ko = {
         period: "2023.07 ~ 2023.12",
         summary: "교통카드 빅데이터를 기반으로 한 시흥시 대중교통 분석 시스템",
         details: [
-          "교통카드 빅데이터를 활용하여 대중교통 이용 패턴 분석 및 시각화",
-          "버스 승하차 데이터 기반 혼잡도 분석 및 시각화",
-          "NoSQL 기반의 Firebase Realtime Database를 활용하여 쿼리 작성",
-          "Tailwind CSS를 활용하여 별도의 CSS 파일 없이 스타일링",
+          "교통카드 빅데이터를 활용하여 교통량·시간대·노선별 승 하차 분석 등 10개 이상 교통 지표 시각화 시스템 구축",
+          "Deck.gl 기반 대규모 GeoJSON(최대 20,000개 피처) 지도 시각화 구현",
+          "약 106개 노선, 3000개의 정류장, 약 1만 건의 승하차 데이터 처리 및 분석",
         ],
       },
       viewTLog: {
@@ -216,88 +210,11 @@ const ko = {
           "Next.js App Router + API Routes로 프론트/백엔드 단일 리포 구성",
           "MySQL 저장 프로시저 기반 집계와 스키마 메타(information_schema)로 조건/라벨 자동 생성",
           "Hadoop/YARN REST 연동으로 작업 진행률·완료 Job 추적 및 타임아웃 처리",
-          // "연/월/일 단위 동적 집계와 네트워크별 필터, 평균 처리시간 산출",
           "ApexCharts 멀티 시리즈 차트 + 비율 보기 토글로 추세 비교",
-          // "커스텀 테이블: 정렬/CSV 다운로드/한글 초성 검색(hangul‑js) 지원",
-          // "경량 상태관리(Zustand), Tailwind로 반응형 UI 구성",
-          // "서브패스 배포(basePath=/note/log)와 환경변수 분리로 운영 환경 대응",
         ],
       },
       
-      personalityByFriends: {
-        name: "친구가 보는 나의 성격은?",
-        period: "2021.05 - 2021.06 (2人 팀 프로젝트)",
-        summary:
-          "내가 생각하는 나의 성격과 친구가 생각하는 나의 성격을 비교할 수 있는 웹사이트",
-        details: [
-          "지인과 서로 MBTI 검사를 해주면서 얻은 아이디어를 바탕으로 개발",
-          "처음으로 역할을 명확히 구분하여 백 엔드 개발자와의 협업 경험",
-          "requestAnimationFrame, canvas API를 활용하여 배경 애니메이션 및 오각형 그래프 구현",
-          "Next.js의 CSR, SSR, SSG에 대한 이해를 바탕으로 사용성을 고려한 페이지 구성",
-        ],
-      },
-      onepick: {
-        name: "Onepick 홈페이지",
-        period: "2021.03 (1人 개인 프로젝트)",
-        summary: "Onepick PT 센터의 홈페이지",
-        details: [
-          "친형이 근무하는 PT 센터에 도움을 주고 싶어 개발",
-          "센터 홍보 목적의 검색 엔진 최적화 및 UI/UX 설계",
-          "RSS를 활용하여 센터 블로그의 최신 포스팅 노출",
-        ],
-      },
-      portfolioNext: {
-        name: "포트폴리오 웹사이트 (Next.js)",
-        period: "2021.01 (1人 개인 프로젝트)",
-        summary: "포트폴리오 웹사이트",
-        details: [
-          "React를 Next.js로 마이그레이션하여 서버 사이드 렌더링을 통해 검색 엔진 최적화",
-          "History API를 활용하여 모달의 뒤로가기 구현",
-        ],
-      },
-      portfolioReact: {
-        name: "포트폴리오 웹사이트 (React)",
-        period: "2021.01 (1人 개인 프로젝트)",
-        summary: "포트폴리오 웹사이트",
-        details: [
-          "나만의 포트폴리오를 위한 웹사이트 개발",
-          "라이브러리 없이 Vanilla JS로 무한 캐러셀 구현",
-        ],
-      },
-      haetbongWikiReact: {
-        name: "햇봉 위키 (React, Django)",
-        period: "2020.08 - 2020.11 (1人 개인 프로젝트)",
-        summary:
-          "서울대학교 중앙 동아리 햇빛봉사단에 관한 유익한 정보들을 문서화하여 제공해주는 웹사이트",
-        details: [
-          "Django 풀 스택을 React와 Django의 조합으로 마이그레이션",
-          "Redux, Redux-Thunk, Redux-Saga를 활용한 전역 상태 관리 및 API 요청 처리",
-          "풀스택과 백 엔드가 분리된 AWS 배포 환경 수동 구축",
-        ],
-      },
-      haetbongWikiDjango: {
-        name: "햇봉 위키 (Django 풀 스택)",
-        period: "2020.05 - 2020.06 (1人 개인 프로젝트)",
-        summary:
-          "서울대학교 중앙 동아리 햇빛봉사단에 관한 유익한 정보들을 문서화하여 제공해주는 웹사이트",
-        details: [
-          "동아리의 역사와 규모에 비해 제대로 된 아카이빙 웹사이트가 없었기 때문에 직접 개발",
-          "회사에서 사용하는 기술과 환경에 대한 심도 있는 이해",
-          "오늘날 많이 사용하는 Docker의 필요성을 느낀 계기",
-        ],
-      },
-      snuMoyeo: {
-        name: "SNU Moyeo",
-        period: "2019.03 - 2019.06 (4人 팀 프로젝트)",
-        summary:
-          "서울대학교 학생들이 쉽게 임시적/장기적 모임을 구성하고 이에 참여할 수 있도록 돕는 웹 서비스",
-        details: [
-          "교내에서 어떠한 목적을 함께 할 사람을 간편하게 찾도록 돕기 위해 개발",
-          "최초 웹 개발 경험 (HTML, CSS, JS, React, Django)",
-          "최초 협업 경험 (Git)",
-          "웹 개발의 길을 걷게 만든 결정적인 계기",
-        ],
-      },
+     
     },
     readmes: {
       erp: {
@@ -323,16 +240,16 @@ const ko = {
             ],
           },
         ],
-        links: [
-          {
-            label: "NPM",
-            href: "https://www.npmjs.com/package/react-bulk-form",
-          },
-          {
-            label: "GitHub",
-            href: "https://github.com/hjcdg1/react-bulk-form",
-          },
-        ],
+        // links: [
+        //   {
+        //     label: "NPM",
+        //     href: "https://www.npmjs.com/package/react-bulk-form",
+        //   },
+        //   {
+        //     label: "GitHub",
+        //     href: "https://github.com/hjcdg1/react-bulk-form",
+        //   },
+        // ],
       },
       viewTexportX: {
         title: "IT 엘도라도 (블로그)",
@@ -356,13 +273,13 @@ const ko = {
             ],
           },
         ],
-        links: [
-          { label: "서비스", href: "https://it-eldorado.com" },
-          {
-            label: "GitHub",
-            href: "https://github.com/hjcdg1/it-eldorado-blog",
-          },
-        ],
+        // links: [
+        //   { label: "서비스", href: "https://it-eldorado.com" },
+        //   {
+        //     label: "GitHub",
+        //     href: "https://github.com/hjcdg1/it-eldorado-blog",
+        //   },
+        // ],
       },
       viewT: {
         title: "viewT",
@@ -385,12 +302,12 @@ const ko = {
             ],
           },
         ],
-        links: [
-          {
-            label: "GitHub",
-            href: "https://github.com/opensourceway/FOSSLight-Hub",
-          },
-        ],
+        // links: [
+        //   {
+        //     label: "GitHub",
+        //     href: "https://github.com/opensourceway/FOSSLight-Hub",
+        //   },
+        // ],
       },
       hs: {
         title: "화성시 신호 모니터링 시스템",
@@ -414,10 +331,10 @@ const ko = {
             ],
           },
         ],
-        links: [
-          { label: "서비스", href: "https://maplealimi.com" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
-        ],
+        // links: [
+        //   { label: "서비스", href: "https://maplealimi.com" },
+        //   { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
+        // ],
       },
 
       si: {
@@ -433,10 +350,10 @@ const ko = {
             ],
           },
         ],
-        links: [
-          { label: "서비스", href: "https://what-to-sing.kr" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
-        ],
+        // links: [
+        //   { label: "서비스", href: "https://what-to-sing.kr" },
+        //   { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+        // ],
       },
 
       viewTLog: {
@@ -454,10 +371,10 @@ const ko = {
             ],
           },
         ],
-        links: [
-          { label: "서비스", href: "https://what-to-sing.kr" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
-        ],
+        // links: [
+        //   { label: "서비스", href: "https://what-to-sing.kr" },
+        //   { label: "GitHub", href: "https://github.com/hjcdg1/what-to-sing" },
+        // ],
       },
     },
 
@@ -628,50 +545,6 @@ const ko = {
           },
         },
       },
-
-      // opengallery: {
-      //   logoText: "OPEN GALLERY",
-      //   period: "2019.08 - 2023.09 (4년 1개월)",
-      //   description:
-      //     "그림을 렌탈하려는 고객들과 그림을 그리는 작가들을 중개하는 그림 렌탈 서비스 플랫폼",
-      //   roles: {
-      //     development: "Next.js, Django 개발",
-      //     techLead: "테크 리딩",
-      //     backoffice: "백 오피스 기획",
-      //   },
-      //   highlights: {
-      //     artistSite: {
-      //       title: "작가 개인용 웹사이트 전체 리뉴얼 (Next.js)",
-      //       period: "2022년 상반기",
-      //       description:
-      //         "Django 풀 스택 기반의 작가 개인용 웹사이트를 Next.js와 Django REST 기반으로 마이그레이션",
-      //     },
-      //     deploy: {
-      //       title: "서버 배포 환경 변경 (AWS ECS)",
-      //       period: "2021년 하반기",
-      //       description:
-      //         "서버 배포 환경을 AWS EB에서 Docker 기반의 AWS ECS로 변경 (개발 환경도 함께 변경)",
-      //     },
-      //     cleanup: {
-      //       title: "대규모 서버 정리 작업 리드",
-      //       period: "2020년 중반기 - 2021년 중반기",
-      //       description:
-      //         "대규모 서버 정리 작업을 주도적으로 진행하여 코드 베이스 전반의 대청소 작업을 진행",
-      //     },
-      //     beyondDev: {
-      //       title: "개발 업무 외 기타 업무 담당",
-      //       period: "2020년 중반기 - 퇴사",
-      //       description:
-      //         "채용, 사수, 코드 리뷰의 역할을 담당하고 팀 내에서 지식 공유와 문서화를 적극적으로 진행",
-      //     },
-      //     backoffice: {
-      //       title: "백 오피스의 전반적인 관리 및 각종 기능 개발/기획",
-      //       period: "2019년 하반기 - 퇴사",
-      //       description:
-      //         "Django 풀 스택 기반 백 오피스의 대규모 리뉴얼과 개발/기획을 담당하여 사내 직원의 업무 효율 개선",
-      //     },
-      //   },
-      // },
     },
   },
   footer: {

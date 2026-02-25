@@ -274,7 +274,7 @@ export function ProjectsSection() {
       </div>
       {modal?.type === "readme" && activeProject?.readme ? (
         <Modal
-          title={`${activeProject.copy.name} README`}
+          title={`${activeProject.copy.name}`}
           onClose={handleModalClose}
           width="wide"
         >
