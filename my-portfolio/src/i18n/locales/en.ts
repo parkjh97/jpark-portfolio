@@ -142,6 +142,17 @@ const en = {
       next: "Next image",
     },
     items: {
+      portfolio: {
+        name: "Personal portfolio website",
+        period: "2025.07 ~ present",
+        summary:
+          "Portfolio site built with React 19 + TypeScript, featuring Korean/English i18n and PDF export",
+        details: [
+          "Designed and deployed a React 19 + TypeScript + Vite SPA to GitHub Pages",
+          "Built an i18next multilingual system — browser language detection, localStorage caching",
+          "Data-UI separation architecture, custom SVG icon system, @media print PDF export",
+        ],
+      },
       erp: {
         name: "In-house ERP system",
         period: "2024.11 ~ 2025.01",
@@ -285,6 +296,55 @@ const en = {
       },
     },
     readmes: {
+      portfolio: {
+        title: "Personal portfolio website",
+        intro: [
+          "A portfolio site designed, developed, and deployed using React 19 + TypeScript + Vite.",
+          "All components are built from scratch without external UI libraries, with Korean/English i18n support via i18next.",
+        ],
+        sections: [
+          {
+            heading: "Tech stack",
+            bullets: [
+              "Framework: React 19.1.1 + TypeScript 5.9.3",
+              "Build: Vite 7.1.7 + @vitejs/plugin-react",
+              "Styling: Tailwind CSS v4 + CSS Modules + CSS Custom Properties",
+              "i18n: i18next, react-i18next, i18next-browser-languagedetector",
+              "Deploy: GitHub Pages (gh-pages)",
+            ],
+          },
+          {
+            heading: "Key implementations",
+            bullets: [
+              "i18n with i18next — object-type translation data cast to TypeScript interfaces via returnObjects option for type safety",
+              "Custom SVG icon system — icons implemented without libraries; IconName union type prevents typos at compile time",
+              "Modal accessibility — role=\"dialog\", aria-modal, ESC key close, background scroll lock",
+              "PDF export — web/print layouts separated via @media print, auto-generates TOC, images, and content sections",
+              "useScrollToSection custom hook — offset-corrected smooth scroll with useCallback memoization",
+            ],
+          },
+          {
+            heading: "Technical challenges",
+            bullets: [
+              "i18n object type safety — cast t(key, {returnObjects: true}) return values to custom interfaces to ensure runtime type safety",
+              "Bundle size minimization — no icon library; only required icons written as SVG paths directly to eliminate unused bundle",
+            ],
+          },
+          {
+            heading: "Resume bullet points",
+            bullets: [
+              "Designed and deployed a portfolio site with React 19 + TypeScript + Vite to GitHub Pages",
+              "Implemented i18next multilingual system (KO/EN toggle, browser language detection, localStorage caching)",
+              "Minimized re-renders with useMemo / useCallback; optimized scroll performance with passive event listeners",
+              "Built @media print PDF export and a custom SVG icon system without external icon libraries",
+            ],
+          },
+        ],
+        links: [
+          { label: "Service", href: "https://parkjh97.github.io/jpark-portfolio/" },
+          { label: "GitHub", href: "https://github.com/parkjh97/jpark-portfolio" },
+        ],
+      },
       erp: {
         title: "react-bulk-form",
         intro: [

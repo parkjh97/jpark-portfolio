@@ -149,6 +149,17 @@ const ko = {
       next: "다음 이미지",
     },
     items: {
+      portfolio: {
+        name: "개인 포트폴리오 웹사이트",
+        period: "2025.07 ~ 진행중",
+        summary:
+          "React 19 + TypeScript 기반 이직용 포트폴리오 사이트, 한/영 다국어 지원 및 PDF 내보내기 기능 포함",
+        details: [
+          "React 19 + TypeScript + Vite 기반 SPA 설계 및 GitHub Pages 배포",
+          "i18next 다국어 시스템 구현 — 브라우저 언어 자동 감지, localStorage 캐싱",
+          "데이터-UI 완전 분리 아키텍처, 커스텀 SVG 아이콘 시스템, @media print PDF 내보내기",
+        ],
+      },
       erp: {
         name: "사내 자체 ERP 시스템",
         period: "2024.11 ~ 2025.01",
@@ -220,6 +231,55 @@ const ko = {
      
     },
     readmes: {
+      portfolio: {
+        title: "개인 포트폴리오 웹사이트",
+        intro: [
+          "React 19 + TypeScript + Vite로 직접 설계·개발·배포한 이직용 포트폴리오 사이트입니다.",
+          "외부 UI 라이브러리 없이 컴포넌트를 직접 구현하고, i18next로 한/영 다국어를 지원합니다.",
+        ],
+        sections: [
+          {
+            heading: "기술 스택",
+            bullets: [
+              "Framework: React 19.1.1 + TypeScript 5.9.3",
+              "Build: Vite 7.1.7 + @vitejs/plugin-react",
+              "스타일링: Tailwind CSS v4 + CSS Modules + CSS Custom Properties",
+              "다국어: i18next, react-i18next, i18next-browser-languagedetector",
+              "배포: GitHub Pages (gh-pages)",
+            ],
+          },
+          {
+            heading: "핵심 구현",
+            bullets: [
+              "i18next 다국어 — returnObjects 옵션으로 객체형 번역 데이터를 TypeScript 인터페이스로 타입 안전하게 캐스팅",
+              "커스텀 SVG 아이콘 시스템 — 외부 라이브러리 없이 아이콘 직접 구현, IconName union 타입으로 컴파일 타임 오타 방지",
+              "모달 접근성 — role=\"dialog\", aria-modal, ESC 키 닫기, 배경 스크롤 잠금 처리",
+              "PDF 내보내기 — @media print로 웹/인쇄 레이아웃 분리, 목차·이미지·상세내용 자동 구성",
+              "useScrollToSection 커스텀 훅 — offset 보정 스크롤 + useCallback 메모이제이션",
+            ],
+          },
+          {
+            heading: "기술적 도전",
+            bullets: [
+              "다국어 객체 타입 안전성 — t(key, {returnObjects: true}) 반환값을 커스텀 인터페이스로 캐스팅해 런타임 타입 안전성 확보",
+              "번들 크기 최소화 — 아이콘 라이브러리 미사용, 실제 사용 아이콘만 SVG path 직접 작성으로 불필요한 번들 제거",
+            ],
+          },
+          {
+            heading: "이력서 Bullet Points",
+            bullets: [
+              "React 19 + TypeScript + Vite 기반 포트폴리오 사이트 설계·개발·GitHub Pages 배포",
+              "i18next 다국어 시스템 구현 (한/영 전환, 브라우저 언어 자동 감지, localStorage 캐싱)",
+              "useMemo / useCallback 활용 리렌더링 최적화, passive 스크롤 이벤트 성능 개선",
+              "@media print 기반 PDF 내보내기, 외부 아이콘 라이브러리 없이 커스텀 SVG 시스템 구현",
+            ],
+          },
+        ],
+        links: [
+          { label: "서비스", href: "https://parkjh97.github.io/jpark-portfolio/" },
+          { label: "GitHub", href: "https://github.com/parkjh97/jpark-portfolio" },
+        ],
+      },
       erp: {
         title: "react-bulk-form",
         intro: [
