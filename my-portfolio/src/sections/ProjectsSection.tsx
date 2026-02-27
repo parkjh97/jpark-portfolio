@@ -22,6 +22,15 @@ type ProjectCardData = (typeof projectEntries)[number] & {
   images?: ProjectImageGallery;
 };
 
+function getSectionType(heading: string) {
+  const h = heading.toLowerCase();
+  if (h === "기술 스택" || h === "tech stack") return "stack";
+  if (h === "핵심 구현" || h === "key implementations") return "implementations";
+  if (h === "기술적 도전" || h === "technical challenges") return "challenges";
+  if (h === "이력서 bullet points" || h === "resume bullet points") return "highlight";
+  return null;
+}
+
 export function ProjectsSection() {
   const { t, i18n } = useTranslation();
   const printDate = new Date().toLocaleDateString(i18n.language);
@@ -284,16 +293,40 @@ export function ProjectsSection() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-            {activeProject.readme.sections.map((section) => (
-              <div key={section.heading} className="project-readme__section">
-                <h4>{section.heading}</h4>
-                <ul>
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {activeProject.readme.sections.map((section) => {
+              const type = getSectionType(section.heading);
+              return (
+                <div
+                  key={section.heading}
+                  className={`project-readme__section${type ? ` project-readme__section--${type}` : ""}`}
+                >
+                  <h4>{section.heading}</h4>
+                  <ul>
+                    {section.bullets.map((bullet) => {
+                      if (type === "stack" && bullet.includes(": ")) {
+                        const colonIdx = bullet.indexOf(": ");
+                        return (
+                          <li key={bullet}>
+                            <strong>{bullet.slice(0, colonIdx)}</strong>
+                            <span>{bullet.slice(colonIdx + 2)}</span>
+                          </li>
+                        );
+                      }
+                      if ((type === "implementations" || type === "challenges") && bullet.includes(" — ")) {
+                        const dashIdx = bullet.indexOf(" — ");
+                        return (
+                          <li key={bullet}>
+                            <strong>{bullet.slice(0, dashIdx)}</strong>
+                            <span>{bullet.slice(dashIdx)}</span>
+                          </li>
+                        );
+                      }
+                      return <li key={bullet}>{bullet}</li>;
+                    })}
+                  </ul>
+                </div>
+              );
+            })}
             {activeProject.readme.links?.length ? (
               <div className="project-readme__links">
                 {activeProject.readme.links.map((link) => (

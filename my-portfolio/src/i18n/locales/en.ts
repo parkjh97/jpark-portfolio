@@ -191,10 +191,10 @@ const en = {
         period: "2022.12 - 2023.04",
         summary: "UI development and maintenance for Hwaseong City signal monitoring",
         details: [
-          "Built from an idea by a friend who loves MapleStory",
-          "Adopted Next.js 13 on React 18 to learn and apply the latest stack",
-          "Handled API requests and forms with React Query and React Hook Form",
-          "Used the Next.js server as a reverse proxy to hide IPs and resolve CORS issues",
+          "Developed traffic signal optimization analysis APIs — signal cycle, phase, and TOD data queries with 5+ table JOINs",
+          "Built the Smart Intersection dashboard module end-to-end — 24-hour CCTV-based occupancy/speed/volume time-series visualization",
+          "Implemented MongoDB-based vehicle path simulation — paginated queries on the POINTPATH collection filtered by time range",
+          "Integrated ITS OpenAPI for real-time traffic incident data filtered to Hwaseong City coordinate boundaries",
         ],
       },
       si: {
@@ -202,10 +202,9 @@ const en = {
         period: "2023.07 ~ 2023.12",
         summary: "Public transit analytics system based on transit card big data",
         details: [
-          "Built to avoid the recurring dilemma about what to sing whenever going to karaoke",
-          "Implemented social login with Firebase Auth (OAuth 2.0)",
-          "Authored queries on Firebase Realtime Database (NoSQL)",
-          "Styled without separate CSS files using Tailwind CSS",
+          "Built a visualization system for 10+ transit indicators (traffic volume, boarding/alighting by time slot and route, OD analysis, profit analysis)",
+          "Rendered large-scale GeoJSON (up to 20,000 features) map layers using Deck.gl",
+          "Processed and integrated ~106 routes, 3,000 stops, and ~10,000 boarding/alighting records into the dashboard",
         ],
       },
       viewTLog: {
@@ -346,36 +345,50 @@ const en = {
         ],
       },
       erp: {
-        title: "react-bulk-form",
+        title: "In-house ERP System",
         intro: [
-          "A lightweight utility to manage complex form state in React with consistent patterns.",
-          "It abstracts repetitive logic for many fields and validations so developers can focus on core UX.",
+          "Led the full lifecycle of an in-house ERP system — from requirements analysis through design, development, deployment, and ongoing operations.",
+          "Built electronic approval (draft / approve / reject), attendance & leave management, and an admin module on Next.js 14 App Router.",
         ],
         sections: [
           {
-            heading: "Key features",
+            heading: "Tech Stack",
             bullets: [
-              "Central store to track field values and error states together",
-              "Minimized re-renders through field/form-level subscriptions",
-              "Lightweight design that can be used alongside React Hook Form or Formik",
+              "Framework: Next.js 14.2.5 (App Router) + TypeScript",
+              "Auth: NextAuth.js v4 + @auth/pg-adapter (PostgreSQL session)",
+              "State: Zustand (sidebar), useReducer (dynamic document form)",
+              "Styling: Tailwind CSS v3",
+              "Notifications: web-push, Webhook (internal messaging tool integration)",
+              "Utils: date-fns, jspdf, react-to-print, jszip",
             ],
           },
           {
-            heading: "Why it was built",
+            heading: "Key Implementations",
             bullets: [
-              "Form complexity grew rapidly in internal projects with dynamic structures",
-              "Repackaged shared custom hooks into a library for team-wide reuse",
+              "Electronic approval — JSON-driven dynamic document form rendering with multi-level approver & reference line management (draft · approve · reject flow)",
+              "Webhook notifications — real-time alerts to internal messaging tool on approve/reject/reference events, parallel dispatch via Promise.all",
+              "Parallel Routes + Intercepting Routes — URL-based modal routing via @modal slot; back-navigation and page refresh work correctly",
+              "Middleware auth guard — checks cookie session and auto-redirects unauthenticated requests to /login across all routes",
+              "useReducer dynamic form — branches docBody initialisation by document type (leave / general) for centralised, consistent state management",
             ],
           },
-        ],
-        links: [
           {
-            label: "NPM",
-            href: "https://www.npmjs.com/package/react-bulk-form",
+            heading: "Technical Challenges",
+            bullets: [
+              "JSON dynamic form state — parses server-side doc_form_data by document type, initialises each field via useReducer dispatch to keep state consistent",
+              "Parallel Webhook dispatch — sends notifications to multiple reference users simultaneously with Promise.all, eliminating sequential-processing delays",
+              "Intercepting Routes modal — splits modal entry into a dedicated route so direct URL access and page refresh still render the full page correctly",
+            ],
           },
           {
-            label: "GitHub",
-            href: "https://github.com/hjcdg1/react-bulk-form",
+            heading: "Resume Bullet Points",
+            bullets: [
+              "Designed and shipped an in-house ERP on Next.js 14 App Router — owned 3 modules: electronic approval, attendance, and admin",
+              "NextAuth.js v4 + PostgreSQL session auth; Middleware-level route protection and forced password change on first login",
+              "JSON-driven dynamic document form rendering with useReducer for unified, complex form state management",
+              "Webhook integration triggering real-time internal notifications on approve / reject / reference events (Promise.all parallel dispatch)",
+              "URL-based modal UX built with Parallel Routes + Intercepting Routes",
+            ],
           },
         ],
       },
@@ -440,28 +453,28 @@ const en = {
       hs: {
         title: "Hwaseong City signal monitoring system",
         intro: [
-          "A service that tracks MapleStory auction listings in real time and sends Discord webhook alerts.",
+          "A web-based traffic signal optimization analytics system that collects, analyzes, and visualizes signal data across Hwaseong City.",
+          "Built on the eGovFrame standard framework; personally responsible for developing the Smart Intersection monitoring module.",
         ],
         sections: [
           {
-            heading: "Key implementation",
+            heading: "Key implementations",
             bullets: [
-              "Resolved CORS issues by using the Next.js server as a proxy for auction API calls",
-              "Reduced traffic with React Query caching for identical conditions",
-              "Designed a form UX that supports multi-condition alert rules",
+              "Developed signal cycle and phase data query APIs — 5+ table JOINs on tb_crsr_plan / tb_crsr_phas_info with GROUP_CONCAT aggregation",
+              "Built the Smart Intersection dashboard module from scratch — 24-hour time-series visualization of CCTV-based occupancy, speed, and traffic volume (owned module)",
+              "MongoDB-based vehicle path simulation — paginated queries on the POINTPATH collection to retrieve vehicle coordinates (lonlat) by time slot",
+              "Integrated the ITS OpenAPI to collect real-time accident/incident data filtered to Hwaseong City coordinate boundaries",
             ],
           },
           {
-            heading: "Operational experience",
+            heading: "Technical highlights",
             bullets: [
-              "Added retry/backoff when Discord alerts were delayed",
-              "Authored monitoring metrics based on daily alert traffic",
+              "Multi-source data integration: MySQL + Tibero (spatial DB) + MongoDB managed within a single application",
+              "Advanced MyBatis dynamic SQL — dynamic table names and condition branching via <choose>/<foreach>; spatial data handling with GEOM/ASTEXT",
+              "eGovFrame 3.9.0 standard 4-layer architecture (Controller → Service → ServiceImpl → DAO)",
+              "HikariCP 4.0.3 connection pool, AOP-based global exception handling, LoggingInterceptor for request tracking",
             ],
           },
-        ],
-        links: [
-          { label: "Service", href: "https://maplealimi.com" },
-          { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
         ],
       },
       si: {
@@ -474,7 +487,7 @@ const en = {
           {
             heading: "Key implementations",
             bullets: [
-              "Built a visualization system for 10+ transit indicators (traffic volume, boarding/alighting by time slot and route) using transit card big data",
+              "Built a visualization system for 10+ transit indicators (traffic volume, boarding/alighting by time slot and route, OD analysis, profit analysis)",
               "Rendered large-scale GeoJSON (up to 20,000 features) map layers using Deck.gl",
               "Processed and integrated ~106 routes, 3,000 stops, and ~10,000 boarding/alighting records into the dashboard",
             ],
@@ -482,9 +495,17 @@ const en = {
           {
             heading: "Technical highlights",
             bullets: [
-              "Developed data query APIs with Spring + MyBatis for large-scale transit datasets",
+              "Spring + MyBatis APIs for large-scale transit data — CTE, FULL JOIN, ROW_NUMBER window function, and PERCENTILE_CONT for percentile-based statistics",
               "Integrated GeoServer WMS/WFS for dynamic spatial data layer rendering on the map",
               "Interactive map visualization using Deck.gl ScatterplotLayer and PathLayer",
+            ],
+          },
+          {
+            heading: "Security & search",
+            bullets: [
+              "BCrypt password hashing and CAPTCHA authentication for secure login",
+              "Custom Korean character decomposition algorithm for optimized stop-name initial-consonant search",
+              "Session timeout management and XSS/SQL Injection defense filters",
             ],
           },
         ],
@@ -521,27 +542,27 @@ const en = {
         items: [
           {
             src: "./img/project/erp/erp001.webp",
-            caption: "Check field values and errors at a glance in the status panel",
+            caption: "ERP system main dashboard",
           },
           {
             src: "./img/project/erp/erp002.webp",
-            caption: "Check field values and errors at a glance in the status panel",
+            caption: "Member annual leave information view",
           },
           {
             src: "./img/project/erp/erp003.webp",
-            caption: "Check field values and errors at a glance in the status panel",
+            caption: "Member attendance information view",
           },
           {
             src: "./img/project/erp/erp004.webp",
-            caption: "Check field values and errors at a glance in the status panel",
+            caption: "Document drafting screen",
           },
           {
             src: "./img/project/erp/erp005.webp",
-            caption: "Check field values and errors at a glance in the status panel",
+            caption: "Document form template settings",
           },
           {
             src: "./img/project/erp/erp006.webp",
-            caption: "Check field values and errors at a glance in the status panel",
+            caption: "Holiday settings screen",
           },
         ],
       },

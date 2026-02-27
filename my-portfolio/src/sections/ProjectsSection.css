@@ -152,7 +152,12 @@
 .project-readme__intro {
   display: grid;
   gap: 8px;
+  padding: 14px 18px;
+  background: rgba(15, 23, 42, 0.02);
+  border-radius: 10px;
+  border-left: 3px solid rgba(29, 78, 216, 0.4);
   color: var(--text-muted);
+  line-height: 1.75;
 }
 
 .project-readme__intro p {
@@ -167,8 +172,14 @@
 }
 
 .project-readme__section h4 {
-  margin: 0 0 10px;
-  font-size: 1.05rem;
+  margin: 0 0 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-col);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(29, 78, 216, 0.12);
 }
 
 .project-readme__section ul {
@@ -177,6 +188,110 @@
   display: grid;
   gap: 6px;
   color: var(--text-muted);
+}
+
+/* 기술 스택 섹션 */
+.project-readme__section--stack ul {
+  padding-left: 0;
+  list-style: none;
+  gap: 0;
+}
+
+.project-readme__section--stack li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  font-size: 0.9rem;
+  color: var(--text-strong);
+}
+
+.project-readme__section--stack li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-readme__section--stack li strong {
+  flex-shrink: 0;
+  min-width: 80px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* 핵심 구현 / 기술적 도전 섹션 */
+.project-readme__section--implementations ul,
+.project-readme__section--challenges ul {
+  padding-left: 0;
+  list-style: none;
+  gap: 0;
+}
+
+.project-readme__section--implementations li,
+.project-readme__section--challenges li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.project-readme__section--implementations li:last-child,
+.project-readme__section--challenges li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-readme__section--implementations li strong,
+.project-readme__section--challenges li strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin-bottom: 2px;
+}
+
+.project-readme__section--implementations li span,
+.project-readme__section--challenges li span {
+  font-size: 0.88rem;
+}
+
+/* 이력서 Bullet Points 섹션 */
+.project-readme__section--highlight {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.5), rgba(219, 234, 254, 0.25));
+  border-color: rgba(29, 78, 216, 0.2);
+}
+
+.project-readme__section--highlight ul {
+  padding-left: 0;
+  list-style: none;
+  gap: 0;
+}
+
+.project-readme__section--highlight li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(29, 78, 216, 0.1);
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--text-strong);
+  line-height: 1.6;
+}
+
+.project-readme__section--highlight li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.project-readme__section--highlight li::before {
+  content: "→";
+  color: var(--primary-col);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .project-readme__links {

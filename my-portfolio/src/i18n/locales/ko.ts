@@ -281,38 +281,52 @@ const ko = {
         ],
       },
       erp: {
-        title: "react-bulk-form",
+        title: "사내 자체 ERP 시스템",
         intro: [
-          "사내 ERP 시스템을 주도적으로 설계·개발·배포·운영하였습니다.",
-          "결제 기능 ( 기안, 결재, 반려 ), 근태 관리, 유저 관리(휴가), 결제 문서 설정 등 의 기능",
+          "사내 ERP 시스템을 요구사항 분석부터 설계·개발·배포·운영까지 전 단계 주도하였습니다.",
+          "전자결재(기안·결재·반려), 근태·휴가 관리, 관리자 모듈을 Next.js 14 App Router 기반으로 구현하였습니다.",
         ],
         sections: [
           {
-            heading: "핵심 기능",
+            heading: "기술 스택",
             bullets: [
-              "필드 값과 오류 상태를 일괄적으로 추적할 수 있는 중앙 저장소 제공",
-              "필드/폼 단위의 상태 구독을 통해 리렌더링 최소화",
-              "기존 React Hook Form, Formik 등과 병행 사용이 가능한 가벼운 설계",
+              "Framework: Next.js 14.2.5 (App Router) + TypeScript",
+              "인증: NextAuth.js v4 + @auth/pg-adapter (PostgreSQL 세션)",
+              "상태 관리: Zustand (사이드바), useReducer (동적 문서 폼)",
+              "스타일링: Tailwind CSS v3",
+              "알림: web-push, Webhook (사내 메시지 도구 연동)",
+              "유틸: date-fns, jspdf, react-to-print, jszip",
             ],
           },
           {
-            heading: "개발 배경",
+            heading: "핵심 구현",
             bullets: [
-              "Form 구조가 동적으로 변화하는 사내 프로젝트에서 상태 관리 복잡도가 크게 증가",
-              "재사용 가능한 커스텀 훅을 팀 단위로 공유하기 위해 라이브러리 형태로 재구성",
+              "전자결재 — JSON 기반 동적 문서 양식 렌더링, 결재선·참조선 다단계 관리 (기안·결재·반려 플로우)",
+              "Webhook 알림 — 결재/반려/참조 이벤트 발생 시 사내 메시지 도구로 실시간 알림 발송, Promise.all 병렬 처리",
+              "Parallel Routes + Intercepting Routes — @modal 슬롯 활용 URL 기반 모달 라우팅 (뒤로가기·새로고침 정상 동작)",
+              "Middleware 인증 보호 — Cookie 세션 확인 후 비인증 요청 전체를 /login으로 자동 리다이렉트",
+              "useReducer 동적 폼 — 양식 타입(휴가/일반)에 따른 docBody 초기값 분기 처리 및 중앙 집중 상태 관리",
+            ],
+          },
+          {
+            heading: "기술적 도전",
+            bullets: [
+              "JSON 동적 폼 상태 — 서버에서 내려오는 doc_form_data 구조를 양식 타입별로 파싱·초기화, useReducer dispatch로 일관성 유지",
+              "Webhook 병렬 발송 — 참조자가 여러 명일 때 Promise.all로 동시 발송하여 순차 처리 대비 응답 지연 해소",
+              "Intercepting Routes 모달 — 모달 진입 URL을 별도 라우트로 분리해 직접 접근·새로고침 시에도 전체 페이지로 정상 렌더링",
+            ],
+          },
+          {
+            heading: "이력서 Bullet Points",
+            bullets: [
+              "Next.js 14 App Router 기반 사내 ERP 설계·개발·배포 (전자결재·근태·관리자 3개 모듈 전담)",
+              "NextAuth.js v4 + PostgreSQL 세션 인증, Middleware로 전체 라우트 일괄 보호 및 최초 로그인 비밀번호 변경 강제",
+              "JSON 기반 동적 문서 양식 렌더링 + useReducer로 복잡한 폼 상태 일원 관리",
+              "Webhook 연동으로 결재·반려·참조 이벤트 → 사내 메시지 도구 실시간 알림, Promise.all 병렬 처리",
+              "Parallel Routes + Intercepting Routes 활용한 URL 기반 모달 UX 구현",
             ],
           },
         ],
-        // links: [
-        //   {
-        //     label: "NPM",
-        //     href: "https://www.npmjs.com/package/react-bulk-form",
-        //   },
-        //   {
-        //     label: "GitHub",
-        //     href: "https://github.com/hjcdg1/react-bulk-form",
-        //   },
-        // ],
       },
       viewTexportX: {
         title: "IT 엘도라도 (블로그)",
@@ -375,29 +389,29 @@ const ko = {
       hs: {
         title: "화성시 신호 모니터링 시스템",
         intro: [
-          "메이플스토리 경매장에 등록되는 아이템을 조건에 맞춰 실시간으로 추적하고, Discord Webhook으로 알림을 전송하는 서비스입니다.",
+          "화성시 교통 신호 데이터를 수집·분석·시각화하는 웹 기반 교통신호 최적화 분석 시스템입니다.",
+          "전자정부 표준프레임워크(eGovFrame) 기반으로 개발되었으며, 스마트 교차로 모니터링 모듈을 담당하여 개발하였습니다.",
         ],
         sections: [
           {
             heading: "주요 구현",
             bullets: [
-              "Next.js 서버를 프록시로 활용해 경매장 API 호출 시 발생하는 CORS 문제 해결",
-              "React Query 기반의 캐시 전략으로 동일 조건 조회 시 트래픽 최소화",
-              "알림 조건을 다중으로 조합할 수 있는 폼 UX 설계",
+              "신호 주기·현시 데이터 조회 API 개발 — tb_crsr_plan, tb_crsr_phas_info 5개 이상 테이블 JOIN, GROUP_CONCAT 집계",
+              "스마트 교차로 대시보드 모듈 신규 개발 — CCTV 기반 점유율·속도·교통량 24시간 시계열 데이터 시각화 (담당 모듈)",
+              "MongoDB 기반 차량 주행 시뮬레이션 — POINTPATH 컬렉션에서 시간대별 차량 좌표(lonlat) 페이징 조회",
+              "기상청 ITS OpenAPI 연동 — 화성시 좌표 범위 기반 실시간 교통사고·돌발 정보 수집",
             ],
           },
           {
-            heading: "운영 경험",
+            heading: "기술 포인트",
             bullets: [
-              "Discord 알림 지연 발생 시 리트라이 백오프 전략 도입",
-              "일일 알림 트래픽을 기준으로 모니터링 지표 작성",
+              "MySQL + Tibero(공간DB) + MongoDB 다중 데이터 소스 단일 애플리케이션에서 통합 관리",
+              "MyBatis 동적 SQL — <choose>/<foreach>를 활용한 동적 테이블명·조건 분기, GEOM/ASTEXT 공간 데이터 처리",
+              "eGovFrame 3.9.0 표준프레임워크 기반 4계층 구조 (Controller → Service → ServiceImpl → DAO)",
+              "HikariCP 4.0.3 고성능 커넥션 풀, AOP 기반 전역 예외처리, LoggingInterceptor 요청 추적",
             ],
           },
         ],
-        // links: [
-        //   { label: "서비스", href: "https://maplealimi.com" },
-        //   { label: "GitHub", href: "https://github.com/hjcdg1/maple-alimi" },
-        // ],
       },
 
       si: {
@@ -410,7 +424,7 @@ const ko = {
           {
             heading: "주요 구현",
             bullets: [
-              "교통카드 빅데이터 기반 10개 이상 교통 지표 시각화 (교통량, 시간대·노선별 승하차 분석 등)",
+              "교통카드 빅데이터 기반 10개 이상 교통 지표 시각화 (교통량, 시간대·노선별 승하차, OD 분석, 수익성 분석 등)",
               "Deck.gl 기반 대규모 GeoJSON(최대 20,000개 피처) 지도 레이어 렌더링 구현",
               "106개 노선·3,000개 정류장·약 1만 건 승하차 데이터 처리 및 대시보드 연동",
             ],
@@ -418,9 +432,17 @@ const ko = {
           {
             heading: "기술 포인트",
             bullets: [
-              "Spring + MyBatis 기반 대용량 교통 데이터 조회 API 개발",
+              "Spring + MyBatis 기반 대용량 교통 데이터 조회 API 개발 — CTE, FULL JOIN, ROW_NUMBER 윈도우 함수, PERCENTILE_CONT 분위수 통계 활용",
               "GeoServer WMS/WFS 연동으로 공간 데이터 지도 레이어 동적 표출",
               "Deck.gl ScatterplotLayer, PathLayer 등을 활용한 인터랙티브 지도 시각화",
+            ],
+          },
+          {
+            heading: "보안 & 검색",
+            bullets: [
+              "BCrypt 기반 비밀번호 암호화 및 CAPTCHA 인증으로 로그인 보안 강화",
+              "한글 자소분해 알고리즘 직접 구현 — 정류장 초성 검색 최적화",
+              "세션 타임아웃 관리, XSS/SQL Injection 방어 필터 적용",
             ],
           },
         ],
