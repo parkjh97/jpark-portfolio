@@ -302,15 +302,6 @@ const en = {
               "Bundle size minimization — no icon library; only required icons written as SVG paths directly to eliminate unused bundle",
             ],
           },
-          {
-            heading: "Resume bullet points",
-            bullets: [
-              "Designed and deployed a portfolio site with React 19 + TypeScript + Vite to GitHub Pages",
-              "Implemented i18next multilingual system (KO/EN toggle, browser language detection, localStorage caching)",
-              "Minimized re-renders with useMemo / useCallback; optimized scroll performance with passive event listeners",
-              "Built @media print PDF export and a custom SVG icon system without external icon libraries",
-            ],
-          },
         ],
         links: [
           { label: "Service", href: "https://parkjh97.github.io/jpark-portfolio/" },
@@ -351,16 +342,6 @@ const en = {
               "JSON dynamic form state — parses server-side doc_form_data by document type, initialises each field via useReducer dispatch to keep state consistent",
               "Parallel Webhook dispatch — sends notifications to multiple reference users simultaneously with Promise.all, eliminating sequential-processing delays",
               "Intercepting Routes modal — splits modal entry into a dedicated route so direct URL access and page refresh still render the full page correctly",
-            ],
-          },
-          {
-            heading: "Resume Bullet Points",
-            bullets: [
-              "Designed and shipped an in-house ERP on Next.js 14 App Router — owned 3 modules: electronic approval, attendance, and admin",
-              "NextAuth.js v4 + PostgreSQL session auth; Middleware-level route protection and forced password change on first login",
-              "JSON-driven dynamic document form rendering with useReducer for unified, complex form state management",
-              "Webhook integration triggering real-time internal notifications on approve / reject / reference events (Promise.all parallel dispatch)",
-              "URL-based modal UX built with Parallel Routes + Intercepting Routes",
             ],
           },
         ],
@@ -406,6 +387,15 @@ const en = {
         ],
         sections: [
           {
+            heading: "Tech Stack",
+            bullets: [
+              "Frontend: JavaScript, CSS, OpenLayers",
+              "Map: GeoServer (WMS/WFS)",
+              "Backend: Spring Framework, MyBatis",
+              "DB: MySQL, MongoDB",
+            ],
+          },
+          {
             heading: "Key Contributions",
             bullets: [
               "Improved the annual large-scale spatial data collection and processing pipeline — optimized MyBatis-based Batch Insert to enhance DB throughput",
@@ -432,16 +422,14 @@ const en = {
           {
             heading: "Key implementations",
             bullets: [
-              "Developed signal cycle and phase data query APIs — 5+ table JOINs on tb_crsr_plan / tb_crsr_phas_info with GROUP_CONCAT aggregation",
+              "Developed signal cycle and phase data query APIs — multi-table JOIN-based query structure optimized for large-scale data",
               "Built the Smart Intersection dashboard module from scratch — 24-hour time-series visualization of CCTV-based occupancy, speed, and traffic volume (owned module)",
-              "MongoDB-based vehicle path simulation — paginated queries on the POINTPATH collection to retrieve vehicle coordinates (lonlat) by time slot",
               "Integrated the ITS OpenAPI to collect real-time accident/incident data filtered to Hwaseong City coordinate boundaries",
             ],
           },
           {
             heading: "Technical highlights",
             bullets: [
-              "Multi-source data integration: MySQL + Tibero (spatial DB) + MongoDB managed within a single application",
               "Advanced MyBatis dynamic SQL — dynamic table names and condition branching via <choose>/<foreach>; spatial data handling with GEOM/ASTEXT",
               "eGovFrame 3.9.0 standard 4-layer architecture (Controller → Service → ServiceImpl → DAO)",
               "HikariCP 4.0.3 connection pool, AOP-based global exception handling, LoggingInterceptor for request tracking",

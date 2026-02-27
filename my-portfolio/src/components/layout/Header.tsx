@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { navigationLinks } from "../../data/content";
 import { useScrollToSection } from "../../hooks/useScrollToSection";
 import { Icon } from "../common/Icon";
-import { LanguageSwitcher } from "../common/LanguageSwitcher";
+//import { LanguageSwitcher } from "../common/LanguageSwitcher";
 
 import "./Header.css";
 
@@ -77,7 +77,7 @@ export function Header() {
           >
             {t("nav.exportPdf")}
           </button> */}
-          <LanguageSwitcher />
+          {/* <LanguageSwitcher /> */}
           <button
             type="button"
             className="site-header__menu-toggle"

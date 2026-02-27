@@ -278,7 +278,7 @@ export const projectEntries: ProjectEntry[] = [
       "MySQL",
       "Zustand",
       "Tailwind CSS",
-      "GeoServer",
+      "ApexCharts",
     ],
   },
   // {

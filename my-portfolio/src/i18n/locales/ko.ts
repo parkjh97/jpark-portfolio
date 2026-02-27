@@ -339,6 +339,15 @@ const ko = {
         ],
         sections: [
           {
+            heading: "기술 스택",
+            bullets: [
+              "Frontend: JavaScript, CSS, OpenLayers",
+              "지도: GeoServer (WMS/WFS)",
+              "Backend: Spring Framework, MyBatis",
+              "DB: MySQL, MongoDB",
+            ],
+          },
+          {
             heading: "주요 역할",
             bullets: [
               "연도별 대용량 공간 데이터 수집·정제 파이프라인 개선 — MyBatis 기반 Batch Insert 최적화로 DB 처리 성능 개선",
