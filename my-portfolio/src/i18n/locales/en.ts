@@ -366,60 +366,59 @@ const en = {
         ],
       },
       viewTexportX: {
-        title: "IT Eldorado (Blog)",
+        title: "Traffic and Spatial Data Web Analytics Service",
         intro: [
-          "Personal tech blog built on the Notion API, aimed at automating both content management and deployment.",
+          "An interactive web service that visualizes and analyzes traffic and environmental indicators by road segment and administrative unit.",
+          "Solely responsible for frontend architecture design, GeoServer integration, and indicator visualization.",
         ],
         sections: [
           {
-            heading: "Implementation highlights",
+            heading: "Tech Stack",
             bullets: [
-              "Notion Database sync via Next.js 13 App Router server components",
-              "SEO tuning with Open Graph and Schema markup",
-              "Automated weekly deploy pipeline and visit/view dashboards",
+              "Framework: React 19 + TypeScript + Vite",
+              "State: Zustand",
+              "Map: GeoServer + in-house map engine (XqbMap), WMS/VectorTile",
+              "UX: DnD Kit (layer sorting · draggable modals)",
             ],
           },
           {
-            heading: "Outcome",
+            heading: "Key Implementations",
             bullets: [
-              "Migrated 40+ major documents and reorganized categories/tags",
-              "Reduced end-to-end publishing to under five minutes",
+              "Designed and implemented the frontend architecture — React 19 + TypeScript + Vite, Zustand state management, DnD Kit for layer sorting and draggable modal UX",
+              "Integrated GeoServer with the in-house map engine (XqbMap) — dynamic WMS/VectorTile updates and link/administrative-unit (view) toggle support",
+              "Visualized diverse traffic and environmental indicators — estimated traffic, VKT, average speed, congestion (frequency/duration) and cost, emissions (CO/NOx/PM/VOC)",
             ],
           },
-        ],
-        links: [
-          { label: "Service", href: "https://it-eldorado.com" },
           {
-            label: "GitHub",
-            href: "https://github.com/hjcdg1/it-eldorado-blog",
+            heading: "Technical Challenges",
+            bullets: [
+              "Designed the pipeline: analysis options → parameter auto-combination (buildParsingParam) → internal API call → map layer/legend auto-generation",
+              "Dual-map comparison toggle, per-map toast alerts, global loading overlay, layer card condition summary and instant style application",
+            ],
           },
         ],
       },
       viewT: {
-        title: "viewT",
+        title: "viewT Maintenance (Traffic and Spatial Data Analytics)",
         intro: [
-          "A lightweight, user-focused version of LG Electronics' open-source license management platform.",
+          "Maintained a service providing an analytics environment based on navigation, mobile, and transit card big data.",
+          "Participated full-stack — from annual data refresh pipeline improvements to map visualization optimization.",
         ],
         sections: [
           {
-            heading: "Role",
+            heading: "Key Contributions",
             bullets: [
-              "Led Next.js-based frontend development",
-              "Defined Swagger-backed API documentation and integration test scenarios",
+              "Improved the annual large-scale spatial data collection and processing pipeline — optimized MyBatis-based Batch Insert to enhance DB throughput",
+              "Maintained OpenLayers + GeoServer map visualization logic and optimized WMS/WFS layer rendering",
+              "Enhanced existing JavaScript-based UI features and refactored CSS",
             ],
           },
           {
-            heading: "Results",
+            heading: "Technical Highlights",
             bullets: [
-              "Redefined key UX flows such as sorting, filtering, and modals",
-              "Minimized migration costs by planning coexistence with the existing project",
+              "MyBatis Batch Insert optimization for high-throughput spatial data loading",
+              "Dynamic WMS/WFS layer updates and rendering optimization with OpenLayers",
             ],
-          },
-        ],
-        links: [
-          {
-            label: "GitHub",
-            href: "https://github.com/opensourceway/FOSSLight-Hub",
           },
         ],
       },

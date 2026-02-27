@@ -178,8 +178,8 @@ export const archiveLinks: ArchiveLink[] = [
 export const projectEntries: ProjectEntry[] = [
   {
     id: "portfolio",
-    url: "https://parkjh97.github.io/jpark-portfolio/",
-    repoUrl: "https://github.com/parkjh97/jpark-portfolio",
+    //url: "https://parkjh97.github.io/jpark-portfolio/",
+    //repoUrl: "https://github.com/parkjh97/jpark-portfolio",
     readmeKey: "projects.readmes.portfolio",
     techStack: ["TypeScript", "React", "Vite", "Tailwind CSS", "i18next"],
     isFeatured: true,

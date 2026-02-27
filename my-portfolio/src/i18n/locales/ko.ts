@@ -299,62 +299,61 @@ const ko = {
         ],
       },
       viewTexportX: {
-        title: "IT 엘도라도 (블로그)",
+        title: "교통·공간 데이터 웹 분석 서비스",
         intro: [
-          "Notion API를 기반으로 구축한 개인 기술 블로그로, 콘텐츠 관리와 배포 자동화를 동시에 제공하는 것이 목표였습니다.",
+          "도로/행정구역 단위의 교통·환경 지표를 시각화·분석하는 대화형 웹 서비스입니다.",
+          "프런트엔드 아키텍처 설계부터 GeoServer 연동, 지표 시각화까지 전담하여 개발하였습니다.",
         ],
         sections: [
           {
-            heading: "구현 포인트",
+            heading: "기술 스택",
             bullets: [
-              "Notion Database ↔ Next.js 13 App Router 기반의 서버 컴포넌트를 이용한 데이터 동기화",
-              "Open Graph/Schema Markup 등 SEO 메타 태그 세부 튜닝",
-              "주간 배포 파이프라인 자동화 및 방문·조회 집계 대시보드 구성",
+              "Framework: React 19 + TypeScript + Vite",
+              "상태 관리: Zustand",
+              "지도: GeoServer + 사내 지도엔진(XqbMap), WMS/VectorTile",
+              "UX: DnD Kit (레이어 정렬·모달 드래그)",
             ],
           },
           {
-            heading: "결과",
+            heading: "핵심 구현",
             bullets: [
-              "주요 기술 문서 40+편 이전 및 카테고리/태그 구조 재정비",
-              "글 작성부터 배포까지 5분 이내로 단축",
+              "프런트엔드 아키텍처 설계 및 구현 — React 19 + TypeScript + Vite, Zustand 상태관리, DnD Kit로 레이어 정렬/모달 드래그 UX 구축",
+              "GeoServer + 사내 지도엔진(XqbMap) 연동 — WMS/VectorTile 동적 갱신, 링크/행정구역(view) 토글 지원",
+              "다양한 교통·환경 지표 시각화 — 추정 교통량, VKT, 평균속도, 혼잡(빈도/시간)·혼잡비용, 배출량(CO/NOx/PM/VOC) 등",
+            ],
+          },
+          {
+            heading: "기술적 도전",
+            bullets: [
+              "분석 옵션 → 파라미터 자동 조합(buildParsingParam) → 내부 API 호출 → 지도 레이어/범례 자동 생성 흐름 설계",
+              "다중 맵 비교 토글, 맵별 토스트 알림/전역 로딩 오버레이, 레이어 카드 조건 요약 및 스타일 즉시 적용",
             ],
           },
         ],
-        // links: [
-        //   { label: "서비스", href: "https://it-eldorado.com" },
-        //   {
-        //     label: "GitHub",
-        //     href: "https://github.com/hjcdg1/it-eldorado-blog",
-        //   },
-        // ],
       },
       viewT: {
-        title: "viewT",
+        title: "viewT 유지보수 (교통·공간 데이터 웹 분석 서비스)",
         intro: [
-          "LG전자에서 운영하는 오픈소스 라이선스 관리 플랫폼의 사용자 전용 경량 버전입니다.",
+          "네비게이션, 휴대폰, 교통카드 빅데이터를 기반으로 분석환경을 제공하는 서비스의 유지보수를 담당하였습니다.",
+          "연도별 데이터 갱신 파이프라인 개선부터 지도 시각화 최적화까지 풀스택으로 참여하였습니다.",
         ],
         sections: [
           {
-            heading: "역할",
+            heading: "주요 역할",
             bullets: [
-              "Next.js 기반 프론트엔드 개발 총괄",
-              "Swagger 기반 API 문서화와 통합 테스트 시나리오 수립",
+              "연도별 대용량 공간 데이터 수집·정제 파이프라인 개선 — MyBatis 기반 Batch Insert 최적화로 DB 처리 성능 개선",
+              "OpenLayers + GeoServer 기반 지도 시각화 로직 유지보수 및 WMS/WFS 레이어 렌더링 최적화",
+              "기존 JavaScript 기반 UI 기능 개선 및 CSS 리팩토링",
             ],
           },
           {
-            heading: "성과",
+            heading: "기술 포인트",
             bullets: [
-              "정렬/필터/모달 등 사용자 중심의 핵심 UX 시나리오 재정립",
-              "기존 프로젝트와의 공존 배포 전략 수립으로 마이그레이션 비용 최소화",
+              "MyBatis Batch Insert 최적화를 통한 대용량 공간 데이터 적재 성능 개선",
+              "OpenLayers 기반 WMS/WFS 레이어 동적 갱신 및 렌더링 최적화",
             ],
           },
         ],
-        // links: [
-        //   {
-        //     label: "GitHub",
-        //     href: "https://github.com/opensourceway/FOSSLight-Hub",
-        //   },
-        // ],
       },
       hs: {
         title: "화성시 신호 모니터링 시스템",

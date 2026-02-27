@@ -69,9 +69,9 @@ export function ProjectsSection() {
     projectId: string;
   } | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const handlePdfExport = () => {
-    window.print();
-  };
+  // const handlePdfExport = () => {
+  //   window.print();
+  // };
   const handleModalClose = () => {
     setModal(null);
     setCurrentImageIndex(0);
@@ -130,13 +130,13 @@ export function ProjectsSection() {
             <Icon name="filter" size={18} />
             <span>{t("projects.filterLabel")}</span>
           </button>
-          <button
+          {/* <button
             type="button"
             className="projects-toolbar__pdf"
             onClick={handlePdfExport}
           >
             {t("projects.ctas.pdf")}
-          </button>
+          </button> */}
         </div>
         <div className="projects-grid">
           {projects.map((project) => {
