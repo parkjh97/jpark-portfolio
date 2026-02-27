@@ -2,12 +2,13 @@
   display: none;
 }
 
+/* ── Projects-only PDF (기존 프로젝트 PDF 버튼) ───────────────── */
 @media print {
   @page {
     margin: 18mm;
   }
 
-  body {
+  body:not(.print-full) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     background: #ffffff;
@@ -16,24 +17,24 @@
     line-height: 1.5;
   }
 
-  .site-header,
-  .site-footer {
+  body:not(.print-full) .site-header,
+  body:not(.print-full) .site-footer {
     display: none !important;
   }
 
-  .site-main > *:not(#projects) {
+  body:not(.print-full) .site-main > *:not(#projects) {
     display: none !important;
   }
 
-  #projects .section__container {
+  body:not(.print-full) #projects .section__container {
     display: block !important;
   }
 
-  #projects .section__container > *:not(.projects-print) {
+  body:not(.print-full) #projects .section__container > *:not(.projects-print) {
     display: none !important;
   }
 
-  #projects .projects-print {
+  body:not(.print-full) #projects .projects-print {
     display: block !important;
     width: 100%;
     padding: 24px 32px;

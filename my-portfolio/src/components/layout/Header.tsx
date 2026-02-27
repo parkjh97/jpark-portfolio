@@ -41,6 +41,12 @@ export function Header() {
     [scrollToSection],
   );
 
+  const handleFullPdfExport = useCallback(() => {
+    document.body.classList.add("print-full");
+    window.print();
+    document.body.classList.remove("print-full");
+  }, []);
+
   return (
     <header className={`site-header${isScrolled ? " site-header--scrolled" : ""}`}>
       <div className="site-header__inner">
@@ -64,6 +70,13 @@ export function Header() {
           ))}
         </nav>
         <div className="site-header__actions">
+          <button
+            type="button"
+            className="site-header__pdf-btn"
+            onClick={handleFullPdfExport}
+          >
+            {t("nav.exportPdf")}
+          </button>
           <LanguageSwitcher />
           <button
             type="button"

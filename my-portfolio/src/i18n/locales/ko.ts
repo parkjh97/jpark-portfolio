@@ -14,6 +14,7 @@ const ko = {
     archiving: "Archiving",
     projects: "Projects",
     career: "Career",
+    exportPdf: "PDF 저장",
   },
   navToggle: "메뉴 열기/닫기",
   masthead: {

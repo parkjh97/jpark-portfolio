@@ -14,6 +14,7 @@ const en = {
     archiving: "Archiving",
     projects: "Projects",
     career: "Career",
+    exportPdf: "Save PDF",
   },
   navToggle: "Toggle navigation",
   masthead: {

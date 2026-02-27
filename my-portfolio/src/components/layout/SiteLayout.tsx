@@ -4,6 +4,7 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 import "./SiteLayout.css";
+import "../../styles/PortfolioPrint.css";
 
 export function SiteLayout({ children }: PropsWithChildren) {
   return (
