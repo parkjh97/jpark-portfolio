@@ -22,6 +22,7 @@ function TechChip({ tech }: { tech: SkillTech }) {
           className="skill-tech-chip__icon"
           width={18}
           height={18}
+          onError={(e) => { e.currentTarget.style.display = "none"; }}
         />
       ) : (
         <span className="skill-tech-chip__icon-placeholder" aria-hidden="true" />

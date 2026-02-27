@@ -5,6 +5,7 @@ import { Icon } from "../components/common/Icon";
 import { Modal } from "../components/common/Modal";
 import { SectionTitle } from "../components/common/SectionTitle";
 import { projectEntries } from "../data/content";
+import { getTechIcon } from "../data/techIconMap";
 import type {
   ProjectCopy,
   ProjectImageGallery,
@@ -13,6 +14,29 @@ import type {
 
 import "./ProjectsSection.css";
 import "./ProjectsPrint.css";
+
+function ProjectTechChip({ name }: { name: string }) {
+  const entry = getTechIcon(name);
+  const iconUrl = entry ? `https://cdn.simpleicons.org/${entry.slug}` : null;
+  return (
+    <span className="project-tech-chip">
+      {iconUrl ? (
+        <img
+          src={iconUrl}
+          alt=""
+          aria-hidden="true"
+          className="project-tech-chip__icon"
+          width={14}
+          height={14}
+          onError={(e) => { e.currentTarget.style.display = "none"; }}
+        />
+      ) : (
+        <span className="project-tech-chip__icon-placeholder" aria-hidden="true" />
+      )}
+      {name}
+    </span>
+  );
+}
 
 type ModalType = "readme" | "images";
 
@@ -144,7 +168,7 @@ export function ProjectsSection() {
                 ) : null}
                 <div className="project-card__stack">
                   {project.techStack.map((tech) => (
-                    <span key={tech}>{tech}</span>
+                    <ProjectTechChip key={tech} name={tech} />
                   ))}
                 </div>
                 <div className="project-card__actions">

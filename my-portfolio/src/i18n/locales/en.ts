@@ -659,22 +659,22 @@ const en = {
         },
         highlights: {
           erp: {
-            title: "In-house ERP system development",
-            period: "2H 2024 - 1H 2025",
+            title: "In-house ERP System Development",
+            period: "2024.11 ~ 2025.01",
             description:
-              "Developed an in-house ERP system (approvals, HR, attendance) (FULLSTACK)",
+              "Designed, built, and operated an ERP on Next.js 14 App Router — electronic approval (draft · approve · reject), attendance & leave management, and admin module (Full-stack)",
           },
           viewT: {
-            title: "View-T system maintenance",
-            period: "1H 2024 ~ 1H 2025",
+            title: "View-T System Maintenance",
+            period: "2024.01 ~ 2025.10",
             description:
-              "Big data processing monitoring solution and annual data refresh (FULLSTACK)",
+              "Developed a big-data processing monitoring dashboard and improved the annual spatial-data refresh pipeline (Full-stack)",
           },
           localBusiness: {
-            title: "Traffic big-data visualization solution",
-            period: "2H 2022 ~ 2H 2025",
+            title: "Traffic Big-Data Visualization Solutions",
+            period: "2022.10 ~ 2025.10",
             description:
-              "Developed signal monitoring and public transit monitoring systems (FULLSTACK)",
+              "Built traffic visualization systems for local governments — signal monitoring for Hwaseong-si and public transit analytics for Siheung-si (Full-stack)",
           },
         },
       },

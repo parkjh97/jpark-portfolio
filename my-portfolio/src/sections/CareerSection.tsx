@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import { Icon } from "../components/common/Icon";
 import { SectionTitle } from "../components/common/SectionTitle";
 import { careerCompanies } from "../data/content";
 
@@ -32,7 +31,7 @@ export function CareerSection() {
                 )}
               </div>
               <div className="career-card__details">
-                <header>
+                <header className="career-card__header">
                   <h4>{t(company.logoTextKey ?? company.descriptionKey)}</h4>
                   <span className="career-card__period">
                     {t(company.periodKey)}
@@ -46,17 +45,29 @@ export function CareerSection() {
                     <span key={roleKey}>{t(roleKey)}</span>
                   ))}
                 </div>
-                <div className="career-card__highlights">
-                  {company.highlights.map((highlight) => (
-                    <div key={highlight.id} className="career-card__highlight">
-                      <div className="career-card__highlight-heading">
-                        <Icon name="stack" size={16} />
-                        <span>{t(highlight.titleKey)}</span>
+
+                <div className="career-timeline">
+                  {company.highlights.map((highlight, index) => (
+                    <div key={highlight.id} className="career-timeline__item">
+                      <div className="career-timeline__marker">
+                        <span className="career-timeline__dot" />
+                        {index < company.highlights.length - 1 && (
+                          <span className="career-timeline__line" />
+                        )}
                       </div>
-                      <span className="career-card__highlight-period">
-                        {t(highlight.periodKey)}
-                      </span>
-                      <p>{t(highlight.descriptionKey)}</p>
+                      <div className="career-timeline__content">
+                        <div className="career-timeline__header">
+                          <h5 className="career-timeline__title">
+                            {t(highlight.titleKey)}
+                          </h5>
+                          <span className="career-timeline__period">
+                            {t(highlight.periodKey)}
+                          </span>
+                        </div>
+                        <p className="career-timeline__description">
+                          {t(highlight.descriptionKey)}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

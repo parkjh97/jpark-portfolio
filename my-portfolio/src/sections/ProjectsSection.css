@@ -102,16 +102,40 @@
 .project-card__stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;
 }
 
-.project-card__stack span {
-  padding: 6px 10px;
+.project-tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px 4px 7px;
   border-radius: 999px;
   background: var(--background-alt);
+  border: 1px solid rgba(15, 23, 42, 0.06);
   color: var(--text-strong);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.project-tech-chip__icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.project-tech-chip__icon-placeholder {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.4;
+  flex-shrink: 0;
 }
 
 .project-card__actions {

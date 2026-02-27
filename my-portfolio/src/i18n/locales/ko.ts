@@ -133,7 +133,7 @@ const ko = {
       },
       erp: {
         name: "사내 자체 ERP 시스템",
-        period: "2024.11 ~ 2025.01",
+        period: "2024.11 ~ 2025.10",
         summary:
           "Next.js 14(App Router) 기반 사내 ERP 구축 — 전자결재·근태·관리자 모듈 설계/개발/배포",
         details: [
@@ -205,7 +205,7 @@ const ko = {
       portfolio: {
         title: "개인 포트폴리오 웹사이트",
         intro: [
-          "React 19 + TypeScript + Vite로 직접 설계·개발·배포한 이직용 포트폴리오 사이트입니다.",
+          "React 19 + TypeScript + Vite로 직접 설계·개발·배포한 포트폴리오 사이트입니다.",
           "외부 UI 라이브러리 없이 컴포넌트를 직접 구현하고, i18next로 한/영 다국어를 지원합니다.",
         ],
         sections: [
@@ -263,7 +263,7 @@ const ko = {
             bullets: [
               "Framework: Next.js 14.2.5 (App Router) + TypeScript",
               "인증: NextAuth.js v4 + @auth/pg-adapter (PostgreSQL 세션)",
-              "상태 관리: Zustand (사이드바), useReducer (동적 문서 폼)",
+              "상태 관리: Zustand",
               "스타일링: Tailwind CSS v3",
               "알림: web-push, Webhook (사내 메시지 도구 연동)",
               "유틸: date-fns, jspdf, react-to-print, jszip",
@@ -275,9 +275,7 @@ const ko = {
               "전자결재 — JSON 기반 동적 문서 양식 렌더링, 결재선·참조선 다단계 관리 (기안·결재·반려 플로우)",
               "Webhook 알림 — 결재/반려/참조 이벤트 발생 시 사내 메시지 도구로 실시간 알림 발송, Promise.all 병렬 처리",
               "Parallel Routes + Intercepting Routes — @modal 슬롯 활용 URL 기반 모달 라우팅 (뒤로가기·새로고침 정상 동작)",
-              "Middleware 인증 보호 — Cookie 세션 확인 후 비인증 요청 전체를 /login으로 자동 리다이렉트",
-              "useReducer 동적 폼 — 양식 타입(휴가/일반)에 따른 docBody 초기값 분기 처리 및 중앙 집중 상태 관리",
-            ],
+              "Middleware 인증 보호 — Cookie 세션 확인 후 비인증 요청 전체를 /login으로 자동 리다이렉트",            ],
           },
           {
             heading: "기술적 도전",
@@ -367,16 +365,13 @@ const ko = {
           {
             heading: "주요 구현",
             bullets: [
-              "신호 주기·현시 데이터 조회 API 개발 — tb_crsr_plan, tb_crsr_phas_info 5개 이상 테이블 JOIN, GROUP_CONCAT 집계",
-              "스마트 교차로 대시보드 모듈 신규 개발 — CCTV 기반 점유율·속도·교통량 24시간 시계열 데이터 시각화 (담당 모듈)",
-              "MongoDB 기반 차량 주행 시뮬레이션 — POINTPATH 컬렉션에서 시간대별 차량 좌표(lonlat) 페이징 조회",
-              "기상청 ITS OpenAPI 연동 — 화성시 좌표 범위 기반 실시간 교통사고·돌발 정보 수집",
+              "신호 주기·현시 데이터 조회 API 개발 — 복수 테이블 조인 기반 대용량 데이터의 성능 최적화 조회 구조 설계",
+              "스마트 교차로 대시보드 모듈 신규 개발 — CCTV 기반 점유율·속도·교통량 24시간 시계열 데이터 시각화 (담당 모듈)",              "기상청 ITS OpenAPI 연동 — 화성시 좌표 범위 기반 실시간 교통사고·돌발 정보 수집",
             ],
           },
           {
             heading: "기술 포인트",
             bullets: [
-              "MySQL + Tibero(공간DB) + MongoDB 다중 데이터 소스 단일 애플리케이션에서 통합 관리",
               "MyBatis 동적 SQL — <choose>/<foreach>를 활용한 동적 테이블명·조건 분기, GEOM/ASTEXT 공간 데이터 처리",
               "eGovFrame 3.9.0 표준프레임워크 기반 4계층 구조 (Controller → Service → ServiceImpl → DAO)",
               "HikariCP 4.0.3 고성능 커넥션 풀, AOP 기반 전역 예외처리, LoggingInterceptor 요청 추적",
@@ -594,22 +589,22 @@ const ko = {
         },
         highlights: {
           erp: {
-            title: "사내 erp 시스템 개발",
-            period: "2024년 하반기 - 2025년 상반기",
+            title: "사내 ERP 시스템 개발",
+            period: "2024.11 ~ 2025.10",
             description:
-              "사내 자체 erp 시스템 개발 (전자결재, 인사, 출퇴 등) (FULLSTACK)",
+              "전자결재(기안·결재·반려), 근태·휴가 관리, 관리자 모듈을 Next.js 14 App Router 기반으로 설계·개발·배포·운영 (풀스택)",
           },
           viewT: {
             title: "View-T 시스템 유지보수",
-            period: "2024년 상반기 ~ 2025년 상반기",
+            period: "2024.01 ~ 2025.10",
             description:
-              "빅데이터 가공 프로세스 모니터링 솔루션 및 연도별 갱신 데이터 최신화 (FULLSTACK)",
+              "빅데이터 가공 프로세스 모니터링 대시보드 개발 및 연도별 공간 데이터 갱신 파이프라인 개선 (풀스택)",
           },
           localBusiness: {
-            title: "교통 빅데이터 기반의 시각화 솔루션 개발",
-            period: "2022년 하반기 ~ 2025년 하반기",
+            title: "교통 빅데이터 시각화 솔루션 개발",
+            period: "2022.10 ~ 2024.12",
             description:
-              "신호 모니터링 시스템 및 대중교통 모니터링 시스템 개발 (FULLSTACK)",
+              "화성시 신호 모니터링, 시흥시 대중교통 분석 등 지자체 맞춤 교통 시각화 시스템 개발 (풀스택)",
           },
         },
       },
