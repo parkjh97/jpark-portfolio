@@ -64,23 +64,42 @@ export const skillGroups: SkillGroup[] = [
       {
         id: "html-css-js",
         titleKey: "skills.groups.frontend.items.htmlCssJs.title",
-        descriptionKey: "skills.groups.frontend.items.htmlCssJs.description",
+        techs: [
+          { name: "HTML", iconSlug: "html5", iconColor: "E34F26" },
+          { name: "CSS", iconSlug: "css3", iconColor: "1572B6" },
+          { name: "SCSS", iconSlug: "sass", iconColor: "CC6699" },
+          { name: "Tailwind CSS", iconSlug: "tailwindcss", iconColor: "06B6D4" },
+          { name: "JavaScript", iconSlug: "javascript", iconColor: "F7DF1E" },
+          { name: "TypeScript", iconSlug: "typescript", iconColor: "3178C6" },
+        ],
       },
       {
         id: "react-next",
         titleKey: "skills.groups.frontend.items.reactNext.title",
-        descriptionKey: "skills.groups.frontend.items.reactNext.description",
+        techs: [
+          { name: "React.js", iconSlug: "react", iconColor: "61DAFB" },
+          { name: "Next.js", iconSlug: "nextdotjs", iconColor: "ffffff" },
+        ],
       },
       {
         id: "visualization",
         titleKey: "skills.groups.frontend.items.visualization.title",
-        descriptionKey:
-          "skills.groups.frontend.items.visualization.description",
+        techs: [
+          { name: "Zustand" },
+          { name: "Apache ECharts", iconSlug: "apacheecharts", iconColor: "AA344D" },
+          { name: "D3.js", iconSlug: "d3dotjs", iconColor: "F9A03C" },
+          { name: "deck.gl" },
+          { name: "OpenLayers" },
+        ],
       },
       {
         id: "tooling",
         titleKey: "skills.groups.frontend.items.tooling.title",
-        descriptionKey: "skills.groups.frontend.items.tooling.description",
+        techs: [
+          { name: "Vite", iconSlug: "vite", iconColor: "646CFF" },
+          { name: "Webpack", iconSlug: "webpack", iconColor: "8DD6F9" },
+          { name: "npm", iconSlug: "npm", iconColor: "CB3837" },
+        ],
       },
     ],
   },
@@ -92,17 +111,25 @@ export const skillGroups: SkillGroup[] = [
       {
         id: "spring",
         titleKey: "skills.groups.backendDb.items.spring.title",
-        descriptionKey: "skills.groups.backendDb.items.spring.description",
+        techs: [
+          { name: "Spring Framework", iconSlug: "spring", iconColor: "6DB33F" },
+          { name: "Spring Boot", iconSlug: "springboot", iconColor: "6DB33F" },
+        ],
       },
       {
         id: "mybatis",
         titleKey: "skills.groups.backendDb.items.mybatis.title",
-        descriptionKey: "skills.groups.backendDb.items.mybatis.description",
+        techs: [
+          { name: "MyBatis" },
+        ],
       },
       {
         id: "databases",
         titleKey: "skills.groups.backendDb.items.databases.title",
-        descriptionKey: "skills.groups.backendDb.items.databases.description",
+        techs: [
+          { name: "PostgreSQL", iconSlug: "postgresql", iconColor: "4169E1" },
+          { name: "MySQL", iconSlug: "mysql", iconColor: "4479A1" },
+        ],
       },
     ],
   },
@@ -114,12 +141,20 @@ export const skillGroups: SkillGroup[] = [
       {
         id: "collaboration",
         titleKey: "skills.groups.etc.items.collaboration.title",
-        descriptionKey: "skills.groups.etc.items.collaboration.description",
+        techs: [
+          { name: "Git", iconSlug: "git", iconColor: "F05032" },
+          { name: "Notion", iconSlug: "notion", iconColor: "ffffff" },
+        ],
       },
       {
         id: "infra",
         titleKey: "skills.groups.etc.items.infra.title",
-        descriptionKey: "skills.groups.etc.items.infra.description",
+        techs: [
+          { name: "Docker", iconSlug: "docker", iconColor: "2496ED" },
+          { name: "Jenkins", iconSlug: "jenkins", iconColor: "D24939" },
+          { name: "Nginx", iconSlug: "nginx", iconColor: "009639" },
+          { name: "Apache", iconSlug: "apache", iconColor: "D22128" },
+        ],
       },
     ],
   },

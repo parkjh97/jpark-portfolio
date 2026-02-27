@@ -3,8 +3,33 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "../components/common/Icon";
 import { SectionTitle } from "../components/common/SectionTitle";
 import { skillGroups } from "../data/content";
+import type { SkillTech } from "../types/content";
 
 import "./SkillsSection.css";
+
+function TechChip({ tech }: { tech: SkillTech }) {
+  const iconUrl = tech.iconSlug
+    ? `https://cdn.simpleicons.org/${tech.iconSlug}/${tech.iconColor ?? "ffffff"}`
+    : null;
+
+  return (
+    <span className="skill-tech-chip">
+      {iconUrl ? (
+        <img
+          src={iconUrl}
+          alt=""
+          aria-hidden="true"
+          className="skill-tech-chip__icon"
+          width={18}
+          height={18}
+        />
+      ) : (
+        <span className="skill-tech-chip__icon-placeholder" aria-hidden="true" />
+      )}
+      <span className="skill-tech-chip__name">{tech.name}</span>
+    </span>
+  );
+}
 
 export function SkillsSection() {
   const { t } = useTranslation();
@@ -21,24 +46,21 @@ export function SkillsSection() {
           {skillGroups.map((group) => (
             <article key={group.id} className="skill-card">
               <header className="skill-card__header">
-                <Icon name={group.icon} size={28} />
+                <Icon name={group.icon} size={24} />
                 <h3>{t(group.titleKey)}</h3>
               </header>
-              <ul className="skill-card__list">
+              <div className="skill-card__body">
                 {group.items.map((item) => (
-                  <li key={item.id} className="skill-card__item">
-                    <span className="skill-card__bullet" aria-hidden="true" />
-                    <div className="skill-card__content">
-                      <p className="skill-card__item-title">
-                        {t(item.titleKey)}
-                      </p>
-                      <p className="skill-card__item-description">
-                        {t(item.descriptionKey)}
-                      </p>
+                  <div key={item.id} className="skill-item">
+                    <p className="skill-item__label">{t(item.titleKey)}</p>
+                    <div className="skill-item__techs">
+                      {item.techs.map((tech) => (
+                        <TechChip key={tech.name} tech={tech} />
+                      ))}
                     </div>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </article>
           ))}
         </div>

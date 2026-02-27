@@ -39,8 +39,7 @@ const ko = {
       // "프로젝트 경험이 쌓일수록 느낀 것은, 문제는 코드만으로 해결되지 않는다는 사실이었습니다.",
       // "고객의 요구를 이해하고, 동료들과 같은 그림을 그리며, 때로는 단순한 UX 수정 하나로 더 큰 문제를 풀어내는 과정이 중요했습니다.",
       // "기술은 그 과정에서 선택되는 도구일 뿐이며, 저는 항상 팀과 사용자 사이의 공통 언어를 만드는 데 집중해 왔습니다.",
-      "3년간 여러 프로젝트를 경험하며 확신하게 된 것은, 정답이 기술 그 자체에만 있지는 않다는 사실이었습니다.",
-      "교통 데이터 시각화 플랫폼과 ERP 시스템을 설계하고 운영하며 느낀 점은, 문제는 코드만으로 해결되지 않는다는 것이었습니다.",
+      "여러 프로젝트를 경험하며 각종 시스템을 설계하고 운영하는 과정에서 확신하게 된 것은, 정답이 기술 그 자체에만 있지 않으며 문제 또한 코드만으로 해결되지는 않는다는 사실이었습니다.",
 
       "고객의 요구를 정확히 이해하고, 팀원들과 같은 그림을 그리며, 때로는 작은 UX 개선 하나로 더 큰 문제를 풀어내는 과정이 더 중요했습니다.",
       "기술은 그 과정에서 선택되는 도구일 뿐이며, 저는 항상 팀과 사용자 사이의 공통 언어를 만드는 개발자가 되고자 노력해왔습니다.",
@@ -69,53 +68,25 @@ const ko = {
       frontend: {
         title: "Front-End",
         items: {
-          htmlCssJs: {
-            title: "Markup & Language",
-            description:
-              "HTML, CSS(SCSS, Tailwind CSS), JavaScript(ES6), TypeScript",
-          },
-          reactNext: {
-            title: "Application Frameworks",
-            description: "React.js, Next.js",
-          },
-          visualization: {
-            title: "State & Data Visualization",
-            description: "Zustand, Apache ECharts, D3.js, deck.gl, OpenLayers",
-          },
-          tooling: {
-            title: "Build & Tooling",
-            description: "Vite, Webpack, npm",
-          },
+          htmlCssJs: { title: "Markup & Language" },
+          reactNext: { title: "Application Frameworks" },
+          visualization: { title: "State & Data Visualization" },
+          tooling: { title: "Build & Tooling" },
         },
       },
       backendDb: {
         title: "Back-End & DB",
         items: {
-          spring: {
-            title: " Ecosystem",
-            description: "Spring Framework (Java 11), Spring Boot (Java 21)",
-          },
-          mybatis: {
-            title: "Persistence Layer",
-            description: "MyBatis",
-          },
-          databases: {
-            title: "Databases",
-            description: "PostgreSQL, MySQL",
-          },
+          spring: { title: "Spring Ecosystem" },
+          mybatis: { title: "Persistence Layer" },
+          databases: { title: "Databases" },
         },
       },
       etc: {
         title: "ETC",
         items: {
-          collaboration: {
-            title: "Collaboration",
-            description: "Git, Notion",
-          },
-          infra: {
-            title: "Ops & Infra",
-            description: "Docker, Jenkins, Nginx, Apache",
-          },
+          collaboration: { title: "Collaboration" },
+          infra: { title: "Ops & Infra" },
         },
       },
     },
@@ -265,15 +236,15 @@ const ko = {
               "번들 크기 최소화 — 아이콘 라이브러리 미사용, 실제 사용 아이콘만 SVG path 직접 작성으로 불필요한 번들 제거",
             ],
           },
-          {
-            heading: "이력서 Bullet Points",
-            bullets: [
-              "React 19 + TypeScript + Vite 기반 포트폴리오 사이트 설계·개발·GitHub Pages 배포",
-              "i18next 다국어 시스템 구현 (한/영 전환, 브라우저 언어 자동 감지, localStorage 캐싱)",
-              "useMemo / useCallback 활용 리렌더링 최적화, passive 스크롤 이벤트 성능 개선",
-              "@media print 기반 PDF 내보내기, 외부 아이콘 라이브러리 없이 커스텀 SVG 시스템 구현",
-            ],
-          },
+          // {
+          //   heading: "이력서 Bullet Points",
+          //   bullets: [
+          //     "React 19 + TypeScript + Vite 기반 포트폴리오 사이트 설계·개발·GitHub Pages 배포",
+          //     "i18next 다국어 시스템 구현 (한/영 전환, 브라우저 언어 자동 감지, localStorage 캐싱)",
+          //     "useMemo / useCallback 활용 리렌더링 최적화, passive 스크롤 이벤트 성능 개선",
+          //     "@media print 기반 PDF 내보내기, 외부 아이콘 라이브러리 없이 커스텀 SVG 시스템 구현",
+          //   ],
+          // },
         ],
         links: [
           { label: "서비스", href: "https://parkjh97.github.io/jpark-portfolio/" },
@@ -316,16 +287,16 @@ const ko = {
               "Intercepting Routes 모달 — 모달 진입 URL을 별도 라우트로 분리해 직접 접근·새로고침 시에도 전체 페이지로 정상 렌더링",
             ],
           },
-          {
-            heading: "이력서 Bullet Points",
-            bullets: [
-              "Next.js 14 App Router 기반 사내 ERP 설계·개발·배포 (전자결재·근태·관리자 3개 모듈 전담)",
-              "NextAuth.js v4 + PostgreSQL 세션 인증, Middleware로 전체 라우트 일괄 보호 및 최초 로그인 비밀번호 변경 강제",
-              "JSON 기반 동적 문서 양식 렌더링 + useReducer로 복잡한 폼 상태 일원 관리",
-              "Webhook 연동으로 결재·반려·참조 이벤트 → 사내 메시지 도구 실시간 알림, Promise.all 병렬 처리",
-              "Parallel Routes + Intercepting Routes 활용한 URL 기반 모달 UX 구현",
-            ],
-          },
+          // {
+          //   heading: "이력서 Bullet Points",
+          //   bullets: [
+          //     "Next.js 14 App Router 기반 사내 ERP 설계·개발·배포 (전자결재·근태·관리자 3개 모듈 전담)",
+          //     "NextAuth.js v4 + PostgreSQL 세션 인증, Middleware로 전체 라우트 일괄 보호 및 최초 로그인 비밀번호 변경 강제",
+          //     "JSON 기반 동적 문서 양식 렌더링 + useReducer로 복잡한 폼 상태 일원 관리",
+          //     "Webhook 연동으로 결재·반려·참조 이벤트 → 사내 메시지 도구 실시간 알림, Promise.all 병렬 처리",
+          //     "Parallel Routes + Intercepting Routes 활용한 URL 기반 모달 UX 구현",
+          //   ],
+          // },
         ],
       },
       viewTexportX: {

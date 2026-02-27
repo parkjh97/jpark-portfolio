@@ -31,10 +31,16 @@ export interface AboutField {
   valueKey: TranslationKey;
 }
 
+export interface SkillTech {
+  name: string;
+  iconSlug?: string;
+  iconColor?: string;
+}
+
 export interface SkillListItem {
   id: string;
   titleKey: TranslationKey;
-  descriptionKey: TranslationKey;
+  techs: SkillTech[];
 }
 
 export interface SkillGroup {

@@ -62,53 +62,25 @@ const en = {
       frontend: {
         title: "Front-End",
         items: {
-          htmlCssJs: {
-            title: "Markup & Language",
-            description:
-              "HTML, CSS(SCSS, Tailwind CSS), JavaScript(ES6), TypeScript",
-          },
-          reactNext: {
-            title: "Application Frameworks",
-            description: "React.js, Next.js",
-          },
-          visualization: {
-            title: "State & Data Visualization",
-            description: "Zustand, Apache ECharts, D3.js, deck.gl, OpenLayers",
-          },
-          tooling: {
-            title: "Build & Tooling",
-            description: "Vite, Webpack, npm",
-          },
+          htmlCssJs: { title: "Markup & Language" },
+          reactNext: { title: "Application Frameworks" },
+          visualization: { title: "State & Data Visualization" },
+          tooling: { title: "Build & Tooling" },
         },
       },
       backendDb: {
         title: "Back-End & DB",
         items: {
-          spring: {
-            title: "Spring Ecosystem",
-            description: "Spring Framework (Java 11), Spring Boot (Java 21)",
-          },
-          mybatis: {
-            title: "Persistence Layer",
-            description: "MyBatis",
-          },
-          databases: {
-            title: "Databases",
-            description: "PostgreSQL, MySQL",
-          },
+          spring: { title: "Spring Ecosystem" },
+          mybatis: { title: "Persistence Layer" },
+          databases: { title: "Databases" },
         },
       },
       etc: {
         title: "ETC",
         items: {
-          collaboration: {
-            title: "Collaboration",
-            description: "Git, Notion",
-          },
-          infra: {
-            title: "Ops & Infra",
-            description: "Docker, Jenkins, Nginx, Apache",
-          },
+          collaboration: { title: "Collaboration" },
+          infra: { title: "Ops & Infra" },
         },
       },
     },
