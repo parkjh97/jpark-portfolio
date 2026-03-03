@@ -30,9 +30,10 @@ const map: Record<string, TechIconEntry> = {
   scss:            { slug: "sass" },
   sass:            { slug: "sass" },
   css:             { slug: "css3" },
+  html:            { slug: "html5" },
 
   // State / Libs
-  zustand:         { slug: "zustand" },
+  zustand:         { slug: "redux" },
   i18next:         { slug: "i18next" },
   "next-auth":     { slug: "nextauth" },
   "nextauth.js":   { slug: "nextauth" },
@@ -42,11 +43,16 @@ const map: Record<string, TechIconEntry> = {
   postgresql:      { slug: "postgresql" },
   mysql:           { slug: "mysql" },
   mongodb:         { slug: "mongodb" },
+  sqlite3:         { slug: "sqlite" },
 
   // Backend
   spring:          { slug: "spring" },
   "spring boot":   { slug: "springboot" },
   "spring framework": { slug: "spring" },
+  mybatis:         { slug: "apache" },
+  django:          { slug: "django" },
+  "django rest framework": { slug: "djangorestframework" },
+  geoserver:       { slug: "geoserver" },
 
   // Infra / DevOps
   docker:          { slug: "docker" },
@@ -55,10 +61,30 @@ const map: Record<string, TechIconEntry> = {
   apache:          { slug: "apache" },
   git:             { slug: "git" },
   notion:          { slug: "notion" },
+  npm:             { slug: "npm" },
+  netlify:         { slug: "netlify" },
+  vercel:          { slug: "vercel" },
+  "aws (ec2, rds)": { slug: "amazonaws" },
+  "aws (ec2)":     { slug: "amazonaws" },
+  "aws (elastic beanstalk)": { slug: "amazonaws" },
 
   // Data Viz
   "apache echarts":{ slug: "apacheecharts" },
-  "d3.js":         { slug: "d3dotjs" },
+  "d3.js":         { slug: "d3" },
+  "deck.gl":       { slug: "mapbox" },
+  openlayers:      { slug: "openlayers" },
+  webpack:         { slug: "webpack" },
+  apexcharts:      { slug: "apexcharts" },
+
+  // Server pages
+  jsp:             { slug: "openjdk" },
+
+  // Misc
+  jquery:          { slug: "jquery" },
+  redux:           { slug: "redux" },
+  "redux saga":    { slug: "reduxsaga" },
+  "redux thunk":   { slug: "redux" },
+  "vanilla js":    { slug: "javascript" },
 };
 
 export function getTechIcon(name: string): TechIconEntry | null {

@@ -66,28 +66,29 @@ const ko = {
   skills: {
     title: "SKILLS",
     groups: {
+      languages: {
+        title: "Languages",
+        items: {
+          core: { title: "프로그래밍 언어" },
+        },
+      },
       frontend: {
         title: "Front-End",
         items: {
-          htmlCssJs: { title: "Markup & Language" },
-          reactNext: { title: "Application Frameworks" },
-          visualization: { title: "State & Data Visualization" },
-          tooling: { title: "Build & Tooling" },
+          htmlCssJs: { title: "마크업/기초 언어" },
+          reactNext: { title: "프론트 프레임워크" },
+          visualization: { title: "상태 관리/데이터 시각화" },
+          tooling: { title: "빌드/툴링" },
         },
       },
-      backendDb: {
-        title: "Back-End & DB",
+      backendOps: {
+        title: "Back-End & etc",
         items: {
-          spring: { title: "Spring Ecosystem" },
-          mybatis: { title: "Persistence Layer" },
-          databases: { title: "Databases" },
-        },
-      },
-      etc: {
-        title: "ETC",
-        items: {
-          collaboration: { title: "Collaboration" },
-          infra: { title: "Ops & Infra" },
+          spring: { title: "스프링" },
+          mybatis: { title: "ORM" },
+          databases: { title: "데이터베이스" },
+          collaboration: { title: "협업" },
+          infra: { title: "운영/인프라" },
         },
       },
     },

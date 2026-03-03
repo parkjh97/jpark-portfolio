@@ -57,22 +57,31 @@ export const aboutFields: AboutField[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
+    id: "languages",
+    icon: "language",
+    titleKey: "skills.groups.languages.title",
+    items: [
+      {
+        id: "core-languages",
+        titleKey: "skills.groups.languages.items.core.title",
+        techs: [
+          { name: "Java", iconSlug: "openjdk", iconColor: "007396" },
+          { name: "JavaScript", iconSlug: "javascript", iconColor: "F7DF1E" },
+          { name: "TypeScript", iconSlug: "typescript", iconColor: "3178C6" },
+          { name: "CSS", iconSlug: "css3", iconColor: "1572B6" },
+          { name: "HTML", iconSlug: "html5", iconColor: "E34F26" },
+          //{ name: "SCSS", iconSlug: "sass", iconColor: "CC6699" },
+          { name: "Tailwind CSS", iconSlug: "tailwindcss", iconColor: "06B6D4" },
+          { name: "JSP", iconSlug: "openjdk", iconColor: "007396" },
+        ],
+      },
+    ],
+  },
+  {
     id: "frontend",
     icon: "frontend",
     titleKey: "skills.groups.frontend.title",
     items: [
-      {
-        id: "html-css-js",
-        titleKey: "skills.groups.frontend.items.htmlCssJs.title",
-        techs: [
-          { name: "HTML", iconSlug: "html5", iconColor: "E34F26" },
-          { name: "CSS", iconSlug: "css3", iconColor: "1572B6" },
-          { name: "SCSS", iconSlug: "sass", iconColor: "CC6699" },
-          { name: "Tailwind CSS", iconSlug: "tailwindcss", iconColor: "06B6D4" },
-          { name: "JavaScript", iconSlug: "javascript", iconColor: "F7DF1E" },
-          { name: "TypeScript", iconSlug: "typescript", iconColor: "3178C6" },
-        ],
-      },
       {
         id: "react-next",
         titleKey: "skills.groups.frontend.items.reactNext.title",
@@ -85,11 +94,11 @@ export const skillGroups: SkillGroup[] = [
         id: "visualization",
         titleKey: "skills.groups.frontend.items.visualization.title",
         techs: [
-          { name: "Zustand" },
+          { name: "Zustand", iconSlug: "redux", iconColor: "764ABC" },
           { name: "Apache ECharts", iconSlug: "apacheecharts", iconColor: "AA344D" },
-          { name: "D3.js", iconSlug: "d3dotjs", iconColor: "F9A03C" },
-          { name: "deck.gl" },
-          { name: "OpenLayers" },
+          { name: "D3.js", iconSlug: "d3", iconColor: "F9A03C" },
+          { name: "deck.gl", iconSlug: "mapbox", iconColor: "ffffff" },
+          { name: "OpenLayers", iconSlug: "openlayers", iconColor: "1F6B75" },
         ],
       },
       {
@@ -104,13 +113,13 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    id: "backendDb",
+    id: "backendOps",
     icon: "backend",
-    titleKey: "skills.groups.backendDb.title",
+    titleKey: "skills.groups.backendOps.title",
     items: [
       {
         id: "spring",
-        titleKey: "skills.groups.backendDb.items.spring.title",
+        titleKey: "skills.groups.backendOps.items.spring.title",
         techs: [
           { name: "Spring Framework", iconSlug: "spring", iconColor: "6DB33F" },
           { name: "Spring Boot", iconSlug: "springboot", iconColor: "6DB33F" },
@@ -118,29 +127,22 @@ export const skillGroups: SkillGroup[] = [
       },
       {
         id: "mybatis",
-        titleKey: "skills.groups.backendDb.items.mybatis.title",
+        titleKey: "skills.groups.backendOps.items.mybatis.title",
         techs: [
-          { name: "MyBatis" },
+          { name: "MyBatis", iconSlug: "apache", iconColor: "D22128" },
         ],
       },
       {
         id: "databases",
-        titleKey: "skills.groups.backendDb.items.databases.title",
+        titleKey: "skills.groups.backendOps.items.databases.title",
         techs: [
           { name: "PostgreSQL", iconSlug: "postgresql", iconColor: "4169E1" },
           { name: "MySQL", iconSlug: "mysql", iconColor: "4479A1" },
         ],
       },
-    ],
-  },
-  {
-    id: "etc",
-    icon: "stack",
-    titleKey: "skills.groups.etc.title",
-    items: [
       {
         id: "collaboration",
-        titleKey: "skills.groups.etc.items.collaboration.title",
+        titleKey: "skills.groups.backendOps.items.collaboration.title",
         techs: [
           { name: "Git", iconSlug: "git", iconColor: "F05032" },
           { name: "Notion", iconSlug: "notion", iconColor: "ffffff" },
@@ -148,7 +150,7 @@ export const skillGroups: SkillGroup[] = [
       },
       {
         id: "infra",
-        titleKey: "skills.groups.etc.items.infra.title",
+        titleKey: "skills.groups.backendOps.items.infra.title",
         techs: [
           { name: "Docker", iconSlug: "docker", iconColor: "2496ED" },
           { name: "Jenkins", iconSlug: "jenkins", iconColor: "D24939" },

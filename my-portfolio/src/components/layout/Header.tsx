@@ -41,11 +41,11 @@ export function Header() {
     [scrollToSection],
   );
 
-  // const handleFullPdfExport = useCallback(() => {
-  //   document.body.classList.add("print-full");
-  //   window.print();
-  //   document.body.classList.remove("print-full");
-  // }, []);
+  const handleFullPdfExport = useCallback(() => {
+    document.body.classList.add("print-full");
+    window.print();
+    document.body.classList.remove("print-full");
+  }, []);
 
   return (
     <header className={`site-header${isScrolled ? " site-header--scrolled" : ""}`}>
@@ -70,13 +70,13 @@ export function Header() {
           ))}
         </nav>
         <div className="site-header__actions">
-          {/* <button
+          <button
             type="button"
             className="site-header__pdf-btn"
             onClick={handleFullPdfExport}
           >
             {t("nav.exportPdf")}
-          </button> */}
+          </button>
           {/* <LanguageSwitcher /> */}
           <button
             type="button"

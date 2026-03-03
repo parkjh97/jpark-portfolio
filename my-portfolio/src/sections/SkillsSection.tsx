@@ -43,18 +43,23 @@ export function SkillsSection() {
           textColor="#ffffff"
           accentColor="#ffffff"
         />
-        <div className="skills-grid">
-          {skillGroups.map((group) => (
-            <article key={group.id} className="skill-card">
-              <header className="skill-card__header">
-                <Icon name={group.icon} size={24} />
-                <h3>{t(group.titleKey)}</h3>
+        <div className="skills-showcase">
+          {skillGroups.map((group, index) => (
+            <article key={group.id} className="skill-panel">
+              <header className="skill-panel__top">
+                <span className="skill-panel__index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="skill-panel__title">
+                  <Icon name={group.icon} size={26} />
+                  <h3>{t(group.titleKey)}</h3>
+                </div>
               </header>
-              <div className="skill-card__body">
+              <div className="skill-panel__body">
                 {group.items.map((item) => (
-                  <div key={item.id} className="skill-item">
-                    <p className="skill-item__label">{t(item.titleKey)}</p>
-                    <div className="skill-item__techs">
+                  <div key={item.id} className="skill-lane">
+                    <p className="skill-lane__label">{t(item.titleKey)}</p>
+                    <div className="skill-lane__techs">
                       {item.techs.map((tech) => (
                         <TechChip key={tech.name} tech={tech} />
                       ))}

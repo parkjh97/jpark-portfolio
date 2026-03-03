@@ -60,6 +60,12 @@ const en = {
   skills: {
     title: "SKILLS",
     groups: {
+      languages: {
+        title: "Languages",
+        items: {
+          core: { title: "Programming Languages" },
+        },
+      },
       frontend: {
         title: "Front-End",
         items: {
@@ -69,17 +75,12 @@ const en = {
           tooling: { title: "Build & Tooling" },
         },
       },
-      backendDb: {
-        title: "Back-End & DB",
+      backendOps: {
+        title: "Back-End & Ops",
         items: {
           spring: { title: "Spring Ecosystem" },
           mybatis: { title: "Persistence Layer" },
           databases: { title: "Databases" },
-        },
-      },
-      etc: {
-        title: "ETC",
-        items: {
           collaboration: { title: "Collaboration" },
           infra: { title: "Ops & Infra" },
         },
