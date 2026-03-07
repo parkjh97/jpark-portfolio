@@ -141,7 +141,7 @@ const ko = {
         details: [
           "요구사항 분석부터 설계·개발·배포까지 전 단계 주도",
           "인사 관리 (출퇴, 휴가, 근태), 전자 결재, webhook 알림 등 다양한 모듈 개발",
-          "Next.auth 를 사용한 유저별 Session 관리, WebHook을 사용하여 사내 메세지툴 알림 연동 경험",
+          "Next.auth 를 사용한 유저별 Session 관리, WebHook을 사용하여 사내 메세지툴 알림 연동",
         ],
       },
       viewTexportX: {
@@ -165,7 +165,7 @@ const ko = {
           "네비게이션, 휴대폰, 교통카드 빅데이터를 기반으로 분석환경을 제공하는 서비스",
         details: [
           "연도별 대용량 공간 데이터 수집·정제 파이프라인 개선 및 MyBatis 기반 Batch Insert 최적화를 통한 DB 처리 성능 개선",
-          "OpenLayers + GeoServer 기반 지도 시각화 로직 유지보수 및 WMS/WFS 레이어 렌더링 최적화",
+          "OpenLayers + GeoServer 기반 지도 시각화 로직 유지보수 및 레이어 렌더링 최적화",
           "기존 JavaScript 기반 UI 기능 개선 및 CSS 리팩토링",
         ],
       },
@@ -176,6 +176,7 @@ const ko = {
         details: [
           "주요 교차로 교통량 및 속도, 신호 주기 데이터 조회 api 개발 및 시각화",
           "실시간 스마트 교차로 데이터 업로드 현황 모니터링 대시보드 개발",
+          "ITS OpenAPI 연동으로 화성시 실시간 교통사고·돌발 정보 수집 및 지도 표출"
         ],
       },
       si: {
@@ -382,7 +383,7 @@ const ko = {
           {
             heading: "기술 포인트",
             bullets: [
-              "MyBatis 동적 SQL — <choose>/<foreach>를 활용한 동적 테이블명·조건 분기, GEOM/ASTEXT 공간 데이터 처리",
+              "MyBatis 동적 SQL을 활용한 동적 테이블명·조건 분기, GEOM/ASTEXT 공간 데이터 처리",
               "eGovFrame 3.9.0 표준프레임워크 기반 4계층 구조 (Controller → Service → ServiceImpl → DAO)",
               "HikariCP 4.0.3 고성능 커넥션 풀, AOP 기반 전역 예외처리, LoggingInterceptor 요청 추적",
             ],
@@ -408,7 +409,7 @@ const ko = {
           {
             heading: "기술 포인트",
             bullets: [
-              "Spring + MyBatis 기반 대용량 교통 데이터 조회 API 개발 — CTE, FULL JOIN, ROW_NUMBER 윈도우 함수, PERCENTILE_CONT 분위수 통계 활용",
+              "Spring + MyBatis 기반 대용량 교통 데이터 조회 API 개발 — 교통 데이터 통합 조회 및 순위·분포 통계 계산 로직 구현",
               "GeoServer WMS/WFS 연동으로 공간 데이터 지도 레이어 동적 표출",
               "Deck.gl ScatterplotLayer, PathLayer 등을 활용한 인터랙티브 지도 시각화",
             ],
