@@ -139,39 +139,45 @@ export function ProjectsSection() {
           </button>
         </div>
         <div className="projects-grid">
-          {projects.map((project) => {
-            /**ReadMe 주석 */
+          {projects.map((project, index) => {
             const hasReadme = Boolean(project.readme);
             const hasImages = Boolean(project.images);
             return (
               <article key={project.id} className="project-card">
                 <header className="project-card__header">
-                  <h4>{project.copy.name}</h4>
-                  <span className="project-card__period">
-                    {project.copy.period}
-                  </span>
-                </header>
-                <div className="project-card__summary">
-                  <h5>{project.copy.summary}</h5>
-                  <ul>
-                    {project.copy.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
-                </div>
-                {project.url ? (
-                  <div className="project-card__link">
-                    <a href={project.url} target="_blank" rel="noreferrer">
-                      {project.url}
-                    </a>
+                  <div className="project-card__meta">
+                    <span className="project-card__index">
+                      #{String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="project-card__period">
+                      {project.copy.period}
+                    </span>
                   </div>
-                ) : null}
-                <div className="project-card__stack">
-                  {project.techStack.map((tech) => (
-                    <ProjectTechChip key={tech} name={tech} />
-                  ))}
+                  <h4>{project.copy.name}</h4>
+                </header>
+                <div className="project-card__body">
+                  <div className="project-card__summary">
+                    <h5>{project.copy.summary}</h5>
+                    <ul>
+                      {project.copy.details.map((detail) => (
+                        <li key={detail}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  {project.url ? (
+                    <div className="project-card__link">
+                      <a href={project.url} target="_blank" rel="noreferrer">
+                        {project.url}
+                      </a>
+                    </div>
+                  ) : null}
+                  <div className="project-card__stack">
+                    {project.techStack.map((tech) => (
+                      <ProjectTechChip key={tech} name={tech} />
+                    ))}
+                  </div>
                 </div>
-                <div className="project-card__actions">
+                <footer className="project-card__footer">
                   <button
                     type="button"
                     className={hasReadme ? "is-active" : undefined}
@@ -198,7 +204,7 @@ export function ProjectsSection() {
                   >
                     {t("projects.ctas.images")}
                   </button>
-                </div>
+                </footer>
               </article>
             );
           })}

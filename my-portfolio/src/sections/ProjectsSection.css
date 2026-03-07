@@ -45,55 +45,109 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
 }
 
+/* ── 카드 기본 ───────────────────────────────── */
 .project-card {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 24px;
-  border-radius: 18px;
+  gap: 0;
+  border-radius: 16px;
   background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(79, 70, 229, 0.12);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* 상단 accent 라인 */
+.project-card::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5 0%, #818cf8 100%);
+  flex-shrink: 0;
+}
+
+/* ── 헤더 ────────────────────────────────────── */
 .project-card__header {
+  padding: 16px 20px 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.project-card__header h4 {
-  font-size: 1.3rem;
+.project-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.project-card__index {
+  font-size: 0.68rem;
   font-weight: 700;
-  color: var(--text-strong);
+  letter-spacing: 0.06em;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  border-radius: 5px;
+  padding: 2px 8px;
+  line-height: 1.7;
 }
 
 .project-card__period {
-  font-size: 0.95rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
+  font-weight: 500;
+}
+
+.project-card__header h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  line-height: 1.3;
+}
+
+/* ── 본문 ────────────────────────────────────── */
+.project-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px 20px 16px;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
 }
 
 .project-card__summary h5 {
-  margin: 0 0 10px;
-  font-size: 1.05rem;
+  margin: 0 0 8px;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-strong);
+  line-height: 1.5;
 }
 
 .project-card__summary ul {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.65;
 }
 
 .project-card__link a {
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--primary-col);
   word-break: break-all;
@@ -102,19 +156,20 @@
 .project-card__stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 6px;
 }
 
+/* ── 기술 칩 ─────────────────────────────────── */
 .project-tech-chip {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 10px 4px 7px;
+  padding: 3px 10px 3px 7px;
   border-radius: 999px;
   background: var(--background-alt);
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.07);
   color: var(--text-strong);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
@@ -138,34 +193,41 @@
   flex-shrink: 0;
 }
 
-.project-card__actions {
+/* ── 푸터 (액션 버튼) ─────────────────────────── */
+.project-card__footer {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+  background: rgba(248, 250, 252, 0.6);
 }
 
-.project-card__actions button {
-  flex: none;
-  padding: 10px 18px;
-  border-radius: 10px;
-  border: 1px dashed rgba(15, 23, 42, 0.16);
-  color: var(--text-muted);
-  background: rgba(15, 23, 42, 0.02);
+.project-card__footer button {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px dashed rgba(15, 23, 42, 0.14);
+  color: rgba(15, 23, 42, 0.3);
+  background: transparent;
   cursor: not-allowed;
 }
 
-.project-card__actions button.is-active {
+.project-card__footer button.is-active {
   border-style: solid;
-  border-color: rgba(29, 78, 216, 0.3);
-  color: var(--primary-col);
-  background: rgba(219, 234, 254, 0.4);
+  border-color: rgba(99, 102, 241, 0.28);
+  color: #4f46e5;
+  background: rgba(99, 102, 241, 0.06);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
 
-.project-card__actions button.is-active:hover,
-.project-card__actions button.is-active:focus-visible {
+.project-card__footer button.is-active:hover,
+.project-card__footer button.is-active:focus-visible {
+  background: rgba(99, 102, 241, 0.12);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15);
   transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(29, 78, 216, 0.18);
 }
 
 .project-readme {
