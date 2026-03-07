@@ -40,48 +40,59 @@
     padding: 24px 32px;
   }
 
+  /* ── 문서 헤더 ─────────────────────────────────── */
   .projects-print__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 2px solid rgba(15, 23, 42, 0.2);
-    padding-bottom: 6px;
-    margin-bottom: 6px;
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .projects-print__title {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    color: #0f172a;
   }
 
   .projects-print__date {
     display: block;
-    margin-top: 0;
-    font-size: 0.95rem;
-    color: #475569;
+    margin-top: 2px;
+    font-size: 0.85rem;
+    color: #64748b;
   }
 
+  /* ── 목차 ──────────────────────────────────────── */
   .projects-print__toc {
-    margin: 0 0 6px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+    margin: 0 0 10px;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
   }
 
   .projects-print__toc h3 {
-    margin: 0;
-    font-size: 1.05rem;
+    margin: 0 0 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .projects-print__toc ol {
     margin: 0;
     padding-left: 18px;
-    color: #475569;
+    color: #334155;
+    font-size: 0.85rem;
     display: grid;
-    gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px 16px;
   }
 
-  /* 카드 내부 모든 블록 요소 margin 브라우저 기본값 리셋 */
+  /* ── 카드 공통 리셋 ─────────────────────────────── */
   .project-print-card p,
   .project-print-card ul,
   .project-print-card ol,
@@ -92,14 +103,15 @@
     margin: 0;
   }
 
-  /* article 자체를 flex column — gap 0으로 모두 붙임 */
+  /* ── 카드 레이아웃 ──────────────────────────────── */
   .project-print-card {
-    border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
     break-inside: avoid;
     page-break-inside: avoid;
     display: flex;
     flex-direction: column;
-    gap: 0;
   }
 
   .project-print-card + .project-print-card {
@@ -107,53 +119,71 @@
     page-break-before: always;
   }
 
+  /* ── 카드 헤더 (배경 band) ──────────────────────── */
   .project-print-card__header {
     display: flex;
     justify-content: space-between;
-    gap: 6px;
     align-items: baseline;
+    gap: 8px;
+    background: #f1f5f9;
+    border-bottom: 2px solid #4f46e5;
+    padding: 10px 14px;
   }
 
   .project-print-card__title {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
+    color: #0f172a;
   }
 
   .project-print-card__period {
-    font-size: 0.95rem;
-    color: #475569;
+    font-size: 0.82rem;
+    color: #64748b;
+    white-space: nowrap;
   }
 
+  /* ── 카드 본문 wrapper ──────────────────────────── */
+  .project-print-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  /* ── 요약 ───────────────────────────────────────── */
   .project-print-card__summary {
-    margin: 0;
     font-weight: 600;
-    color: #1f2937;
+    font-size: 0.9rem;
+    color: #1e293b;
   }
 
+  /* ── 상세 목록 ──────────────────────────────────── */
   .project-print-card__details {
-    margin: 0;
     padding-left: 18px;
     color: #475569;
-    display: grid;
-    gap: 0;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 
-  .project-print-card__section-title {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 700;
+  /* ── URL ────────────────────────────────────────── */
+  .project-print-card__url {
+    font-size: 0.8rem;
+    color: #4f46e5;
+    word-break: break-all;
   }
 
+  /* ── 기술 스택 칩 ───────────────────────────────── */
   .project-print-card__stack {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    margin: 0;
   }
 
   .project-print-chip {
-    font-size: 0.76rem;
+    font-size: 0.73rem;
     color: #4f46e5;
     background: rgba(99, 102, 241, 0.07);
     border: 1px solid rgba(99, 102, 241, 0.2);
@@ -161,20 +191,23 @@
     padding: 2px 8px;
   }
 
+  /* ── 이미지 그리드 ──────────────────────────────── */
   .project-print-card__images {
-    margin: 0;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
   }
 
   .project-print-card__image-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4px;
+    gap: 6px;
+    margin-top: 6px;
   }
 
   .project-print-card__image {
     margin: 0;
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
     overflow: hidden;
   }
 
@@ -186,38 +219,93 @@
   }
 
   .project-print-card__image figcaption {
-    padding: 2px 6px;
-    font-size: 0.82rem;
-    color: #475569;
+    padding: 3px 8px;
+    font-size: 0.78rem;
+    color: #64748b;
   }
 
-  /* readme 섹션들 사이 간격 제거 */
+  /* ── README 섹션 ────────────────────────────────── */
   .project-print-card__readme {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    margin: 0;
+    gap: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
   }
 
+  /* readme intro 단락 */
+  .project-print-card__intro {
+    font-size: 0.85rem;
+    color: #334155;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .project-print-card__readme-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* ── 섹션 타이틀 (accent bar) ───────────────────── */
+  .project-print-card__section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e293b;
+    padding-left: 8px;
+    border-left: 3px solid #4f46e5;
+    line-height: 1.3;
+  }
+
+  /* ── README 목록 ────────────────────────────────── */
   .project-print-card__readme-section ul {
-    margin: 0;
     padding-left: 18px;
     color: #475569;
-    display: grid;
-    gap: 0;
+    font-size: 0.83rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 
+  /* 기술스택: key bold */
+  .project-print-card__readme-section ul li strong {
+    color: #1e293b;
+    margin-right: 2px;
+  }
+
+  /* 구현/도전: 제목 bold */
+  .project-print-card__readme-section ul li .bullet-title {
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  /* ── 링크 목록 ──────────────────────────────────── */
   .project-print-card__links {
-    margin: 0;
-    display: grid;
-    gap: 0;
-    font-size: 0.9rem;
-    color: #475569;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.8rem;
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 8px;
   }
 
   .project-print-card__link {
-    display: grid;
-    gap: 0;
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+  }
+
+  .project-print-card__link span:first-child {
+    font-weight: 600;
+    color: #334155;
+    min-width: 60px;
+  }
+
+  .project-print-card__link span:last-child {
+    color: #4f46e5;
+    word-break: break-all;
   }
 
   a[href]:after {

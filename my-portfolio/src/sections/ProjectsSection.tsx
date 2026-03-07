@@ -237,74 +237,112 @@ export function ProjectsSection() {
                     {project.copy.period}
                   </span>
                 </header>
-                <p className="project-print-card__summary">
-                  {project.copy.summary}
-                </p>
-                <ul className="project-print-card__details">
-                  {project.copy.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-                <div className="project-print-card__stack">
-                  {project.techStack.map((tech) => (
-                    <span key={tech} className="project-print-chip">{tech}</span>
-                  ))}
-                </div>
-                {hasImages ? (
-                  <section className="project-print-card__images">
-                    <h4 className="project-print-card__section-title">
-                      {project.images?.title}
-                    </h4>
-                    <div className="project-print-card__image-grid">
-                      {printImages.map((image) => (
-                        <figure
-                          key={`${project.id}-${image.src}`}
-                          className="project-print-card__image"
-                        >
-                          <img
-                            src={image.src}
-                            alt={image.caption ?? project.copy.name}
-                          />
-                          {image.caption ? (
-                            <figcaption>{image.caption}</figcaption>
-                          ) : null}
-                        </figure>
-                      ))}
-                    </div>
-                  </section>
-                ) : null}
-                {hasReadme ? (
-                  <section className="project-print-card__readme">
-                    {project.readme?.sections.map((section) => (
-                      <div
-                        key={`${project.id}-${section.heading}`}
-                        className="project-print-card__readme-section"
-                      >
-                        <h4 className="project-print-card__section-title">
-                          {section.heading}
-                        </h4>
-                        <ul>
-                          {section.bullets.map((bullet) => (
-                            <li key={bullet}>{bullet}</li>
-                          ))}
-                        </ul>
-                      </div>
+                <div className="project-print-card__body">
+                  <p className="project-print-card__summary">
+                    {project.copy.summary}
+                  </p>
+                  <ul className="project-print-card__details">
+                    {project.copy.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
                     ))}
-                    {project.readme?.links?.length ? (
-                      <div className="project-print-card__links">
-                        {project.readme.links.map((link) => (
-                          <div
-                            key={`${project.id}-${link.href}`}
-                            className="project-print-card__link"
+                  </ul>
+                  {project.url ? (
+                    <p className="project-print-card__url">{project.url}</p>
+                  ) : null}
+                  <div className="project-print-card__stack">
+                    {project.techStack.map((tech) => (
+                      <span key={tech} className="project-print-chip">{tech}</span>
+                    ))}
+                  </div>
+                  {hasImages ? (
+                    <section className="project-print-card__images">
+                      <h4 className="project-print-card__section-title">
+                        {project.images?.title}
+                      </h4>
+                      <div className="project-print-card__image-grid">
+                        {printImages.map((image) => (
+                          <figure
+                            key={`${project.id}-${image.src}`}
+                            className="project-print-card__image"
                           >
-                            <span>{link.label}</span>
-                            <span>{link.href}</span>
-                          </div>
+                            <img
+                              src={image.src}
+                              alt={image.caption ?? project.copy.name}
+                            />
+                            {image.caption ? (
+                              <figcaption>{image.caption}</figcaption>
+                            ) : null}
+                          </figure>
                         ))}
                       </div>
-                    ) : null}
-                  </section>
-                ) : null}
+                    </section>
+                  ) : null}
+                  {hasReadme ? (
+                    <section className="project-print-card__readme">
+                      {project.readme?.intro?.length ? (
+                        <div className="project-print-card__intro">
+                          {project.readme.intro.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
+                      ) : null}
+                      {project.readme?.sections.map((section) => {
+                        const type = getSectionType(section.heading);
+                        return (
+                          <div
+                            key={`${project.id}-${section.heading}`}
+                            className="project-print-card__readme-section"
+                          >
+                            <h4 className="project-print-card__section-title">
+                              {section.heading}
+                            </h4>
+                            <ul>
+                              {section.bullets.map((bullet) => {
+                                if (type === "stack" && bullet.includes(": ")) {
+                                  const colonIdx = bullet.indexOf(": ");
+                                  return (
+                                    <li key={bullet}>
+                                      <strong>{bullet.slice(0, colonIdx)}:</strong>{" "}
+                                      {bullet.slice(colonIdx + 2)}
+                                    </li>
+                                  );
+                                }
+                                if (
+                                  (type === "implementations" || type === "challenges") &&
+                                  bullet.includes(" — ")
+                                ) {
+                                  const dashIdx = bullet.indexOf(" — ");
+                                  return (
+                                    <li key={bullet}>
+                                      <span className="bullet-title">
+                                        {bullet.slice(0, dashIdx)}
+                                      </span>
+                                      {bullet.slice(dashIdx)}
+                                    </li>
+                                  );
+                                }
+                                return <li key={bullet}>{bullet}</li>;
+                              })}
+                            </ul>
+                          </div>
+                        );
+                      })}
+                      {project.readme?.links?.length ? (
+                        <div className="project-print-card__links">
+                          {project.readme.links.map((link) => (
+                            <div
+                              key={`${project.id}-${link.href}`}
+                              className="project-print-card__link"
+                            >
+                              <span>{link.label}</span>
+                              <span>{link.href}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+                    </section>
+                  ) : null}
+                </div>
               </article>
             );
           })}
