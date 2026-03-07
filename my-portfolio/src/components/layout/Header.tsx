@@ -41,10 +41,29 @@ export function Header() {
     [scrollToSection],
   );
 
-  const handleFullPdfExport = useCallback(() => {
+  const handleFullPdfExport = useCallback(async () => {
+    const waitForImages = () => {
+      const images = Array.from(document.querySelectorAll("img"));
+      const pending = images.map((img) => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise<void>((resolve) => {
+          img.addEventListener("load", () => resolve(), { once: true });
+          img.addEventListener("error", () => resolve(), { once: true });
+        });
+      });
+      return Promise.race([
+        Promise.all(pending),
+        new Promise<void>((resolve) => setTimeout(resolve, 3000)),
+      ]);
+    };
+
     document.body.classList.add("print-full");
-    window.print();
-    document.body.classList.remove("print-full");
+    try {
+      await waitForImages();
+      window.print();
+    } finally {
+      document.body.classList.remove("print-full");
+    }
   }, []);
 
   return (

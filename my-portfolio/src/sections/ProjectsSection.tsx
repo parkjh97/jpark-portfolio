@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Icon } from "../components/common/Icon";
@@ -57,7 +57,17 @@ function getSectionType(heading: string) {
 
 export function ProjectsSection() {
   const { t, i18n } = useTranslation();
-  const printDate = new Date().toLocaleDateString(i18n.language);
+  const [printDate, setPrintDate] = useState(() =>
+    new Date().toLocaleDateString(i18n.language),
+  );
+
+  useEffect(() => {
+    const handler = () => {
+      setPrintDate(new Date().toLocaleDateString(i18n.language));
+    };
+    window.addEventListener("beforeprint", handler);
+    return () => window.removeEventListener("beforeprint", handler);
+  }, [i18n.language]);
   const printLabels = {
     title: t("projects.printTitle", { defaultValue: "Projects Portfolio" }),
     date: t("projects.printDateLabel", { defaultValue: "Date" }),
@@ -69,9 +79,6 @@ export function ProjectsSection() {
     projectId: string;
   } | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // const handlePdfExport = () => {
-  //   window.print();
-  // };
   const handleModalClose = () => {
     setModal(null);
     setCurrentImageIndex(0);
@@ -130,13 +137,6 @@ export function ProjectsSection() {
             <Icon name="filter" size={18} />
             <span>{t("projects.filterLabel")}</span>
           </button>
-          {/* <button
-            type="button"
-            className="projects-toolbar__pdf"
-            onClick={handlePdfExport}
-          >
-            {t("projects.ctas.pdf")}
-          </button> */}
         </div>
         <div className="projects-grid">
           {projects.map((project) => {
@@ -223,7 +223,7 @@ export function ProjectsSection() {
             </ol>
           </section>
           {projects.map((project, index) => {
-            const printImages = project.images?.items.slice(0, 4) ?? [];
+            const printImages = project.images?.items ?? [];
             const hasReadme = Boolean(project.readme);
             const hasImages = Boolean(printImages.length);
 
@@ -245,6 +245,11 @@ export function ProjectsSection() {
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
+                <div className="project-print-card__stack">
+                  {project.techStack.map((tech) => (
+                    <span key={tech} className="project-print-chip">{tech}</span>
+                  ))}
+                </div>
                 {hasImages ? (
                   <section className="project-print-card__images">
                     <h4 className="project-print-card__section-title">
