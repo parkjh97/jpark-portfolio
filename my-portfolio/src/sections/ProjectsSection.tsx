@@ -223,7 +223,14 @@ export function ProjectsSection() {
             <ol>
               {projects.map((project, index) => (
                 <li key={`toc-${project.id}`}>
-                  {index + 1}. {project.copy.name}
+                  <div className="projects-print__toc-title">
+                    <span className="projects-print__toc-num">{index + 1})</span>
+                    <span className="projects-print__toc-name">{project.copy.name}</span>
+                  </div>
+                  <div className="projects-print__toc-details">
+                    <span><span className="projects-print__toc-label">기간 :</span> {project.copy.period}</span>
+                    <span><span className="projects-print__toc-label">기술스택 :</span> {project.techStack.slice(0, 4).join(", ")}</span>
+                  </div>
                 </li>
               ))}
             </ol>

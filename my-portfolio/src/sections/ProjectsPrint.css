@@ -84,12 +84,59 @@
 
   .projects-print__toc ol {
     margin: 0;
-    padding-left: 18px;
+    padding-left: 0;
+    list-style: none;
     color: #334155;
-    font-size: 0.85rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px 16px;
+    font-size: 0.83rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .projects-print__toc ol li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .projects-print__toc ol li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .projects-print__toc-title {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .projects-print__toc-num {
+    flex-shrink: 0;
+    font-weight: 700;
+    color: #4f46e5;
+    font-size: 0.88rem;
+  }
+
+  .projects-print__toc-name {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.9rem;
+  }
+
+  .projects-print__toc-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: 20px;
+    font-size: 0.8rem;
+    color: #475569;
+  }
+
+  .projects-print__toc-label {
+    font-weight: 600;
+    color: #64748b;
   }
 
   /* ── 카드 공통 리셋 ─────────────────────────────── */

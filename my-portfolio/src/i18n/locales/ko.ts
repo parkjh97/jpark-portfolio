@@ -258,7 +258,7 @@ const ko = {
         title: "사내 자체 ERP 시스템",
         intro: [
           "사내 ERP 시스템을 요구사항 분석부터 설계·개발·배포·운영까지 전 단계 주도하였습니다.",
-          "전자결재(기안·결재·반려), 근태·휴가 관리, 관리자 모듈을 Next.js 14 App Router 기반으로 구현하였습니다.",
+          "전자결재(기안·결재·반려), 근태·휴가 관리, 관리자 모듈을 Next.js 14 App Router 기반으로 서버/클라이언트 컴포넌트를 분리하고, PostgreSQL 기반 세션 인증, 멀티스텝 결재 워크플로우, PWA 푸시 알림, Jandi 웹훅 알림, PDF/ZIP 일괄 다운로드 기능을 구현했습니다.",
         ],
         sections: [
           {
@@ -327,8 +327,9 @@ const ko = {
           {
             heading: "기술적 도전",
             bullets: [
-              "분석 옵션 → 파라미터 자동 조합(buildParsingParam) → 내부 API 호출 → 지도 레이어/범례 자동 생성 흐름 설계",
-              "다중 맵 비교 토글, 맵별 토스트 알림/전역 로딩 오버레이, 레이어 카드 조건 요약 및 스타일 즉시 적용",
+              "분석 파라미터 자동 조합 — 선택된 분석 옵션을 buildParsingParam으로 조합 후 내부 API 호출, 지도 레이어·범례를 자동 생성하는 단방향 흐름 설계",
+              "DnD Kit 레이어 정렬 — 드래그 순서가 지도 레이어 z-index에 실시간 반영되도록 Zustand 상태와 연동",
+              "다중 맵 비교 토글·전역 로딩 오버레이 — 맵별 독립 상태와 전역 상태를 분리해 동기화 이슈 없이 병렬 렌더링 지원",
             ],
           },
         ],
@@ -370,22 +371,32 @@ const ko = {
         title: "화성시 신호 모니터링 시스템",
         intro: [
           "화성시 교통 신호 데이터를 수집·분석·시각화하는 웹 기반 교통신호 최적화 분석 시스템입니다.",
-          "전자정부 표준프레임워크(eGovFrame) 기반으로 개발되었으며, 스마트 교차로 모니터링 모듈을 담당하여 개발하였습니다.",
+          "전자정부 표준프레임워크(eGovFrame) 기반으로 개발되었으며, 스마트 교차로 모니터링 모듈 신규 개발을 전담하였습니다.",
         ],
         sections: [
           {
-            heading: "주요 구현",
+            heading: "기술 스택",
+            bullets: [
+              "Frontend: JavaScript, CSS (JSP 기반 화면 구성)",
+              "지도: Deck.gl + GeoServer (교통사고·돌발 정보 레이어 표출)",
+              "Backend: Spring Framework, Java 11, MyBatis",
+              "DB: MySQL",
+              "프레임워크: eGovFrame 3.9.0 (전자정부 표준프레임워크)",
+            ],
+          },
+          {
+            heading: "핵심 구현",
             bullets: [
               "신호 주기·현시 데이터 조회 API 개발 — 복수 테이블 조인 기반 대용량 데이터의 성능 최적화 조회 구조 설계",
-              "스마트 교차로 대시보드 모듈 신규 개발 — CCTV 기반 점유율·속도·교통량 24시간 시계열 데이터 시각화 (담당 모듈)",              "기상청 ITS OpenAPI 연동 — 화성시 좌표 범위 기반 실시간 교통사고·돌발 정보 수집",
+              "스마트 교차로 대시보드 모듈 신규 개발 — CCTV 기반 점유율·속도·교통량 24시간 시계열 데이터 시각화 (전담 모듈)",
+              "기상청 ITS OpenAPI 연동 — 화성시 좌표 범위 기반 실시간 교통사고·돌발 정보 수집 및 지도 표출",
             ],
           },
           {
             heading: "기술 포인트",
             bullets: [
-              "MyBatis 동적 SQL을 활용한 동적 테이블명·조건 분기, GEOM/ASTEXT 공간 데이터 처리",
-              "eGovFrame 3.9.0 표준프레임워크 기반 4계층 구조 (Controller → Service → ServiceImpl → DAO)",
-              "HikariCP 4.0.3 고성능 커넥션 풀, AOP 기반 전역 예외처리, LoggingInterceptor 요청 추적",
+              "MyBatis 동적 SQL활용 — 동적 테이블명·조건 분기, GEOM 공간 데이터 처리",
+              "HikariCP 4.0.3 커넥션 풀, AOP 기반 전역 예외처리, LoggingInterceptor 요청 추적 구성",
             ],
           },
         ],
@@ -395,11 +406,20 @@ const ko = {
         title: "시흥시 대중교통 분석 시스템",
         intro: [
           "교통카드 빅데이터를 기반으로 시흥시 대중교통 현황을 분석하고 시각화하는 웹 시스템입니다.",
-          "노선·정류장·시간대별 승하차 데이터를 지도와 차트로 표현해 교통 정책 의사결정을 지원합니다.",
+          "노선·정류장·시간대별 승하차 데이터를 지도와 차트로 표현해 교통 정책 의사결정을 지원하며, 풀스택으로 개발에 참여하였습니다.",
         ],
         sections: [
           {
-            heading: "주요 구현",
+            heading: "기술 스택",
+            bullets: [
+              "Frontend: JavaScript, CSS (대시보드·차트 UI 구성)",
+              "지도: Deck.gl + GeoServer (대규모 GeoJSON 지도 시각화)",
+              "Backend: Spring Framework, Java 11, MyBatis",
+              "DB: MySQL",
+            ],
+          },
+          {
+            heading: "핵심 구현",
             bullets: [
               "교통카드 빅데이터 기반 10개 이상 교통 지표 시각화 (교통량, 시간대·노선별 승하차, OD 분석, 수익성 분석 등)",
               "Deck.gl 기반 대규모 GeoJSON(최대 20,000개 피처) 지도 레이어 렌더링 구현",
@@ -412,13 +432,7 @@ const ko = {
               "Spring + MyBatis 기반 대용량 교통 데이터 조회 API 개발 — 교통 데이터 통합 조회 및 순위·분포 통계 계산 로직 구현",
               "GeoServer WMS/WFS 연동으로 공간 데이터 지도 레이어 동적 표출",
               "Deck.gl ScatterplotLayer, PathLayer 등을 활용한 인터랙티브 지도 시각화",
-            ],
-          },
-          {
-            heading: "보안 & 검색",
-            bullets: [
-              "BCrypt 기반 비밀번호 암호화 및 CAPTCHA 인증으로 로그인 보안 강화",
-              "한글 자소분해 알고리즘 직접 구현 — 정류장 초성 검색 최적화",
+               "BCrypt 기반 비밀번호 암호화 및 CAPTCHA 인증으로 로그인 보안 강화",
               "세션 타임아웃 관리, XSS/SQL Injection 방어 필터 적용",
             ],
           },
@@ -429,11 +443,22 @@ const ko = {
         title: "빅데이터 가공 로그 대시보드",
         intro: [
           "Hadoop/YARN과 MySQL 기반 교통 데이터 수집·가공 파이프라인의 현황 및 진행률을 실시간으로 시각화한 모니터링 대시보드입니다.",
-          "Next.js App Router를 활용해 프론트엔드와 백엔드를 단일 레포로 구성하였습니다.",
+          "Next.js App Router를 활용해 프론트엔드와 백엔드를 단일 레포로 구성하고, 사내 데이터 운영팀이 파이프라인 상태를 직접 확인할 수 있도록 개발하였습니다.",
         ],
         sections: [
           {
-            heading: "주요 구현",
+            heading: "기술 스택",
+            bullets: [
+              "Framework: Next.js 14 (App Router) + TypeScript",
+              "상태 관리: Zustand",
+              "스타일링: Tailwind CSS",
+              "차트: ApexCharts (멀티 시리즈)",
+              "DB: MySQL (저장 프로시저 기반 집계)",
+              "연동: Hadoop/YARN REST API",
+            ],
+          },
+          {
+            heading: "핵심 구현",
             bullets: [
               "Next.js App Router + API Routes로 프론트·백엔드 단일 레포 구성",
               "MySQL 저장 프로시저 기반 집계와 information_schema 메타 활용으로 조건·라벨 자동 생성",
