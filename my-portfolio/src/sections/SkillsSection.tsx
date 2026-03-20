@@ -34,7 +34,7 @@ export function SkillsSection() {
                 <div className="skill-band__content">
                   {group.items.map((item) => (
                     <div key={item.id} className="skill-band__row">
-                      <span className="skill-band__label">{t(item.titleKey)}</span>
+                      {/* <span className="skill-band__label">{t(item.titleKey)}</span> */}
                       <div className="skill-band__tags">
                         {item.techs.map((tech) => (
                           <span key={tech.name} className="skill-tag">

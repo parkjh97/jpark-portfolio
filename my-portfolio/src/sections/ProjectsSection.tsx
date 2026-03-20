@@ -5,7 +5,6 @@ import { Icon } from "../components/common/Icon";
 import { Modal } from "../components/common/Modal";
 import { SectionTitle } from "../components/common/SectionTitle";
 import { projectEntries } from "../data/content";
-import { getTechIcon } from "../data/techIconMap";
 import type {
   ProjectCopy,
   ProjectImageGallery,
@@ -16,26 +15,7 @@ import "./ProjectsSection.css";
 import "./ProjectsPrint.css";
 
 function ProjectTechChip({ name }: { name: string }) {
-  const entry = getTechIcon(name);
-  const iconUrl = entry ? `https://cdn.simpleicons.org/${entry.slug}` : null;
-  return (
-    <span className="project-tech-chip">
-      {iconUrl ? (
-        <img
-          src={iconUrl}
-          alt=""
-          aria-hidden="true"
-          className="project-tech-chip__icon"
-          width={14}
-          height={14}
-          onError={(e) => { e.currentTarget.style.display = "none"; }}
-        />
-      ) : (
-        <span className="project-tech-chip__icon-placeholder" aria-hidden="true" />
-      )}
-      {name}
-    </span>
-  );
+  return <span className="project-tech-chip">{name}</span>;
 }
 
 type ModalType = "readme" | "images";
@@ -58,17 +38,6 @@ function getProjectAccentColor(id: string): string {
   return colorMap[id] ?? "indigo";
 }
 
-function getProjectTypeBadge(id: string): string {
-  const typeMap: Record<string, string> = {
-    erp: "풀스택 / ERP",
-    viewTLog: "풀스택 / 모니터링",
-    si: "SI / 교통분석",
-    hs: "SI / 신호분석",
-    viewT: "백엔드 / GIS 플랫폼",
-    viewTexportX: "프론트엔드 / GIS",
-  };
-  return typeMap[id] ?? "웹 개발";
-}
 
 export function ProjectsSection() {
   const { t, i18n } = useTranslation();
@@ -143,11 +112,10 @@ export function ProjectsSection() {
         <SectionTitle title={t("projects.title")} />
 
         <div className="projects-showcase">
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             const hasReadme = Boolean(project.readme);
             const hasImages = Boolean(project.images);
             const accentColor = getProjectAccentColor(project.id);
-            const typeBadge = getProjectTypeBadge(project.id);
 
             return (
               <article
@@ -156,13 +124,6 @@ export function ProjectsSection() {
               >
                 {/* Panel Header */}
                 <header className="project-panel__header">
-                  <div className="project-panel__meta">
-                    <span className="project-panel__index">
-                      #{String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="project-panel__period">{project.copy.period}</span>
-                    <span className="project-panel__type-badge">{typeBadge}</span>
-                  </div>
                   <h3 className="project-panel__title">{project.copy.name}</h3>
                   <p className="project-panel__summary">{project.readme?.overview.description ?? project.copy.summary}</p>
                 </header>
@@ -170,6 +131,18 @@ export function ProjectsSection() {
                 {/* Panel Body: info (single column) */}
                 <div className="project-panel__body">
                   <div className="project-panel__info">
+                    <div className="project-panel__period-row">
+                      <span className="project-panel__period-label">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                          <rect x="3" y="4" width="18" height="18" rx="2"/>
+                          <line x1="16" y1="2" x2="16" y2="6"/>
+                          <line x1="8" y1="2" x2="8" y2="6"/>
+                          <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        기간
+                      </span>
+                      <span className="project-panel__period">{project.copy.period}</span>
+                    </div>
                     {/* Tech Stack */}
                     <div className="project-panel__section">
                       <h4 className="project-panel__section-title">
@@ -242,12 +215,15 @@ export function ProjectsSection() {
                     <span className="project-panel__url-label">URL</span>
                     {project.url ? (
                       <a href={project.url} target="_blank" rel="noreferrer" className="project-panel__link">
-                        {project.url}
+                        바로가기
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                          <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                          <polyline points="15 3 21 3 21 9"/>
+                          <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
                       </a>
-                    ) : project.id === "viewT" ? (
-                      <span className="project-panel__url-value">—</span>
                     ) : (
-                      <span className="project-panel__url-private">내부 프로젝트로 인한 URL 미공개</span>
+                      <span className="project-panel__url-private">내부 프로젝트로 인한 미공개</span>
                     )}
                   </div>
                 </footer>
@@ -288,13 +264,11 @@ export function ProjectsSection() {
             const hasImages = Boolean(printImages.length);
             const readme = project.readme;
             const accentColor = getProjectAccentColor(project.id);
-            const typeBadge = getProjectTypeBadge(project.id);
             return (
               <article key={`print-${project.id}`} className={`project-print-card project-print-card--${accentColor}`}>
                 <header className="project-print-card__header">
                   <div className="ppc-header-meta">
                     <span className="ppc-header-index">#{String(index + 1).padStart(2, "0")}</span>
-                    <span className="ppc-header-type-badge">{typeBadge}</span>
                   </div>
                   <div className="ppc-header-main">
                     <h3 className="project-print-card__title">{project.copy.name}</h3>
@@ -326,10 +300,8 @@ export function ProjectsSection() {
                           <span className="ppc-url-label">URL</span>
                           {project.url ? (
                             <span className="ppc-url-value ppc-url-value--link">{project.url}</span>
-                          ) : project.id === "viewT" ? (
-                            <span className="ppc-url-value">—</span>
                           ) : (
-                            <span className="ppc-url-value ppc-url-value--private">내부 프로젝트로 인한 URL 미공개</span>
+                            <span className="ppc-url-value ppc-url-value--private">내부 프로젝트로 인한 미공개</span>
                           )}
                         </div>
                         <div className="ppc-highlights">
@@ -448,7 +420,7 @@ export function ProjectsSection() {
                               <span className="rmv2__highlight-background">{d.background}</span>
                             )}
                             {d.result && (
-                              <span className="rmv2__highlight-result">→ {d.result}</span>
+                              <span className="rmv2__highlight-result">{d.result}</span>
                             )}
                           </div>
                         </li>

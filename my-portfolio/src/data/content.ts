@@ -80,25 +80,6 @@ export const skillGroups: SkillGroup[] = [
     titleKey: "skills.groups.frontend.title",
     items: [
       {
-        id: "react-next",
-        titleKey: "skills.groups.frontend.items.reactNext.title",
-        techs: [
-          { name: "React.js" },
-          { name: "Next.js" },
-        ],
-      },
-      {
-        id: "visualization",
-        titleKey: "skills.groups.frontend.items.visualization.title",
-        techs: [
-          { name: "Zustand" },
-          { name: "Apache ECharts" },
-          { name: "D3.js" },
-          { name: "deck.gl" },
-          { name: "OpenLayers" },
-        ],
-      },
-      {
         id: "tooling",
         titleKey: "skills.groups.frontend.items.tooling.title",
         techs: [
@@ -126,22 +107,6 @@ export const skillGroups: SkillGroup[] = [
         titleKey: "skills.groups.backendOps.items.mybatis.title",
         techs: [
           { name: "MyBatis" },
-        ],
-      },
-      {
-        id: "databases",
-        titleKey: "skills.groups.backendOps.items.databases.title",
-        techs: [
-          { name: "PostgreSQL" },
-          { name: "MySQL" },
-        ],
-      },
-      {
-        id: "collaboration",
-        titleKey: "skills.groups.backendOps.items.collaboration.title",
-        techs: [
-          { name: "Git" },
-          { name: "Notion" },
         ],
       },
     ],
@@ -174,6 +139,7 @@ export const projectEntries: ProjectEntry[] = [
   // },
   {
     id: "erp",
+
     readmeKey: "projects.readmes.erp",
     imagesKey: "projects.images.erp",
     archSrc: "./img/project/erp/erp-arch.svg",
@@ -185,19 +151,15 @@ export const projectEntries: ProjectEntry[] = [
       "Zustand",
       "NextAuth.js",
       "PostgreSQL",
-      "bcryptjs",
-      "html2canvas",
-      "jsPDF",
-      "JSZip",
-      "web-push",
-      "date-fns",
-      "react-to-print",
+      
+      
     ],
 
     scaleStats: ["65 API Routes", "30+ 페이지", "15+ DB 테이블", "PWA + Jandi 연동"],
   },
   {
     id: "si",
+
     readmeKey: "projects.readmes.si",
     imagesKey: "projects.images.si",
     archSrc: "./img/project/si/si-arch.svg",
@@ -208,6 +170,7 @@ export const projectEntries: ProjectEntry[] = [
       "GeoServer",
       "Spring",
       "Java 11",
+      "myBatis",
       "PostgreSQL",
     ],
 
@@ -225,14 +188,16 @@ export const projectEntries: ProjectEntry[] = [
       "GeoServer",
       "Spring",
       "Java 11",
+      "myBatis",
       "MySQL",
       "MongoDB",
     ],
-
+    url: "https://viewt.ktdb.go.kr/cong/map/page.do",
     scaleStats: ["300+ 쿼리", "50+ REST API", "40+ DB 테이블", "MySQL + MongoDB 이중 DB"],
   },
   {
     id: "hs",
+
     readmeKey: "projects.readmes.hs",
     imagesKey: "projects.images.hs",
     archSrc: "./img/project/hs/hs-arch.svg",
@@ -243,6 +208,7 @@ export const projectEntries: ProjectEntry[] = [
       "GeoServer",
       "Spring",
       "Java 11",
+      "myBatis",
       "MySQL",
       "MongoDB",
     ],
@@ -251,6 +217,7 @@ export const projectEntries: ProjectEntry[] = [
   },
   {
     id: "viewTexportX",
+
     repoUrl: "https://github.com/hjcdg1/it-eldorado-blog",
     readmeKey: "projects.readmes.viewTexportX",
     imagesKey: "projects.images.viewTexportX",

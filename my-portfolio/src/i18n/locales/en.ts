@@ -70,8 +70,6 @@ const en = {
         title: "Front-End",
         items: {
           htmlCssJs: { title: "Markup & Language" },
-          reactNext: { title: "Application Frameworks" },
-          visualization: { title: "State & Data Visualization" },
           tooling: { title: "Build & Tooling" },
         },
       },
