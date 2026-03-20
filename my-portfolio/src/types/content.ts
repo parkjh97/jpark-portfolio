@@ -7,15 +7,11 @@ export type IconName =
   | "phone"
   | "email"
   | "education"
-  | "language"
-  | "frontend"
-  | "backend"
   | "devops"
   | "external"
   | "github"
   | "blog"
   | "chevron-down"
-  | "filter"
   | "stack";
 
 export interface NavigationLink {
@@ -33,8 +29,6 @@ export interface AboutField {
 
 export interface SkillTech {
   name: string;
-  iconSlug?: string;
-  iconColor?: string;
 }
 
 export interface SkillListItem {
@@ -45,7 +39,6 @@ export interface SkillListItem {
 
 export interface SkillGroup {
   id: string;
-  icon: IconName;
   titleKey: TranslationKey;
   items: SkillListItem[];
 }
@@ -65,14 +58,15 @@ export interface ProjectEntry {
   readmeKey?: TranslationKey;
   imagesKey?: TranslationKey;
   techStack: string[];
-  isFeatured?: boolean;
+  scaleStats?: string[];
+  archSrc?: string;
 }
 
 export interface ProjectCopy {
   name: string;
   period: string;
-  summary: string;
-  details: string[];
+  summary?: string;
+  details?: string[];
 }
 
 export interface ProjectReadmeSection {
@@ -85,6 +79,23 @@ export interface ProjectReadmeContent {
   intro: string[];
   sections: ProjectReadmeSection[];
   links?: Array<{ label: string; href: string }>;
+}
+
+export interface ProjectReadmeDetailItem {
+  title: string;
+  background: string;
+  points?: string[];
+  result?: string;
+}
+
+export interface ProjectReadmeV2 {
+  overview: {
+    description: string;
+    team: string;
+    role: string;
+  };
+  details: ProjectReadmeDetailItem[];
+  reflection: string[];
 }
 
 export interface ProjectImageItem {

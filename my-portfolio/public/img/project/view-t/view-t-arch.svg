@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360" font-family="'Pretendard','Inter','Segoe UI',system-ui,sans-serif">
+  <defs>
+    <marker id="arrow-vt" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="620" height="360" fill="#f8fafc" rx="12"/>
+  <text x="310" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">시스템 아키텍처 — View-T 3.0 Expert (교통 빅데이터 분석 플랫폼)</text>
+
+  <!-- Client -->
+  <rect x="20" y="50" width="580" height="50" rx="8" fill="#ede9fe" stroke="#a78bfa" stroke-width="1.2"/>
+  <text x="36" y="68" font-size="9" font-weight="700" fill="#7c3aed">CLIENT</text>
+  <rect x="100" y="58" width="140" height="30" rx="6" fill="#7c3aed"/>
+  <text x="170" y="73" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Browser</text>
+  <text x="170" y="84" text-anchor="middle" font-size="9" fill="#ddd6fe">110+ JSP · jQuery</text>
+  <rect x="260" y="58" width="140" height="30" rx="6" fill="#6d28d9"/>
+  <text x="330" y="73" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">OpenLayers</text>
+  <text x="330" y="84" text-anchor="middle" font-size="9" fill="#ddd6fe">GIS 지도 시각화</text>
+  <rect x="420" y="58" width="140" height="30" rx="6" fill="#5b21b6"/>
+  <text x="490" y="73" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">GeoServer</text>
+  <text x="490" y="84" text-anchor="middle" font-size="9" fill="#ddd6fe">WMS 레이어 서비스</text>
+
+  <line x1="310" y1="100" x2="310" y2="118" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-vt)"/>
+
+  <!-- Backend -->
+  <rect x="20" y="120" width="580" height="90" rx="8" fill="#dcfce7" stroke="#4ade80" stroke-width="1.2"/>
+  <text x="36" y="138" font-size="9" font-weight="700" fill="#15803d">BACKEND (Java 1.8)</text>
+  <rect x="36" y="144" width="130" height="56" rx="6" fill="#15803d"/>
+  <text x="101" y="161" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Spring MVC 3.1</text>
+  <text x="101" y="174" text-anchor="middle" font-size="9" fill="#bbf7d0">eGovFramework 2.7</text>
+  <text x="101" y="187" text-anchor="middle" font-size="9" fill="#bbf7d0">50+ REST API</text>
+  <line x1="166" y1="172" x2="186" y2="172" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-vt)"/>
+  <rect x="186" y="144" width="130" height="56" rx="6" fill="#16a34a"/>
+  <text x="251" y="161" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Service Layer</text>
+  <text x="251" y="174" text-anchor="middle" font-size="9" fill="#bbf7d0">GeoTrans 좌표변환</text>
+  <text x="251" y="187" text-anchor="middle" font-size="9" fill="#bbf7d0">ConvexHull Graham</text>
+  <line x1="316" y1="172" x2="336" y2="172" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-vt)"/>
+  <rect x="336" y="144" width="130" height="56" rx="6" fill="#166534"/>
+  <text x="401" y="161" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">MyBatis Mapper</text>
+  <text x="401" y="174" text-anchor="middle" font-size="9" fill="#bbf7d0">20 XML · 300+ 쿼리</text>
+  <text x="401" y="187" text-anchor="middle" font-size="9" fill="#bbf7d0">동적 테이블명 조회</text>
+  <rect x="480" y="148" width="112" height="50" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="536" y="163" text-anchor="middle" font-size="9" fill="#166534">Jasypt 암호화</text>
+  <text x="536" y="174" text-anchor="middle" font-size="9" fill="#166534">JavaMelody 모니터링</text>
+  <text x="536" y="185" text-anchor="middle" font-size="9" fill="#166534">SXSSF 엑셀 스트리밍</text>
+
+  <!-- Arrows to DBs -->
+  <line x1="220" y1="210" x2="150" y2="228" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-vt)"/>
+  <line x1="400" y1="210" x2="470" y2="228" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-vt)"/>
+
+  <!-- DBs -->
+  <rect x="20" y="230" width="265" height="60" rx="8" fill="#fef9c3" stroke="#fde047" stroke-width="1.2"/>
+  <text x="36" y="248" font-size="9" font-weight="700" fill="#854d0e">PRIMARY DB</text>
+  <rect x="36" y="252" width="233" height="30" rx="6" fill="#854d0e"/>
+  <text x="152" y="267" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">MySQL</text>
+  <text x="152" y="278" text-anchor="middle" font-size="9" fill="#fef9c3">40+ 테이블 · 교통 정형 데이터</text>
+
+  <rect x="320" y="230" width="280" height="60" rx="8" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.2"/>
+  <text x="336" y="248" font-size="9" font-weight="700" fill="#9d174d">SPATIAL DB</text>
+  <rect x="336" y="252" width="248" height="30" rx="6" fill="#9d174d"/>
+  <text x="460" y="267" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">MongoDB</text>
+  <text x="460" y="278" text-anchor="middle" font-size="9" fill="#fce7f3">GeoJSON 기하 데이터 · 비정형 레이어</text>
+
+  <!-- Stack bar -->
+  <rect x="20" y="304" width="580" height="42" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="36" y="317" font-size="9" font-weight="600" fill="#64748b">STACK</text>
+  <rect x="70" y="310" width="52" height="20" rx="4" fill="#dcfce7"/>
+  <text x="96" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">Java 1.8</text>
+  <rect x="128" y="310" width="72" height="20" rx="4" fill="#dcfce7"/>
+  <text x="164" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">Spring MVC</text>
+  <rect x="206" y="310" width="56" height="20" rx="4" fill="#dcfce7"/>
+  <text x="234" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">MyBatis</text>
+  <rect x="268" y="310" width="52" height="20" rx="4" fill="#fef9c3"/>
+  <text x="294" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#854d0e">MySQL</text>
+  <rect x="326" y="310" width="68" height="20" rx="4" fill="#fce7f3"/>
+  <text x="360" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#9d174d">MongoDB</text>
+  <rect x="400" y="310" width="68" height="20" rx="4" fill="#ede9fe"/>
+  <text x="434" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#7c3aed">OpenLayers</text>
+  <rect x="474" y="310" width="68" height="20" rx="4" fill="#ede9fe"/>
+  <text x="508" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#7c3aed">GeoServer</text>
+  <rect x="548" y="310" width="44" height="20" rx="4" fill="#dcfce7"/>
+  <text x="570" y="323" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">Jasypt</text>
+
+  <text x="310" y="355" text-anchor="middle" font-size="10" fill="#94a3b8">70+ Java Files · 300+ Queries · 110+ JSP · 50+ REST API</text>
+</svg>

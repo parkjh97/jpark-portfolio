@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360" font-family="'Pretendard','Inter','Segoe UI',system-ui,sans-serif">
+  <defs>
+    <marker id="arrow-hs" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="620" height="360" fill="#f8fafc" rx="12"/>
+  <text x="310" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">시스템 아키텍처 — 화성시 스마트 교통신호 분석</text>
+
+  <!-- Client -->
+  <rect x="20" y="50" width="580" height="50" rx="8" fill="#ede9fe" stroke="#a78bfa" stroke-width="1.2"/>
+  <text x="36" y="68" font-size="9" font-weight="700" fill="#7c3aed">CLIENT</text>
+  <rect x="100" y="58" width="140" height="30" rx="6" fill="#7c3aed"/>
+  <text x="170" y="73" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Browser</text>
+  <text x="170" y="84" text-anchor="middle" font-size="9" fill="#ddd6fe">Thymeleaf / JSP</text>
+  <rect x="260" y="58" width="140" height="30" rx="6" fill="#6d28d9"/>
+  <text x="330" y="73" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Deck.GL / WebGL</text>
+  <text x="330" y="84" text-anchor="middle" font-size="9" fill="#ddd6fe">교차로 지도 시각화</text>
+  <rect x="420" y="58" width="140" height="30" rx="6" fill="#5b21b6"/>
+  <text x="490" y="73" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">D3.js</text>
+  <text x="490" y="84" text-anchor="middle" font-size="9" fill="#ddd6fe">신호 분석 차트</text>
+
+  <line x1="310" y1="100" x2="310" y2="118" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-hs)"/>
+
+  <!-- Server -->
+  <rect x="20" y="120" width="580" height="70" rx="8" fill="#dcfce7" stroke="#4ade80" stroke-width="1.2"/>
+  <text x="36" y="138" font-size="9" font-weight="700" fill="#15803d">BACKEND (Java 1.8)</text>
+  <rect x="36" y="144" width="120" height="36" rx="6" fill="#15803d"/>
+  <text x="96" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Spring MVC 4.3</text>
+  <text x="96" y="172" text-anchor="middle" font-size="9" fill="#bbf7d0">197 Java Files</text>
+  <line x1="156" y1="162" x2="176" y2="162" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-hs)"/>
+  <rect x="176" y="144" width="130" height="36" rx="6" fill="#16a34a"/>
+  <text x="241" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Service Layer</text>
+  <text x="241" y="172" text-anchor="middle" font-size="9" fill="#bbf7d0">30+ 기능 모듈</text>
+  <line x1="306" y1="162" x2="326" y2="162" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-hs)"/>
+  <rect x="326" y="144" width="130" height="36" rx="6" fill="#166534"/>
+  <text x="391" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">MyBatis Mapper</text>
+  <text x="391" y="172" text-anchor="middle" font-size="9" fill="#bbf7d0">33 XML · 5,705 SQL</text>
+  <rect x="472" y="148" width="116" height="28" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="530" y="161" text-anchor="middle" font-size="9" fill="#166534">HikariCP</text>
+  <text x="530" y="172" text-anchor="middle" font-size="9" fill="#166534">커넥션 풀</text>
+
+  <!-- Arrow to DBs -->
+  <line x1="200" y1="190" x2="140" y2="208" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-hs)"/>
+  <line x1="310" y1="190" x2="310" y2="208" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-hs)"/>
+  <line x1="420" y1="190" x2="480" y2="208" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-hs)"/>
+
+  <!-- DBs layer -->
+  <rect x="20" y="210" width="175" height="56" rx="8" fill="#fef9c3" stroke="#fde047" stroke-width="1.2"/>
+  <text x="36" y="226" font-size="9" font-weight="700" fill="#854d0e">PRIMARY DB</text>
+  <rect x="36" y="230" width="143" height="28" rx="6" fill="#854d0e"/>
+  <text x="107" y="245" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">MySQL 5.x</text>
+  <text x="107" y="256" text-anchor="middle" font-size="9" fill="#fef9c3">정적 교통망 데이터</text>
+
+  <rect x="220" y="210" width="175" height="56" rx="8" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.2"/>
+  <text x="236" y="226" font-size="9" font-weight="700" fill="#9d174d">REALTIME DB</text>
+  <rect x="236" y="230" width="143" height="28" rx="6" fill="#9d174d"/>
+  <text x="307" y="245" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">MongoDB 3.9</text>
+  <text x="307" y="256" text-anchor="middle" font-size="9" fill="#fce7f3">OBU 실시간 궤적</text>
+
+  <rect x="420" y="210" width="175" height="56" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+  <text x="436" y="226" font-size="9" font-weight="700" fill="#166534">LEGACY DB</text>
+  <rect x="436" y="230" width="143" height="28" rx="6" fill="#166534"/>
+  <text x="507" y="245" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Tibero 6</text>
+  <text x="507" y="256" text-anchor="middle" font-size="9" fill="#dcfce7">통합 교통 DB</text>
+
+  <!-- Stack bar -->
+  <rect x="20" y="280" width="580" height="42" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="36" y="293" font-size="9" font-weight="600" fill="#64748b">STACK</text>
+  <rect x="70" y="286" width="52" height="20" rx="4" fill="#dcfce7"/>
+  <text x="96" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">Java 1.8</text>
+  <rect x="128" y="286" width="72" height="20" rx="4" fill="#dcfce7"/>
+  <text x="164" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">Spring MVC</text>
+  <rect x="206" y="286" width="56" height="20" rx="4" fill="#dcfce7"/>
+  <text x="234" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#15803d">MyBatis</text>
+  <rect x="268" y="286" width="52" height="20" rx="4" fill="#fef9c3"/>
+  <text x="294" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#854d0e">MySQL</text>
+  <rect x="326" y="286" width="68" height="20" rx="4" fill="#fce7f3"/>
+  <text x="360" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#9d174d">MongoDB</text>
+  <rect x="400" y="286" width="52" height="20" rx="4" fill="#f0fdf4"/>
+  <text x="426" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#166534">Tibero</text>
+  <rect x="458" y="286" width="48" height="20" rx="4" fill="#ede9fe"/>
+  <text x="482" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#7c3aed">deck.gl</text>
+  <rect x="512" y="286" width="48" height="20" rx="4" fill="#ede9fe"/>
+  <text x="536" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#7c3aed">D3.js</text>
+
+  <text x="310" y="336" text-anchor="middle" font-size="10" fill="#94a3b8">197 Java Files · 20,097 Lines · 100+ API · 155,001+ Frontend Lines</text>
+</svg>

@@ -46,29 +46,6 @@ const iconPaths: Record<IconName, ReactNode> = {
       <path d="m17 9 3 2v4" />
     </>
   ),
-  language: (
-    <>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M21 12H3" />
-      <path d="M12 3a14.5 14.5 0 0 1 4 9 14.5 14.5 0 0 1-4 9" />
-      <path d="M12 3a14.5 14.5 0 0 0-4 9 14.5 14.5 0 0 0 4 9" />
-    </>
-  ),
-  frontend: (
-    <>
-      <rect x="3" y="4" width="18" height="14" rx="2" />
-      <path d="m9 9-3 3 3 3" />
-      <path d="m15 9 3 3-3 3" />
-    </>
-  ),
-  backend: (
-    <>
-      <path d="M4 4h16v4H4z" />
-      <path d="M4 12h16v8H4z" />
-      <path d="M9 8v4" />
-      <path d="M15 8v4" />
-    </>
-  ),
   devops: (
     <>
       <path d="M4 12a4 4 0 0 1 7-2.828l2 2 2-2a4 4 0 1 1 0 5.656l-2 2-2-2A4 4 0 0 1 4 12Z" />
@@ -97,11 +74,6 @@ const iconPaths: Record<IconName, ReactNode> = {
   "chevron-down": (
     <>
       <path d="M6 9l6 6 6-6" />
-    </>
-  ),
-  filter: (
-    <>
-      <path d="M4 5h16l-6.5 7.5V20l-3-1v-6.5Z" />
     </>
   ),
   stack: (

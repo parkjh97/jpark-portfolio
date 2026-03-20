@@ -2,19 +2,26 @@
   display: none;
 }
 
-/* ── Projects-only PDF (기존 프로젝트 PDF 버튼) ───────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   Projects PDF Print Styles
+   ─────────────────────────────────────────────────────────────── */
 @media print {
   @page {
-    margin: 18mm;
+    margin: 10mm 12mm;
+    size: A4 portrait;
   }
 
+  /* ── 프로젝트 전용 PDF: body 기본값 ─────────────────────────── */
   body:not(.print-full) {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     background: #ffffff;
     color: #0f172a;
     font-family: var(--font-sans);
-    line-height: 1.5;
+    font-size: 11px;
+    line-height: 1.65;
+    orphans: 2;
+    widows: 2;
   }
 
   body:not(.print-full) .site-header,
@@ -37,328 +44,699 @@
   body:not(.print-full) #projects .projects-print {
     display: block !important;
     width: 100%;
-    padding: 24px 32px;
+    padding: 16px 0;
   }
 
-  /* ── 문서 헤더 ─────────────────────────────────── */
+  a[href]:after {
+    content: "";
+  }
+
+  /* ══ 문서 헤더 ══════════════════════════════════════════════ */
   .projects-print__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 2px solid #4f46e5;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+    border-bottom: 2.5px solid #4f46e5;
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .projects-print__title {
     margin: 0;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: #0f172a;
+    letter-spacing: -0.025em;
   }
 
   .projects-print__date {
     display: block;
-    margin-top: 2px;
-    font-size: 0.85rem;
+    margin-top: 4px;
+    font-size: 0.8rem;
     color: #64748b;
   }
 
-  /* ── 목차 ──────────────────────────────────────── */
+  /* ══ 목차 — 독립 페이지 ════════════════════════════════════════
+     break-after: page → 목차 다음 항상 새 페이지에서 프로젝트 시작 */
   .projects-print__toc {
-    margin: 0 0 10px;
-    padding: 10px 14px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    break-after: page;
+    page-break-after: always;
   }
 
   .projects-print__toc h3 {
-    margin: 0 0 6px;
-    font-size: 0.8rem;
+    margin: 0 0 16px !important;
+    font-size: 0.72rem;
     font-weight: 700;
-    color: #4f46e5;
+    color: #94a3b8;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
   }
 
   .projects-print__toc ol {
     margin: 0;
-    padding-left: 0;
+    padding: 0;
     list-style: none;
-    color: #334155;
-    font-size: 0.83rem;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0;
   }
 
-  .projects-print__toc ol li {
+  /* ── TOC 행: 2줄 레이아웃 ──────────────────────────────────── */
+  .ppc-toc-row {
     display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 8px 0;
-    border-bottom: 1px solid #e2e8f0;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f4f8;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  .projects-print__toc ol li:last-child {
+  .ppc-toc-row:last-child {
     border-bottom: none;
-    padding-bottom: 0;
   }
 
-  .projects-print__toc-title {
+  /* 번호 배지 */
+  .ppc-toc-num {
+    flex-shrink: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #cbd5e1;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    padding-top: 2px;
+    width: 36px;
+  }
+
+  /* 색상 테마별 번호 */
+  .ppc-toc-row--indigo .ppc-toc-num  { color: rgba(79,70,229,0.35); }
+  .ppc-toc-row--emerald .ppc-toc-num { color: rgba(5,150,105,0.35); }
+  .ppc-toc-row--cyan .ppc-toc-num    { color: rgba(8,145,178,0.35); }
+
+  /* 메인 콘텐츠 (2줄) */
+  .ppc-toc-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+  }
+
+  /* 1줄: 이름 + 기간 */
+  .ppc-toc-top {
     display: flex;
     align-items: baseline;
-    gap: 6px;
+    justify-content: space-between;
+    gap: 12px;
   }
 
-  .projects-print__toc-num {
-    flex-shrink: 0;
-    font-weight: 700;
-    color: #4f46e5;
-    font-size: 0.88rem;
-  }
-
-  .projects-print__toc-name {
+  .ppc-toc-name {
+    font-size: 1rem;
     font-weight: 700;
     color: #0f172a;
-    font-size: 0.9rem;
+    line-height: 1.35;
+    flex: 1;
+    min-width: 0;
   }
 
-  .projects-print__toc-details {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    padding-left: 20px;
+  .ppc-toc-period {
+    flex-shrink: 0;
     font-size: 0.8rem;
     color: #475569;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
   }
 
-  .projects-print__toc-label {
-    font-weight: 600;
-    color: #64748b;
+  /* 2줄: 기술스택 */
+  .ppc-toc-stack {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    line-height: 1.4;
+    font-weight: 400;
   }
 
-  /* ── 카드 공통 리셋 ─────────────────────────────── */
-  .project-print-card p,
+  /* ══ 카드 공통 리셋 ══════════════════════════════════════════
+     h4, p를 포함하면 specificity(0,1,1)가 클래스 단독(0,1,0)보다 높아
+     ppc-section__label, ppc-overview__desc 등의 margin을 덮어쓰는 문제 발생.
+     해당 태그는 리셋에서 제외하고 필요한 경우 각 클래스에서 명시적으로 처리. */
   .project-print-card ul,
   .project-print-card ol,
   .project-print-card li,
-  .project-print-card section,
-  .project-print-card h3,
-  .project-print-card h4 {
+  .project-print-card section {
     margin: 0;
   }
 
-  /* ── 카드 레이아웃 ──────────────────────────────── */
-  .project-print-card {
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    overflow: hidden;
-    break-inside: avoid;
-    page-break-inside: avoid;
-    display: flex;
-    flex-direction: column;
+  /* ══ 색상 테마 변수 ══════════════════════════════════════════ */
+  .project-print-card--indigo {
+    --ppc-accent: #4f46e5;
+    --ppc-accent-light: rgba(79,70,229,0.07);
+    --ppc-accent-mid: rgba(79,70,229,0.18);
+    --ppc-badge-bg: #ede9fe;
+    --ppc-badge-color: #4338ca;
   }
 
+  .project-print-card--emerald {
+    --ppc-accent: #059669;
+    --ppc-accent-light: rgba(5,150,105,0.07);
+    --ppc-accent-mid: rgba(5,150,105,0.18);
+    --ppc-badge-bg: #dcfce7;
+    --ppc-badge-color: #065f46;
+  }
+
+  .project-print-card--cyan {
+    --ppc-accent: #0891b2;
+    --ppc-accent-light: rgba(8,145,178,0.07);
+    --ppc-accent-mid: rgba(8,145,178,0.18);
+    --ppc-badge-bg: #cffafe;
+    --ppc-badge-color: #0e7490;
+  }
+
+  /* ══ 카드 레이아웃 ══════════════════════════════════════════
+     각 프로젝트는 새 페이지에서 시작
+     카드 전체에 break-inside: avoid 미적용 → 섹션 단위 제어 */
+  .project-print-card {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /* 두 번째 카드부터는 새 페이지 시작 (TOC의 break-after로 첫 카드도 새 페이지) */
   .project-print-card + .project-print-card {
     break-before: page;
     page-break-before: always;
   }
 
-  /* ── 카드 헤더 (배경 band) ──────────────────────── */
+  /* ── 카드 헤더 ──────────────────────────────────────────── */
   .project-print-card__header {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--ppc-accent);
+    padding: 12px 18px 14px;
+    border-radius: 10px 10px 0 0;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* 메타 행: 인덱스 + 타입 배지 */
+  .ppc-header-meta {
+    display: flex;
+    align-items: center;
     gap: 8px;
-    background: #f1f5f9;
-    border-bottom: 2px solid #4f46e5;
-    padding: 10px 14px;
+  }
+
+  .ppc-header-index {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.06em;
+  }
+
+  .ppc-header-type-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.18);
+    border-radius: 999px;
+    padding: 2px 10px;
+    letter-spacing: 0.03em;
+  }
+
+  /* 타이틀 + 기간 행 */
+  .ppc-header-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .project-print-card__title {
     margin: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #0f172a;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.015em;
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .project-print-card__period {
+    flex-shrink: 0;
     font-size: 0.82rem;
-    color: #64748b;
+    color: rgba(255,255,255,0.8);
     white-space: nowrap;
+    font-weight: 500;
   }
 
-  /* ── 카드 본문 wrapper ──────────────────────────── */
+  /* ── 카드 본문 ──────────────────────────────────────────── */
   .project-print-card__body {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 12px 14px;
   }
 
-  /* ── 요약 ───────────────────────────────────────── */
-  .project-print-card__summary {
+  /* ══ 공통 섹션 블록 ══════════════════════════════════════════ */
+  .ppc-section {
+    padding: 14px 20px;
+    border-bottom: 1px solid #eef2f7;
+  }
+
+  .ppc-section:last-child {
+    border-bottom: none;
+    padding-bottom: 18px;
+  }
+
+  /* 섹션 레이블 뱃지
+     break-after: avoid → 레이블이 페이지 하단에 혼자 남지 않도록 */
+  .ppc-section__label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--ppc-accent);
+    background: var(--ppc-accent-light);
+    border: 1px solid var(--ppc-accent-mid);
+    border-radius: 20px;
+    padding: 2px 10px;
+    margin: 0 0 10px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* ══ 개요 섹션 ════════════════════════════════════════════ */
+  .ppc-section--overview {
+    background: #fafbff;
+    /* break-inside: avoid 제거 — 하이라이트 많을 경우 1페이지 초과 가능, 대신 개별 아이템 단위로 제어 */
+  }
+
+  .ppc-overview__desc {
+    font-size: 0.88rem;
     font-weight: 600;
-    font-size: 0.9rem;
     color: #1e293b;
+    line-height: 1.7;
+    margin: 0 0 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
-  /* ── 상세 목록 ──────────────────────────────────── */
-  .project-print-card__details {
-    padding-left: 18px;
-    color: #475569;
-    font-size: 0.85rem;
+  /* 기간/인원/역할 info grid — 3열 수평 */
+  .ppc-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ppc-info-row {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    border-right: 1px solid #eef2f7;
   }
 
-  /* ── URL ────────────────────────────────────────── */
-  .project-print-card__url {
+  .ppc-info-row:last-child {
+    border-right: none;
+  }
+
+  .ppc-info-label {
+    padding: 5px 10px 4px;
+    font-size: 0.63rem;
+    font-weight: 700;
+    color: var(--ppc-accent);
+    background: var(--ppc-accent-light);
+    border-bottom: 1px solid var(--ppc-accent-mid);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .ppc-info-value {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+    color: #334155;
+    line-height: 1.5;
+    font-weight: 500;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* URL 행 */
+  .ppc-url-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    background: rgba(15,23,42,0.02);
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    break-inside: avoid;
+  }
+
+  .ppc-url-label {
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ppc-accent);
+    background: var(--ppc-accent-light);
+    border: 1px solid var(--ppc-accent-mid);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+
+  .ppc-url-value {
     font-size: 0.8rem;
-    color: #4f46e5;
+    color: #334155;
+    font-weight: 500;
+  }
+
+  .ppc-url-value--link {
+    color: var(--ppc-accent);
+    font-weight: 600;
     word-break: break-all;
   }
 
-  /* ── 기술 스택 칩 ───────────────────────────────── */
-  .project-print-card__stack {
+  .ppc-url-value--private {
+    color: #94a3b8;
+    font-style: italic;
+  }
+
+  /* 개발 주요사항 */
+  .ppc-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ppc-sub-label {
+    /* p 요소 - 브라우저 기본 margin 방지 위해 명시 */
+    margin: 0 0 6px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  .ppc-highlights-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ppc-highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 7px 9px;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(15,23,42,0.07);
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ppc-highlight-num {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--ppc-accent);
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .ppc-highlight-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  .ppc-highlight-text {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .ppc-highlight-background {
+    font-size: 0.74rem;
+    color: #475569;
+    line-height: 1.55;
+    padding: 3px 7px;
+    background: rgba(15,23,42,0.03);
+    border-radius: 4px;
+    border-left: 2px solid rgba(15,23,42,0.1);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .ppc-highlight-result {
+    font-size: 0.73rem;
+    color: var(--ppc-accent);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  /* ══ 구현 상세 섹션 ══════════════════════════════════════════ */
+  .ppc-section--detail {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 섹션 헤더 */
+  .ppc-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .ppc-detail-badge {
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    background: var(--ppc-badge-bg);
+    color: var(--ppc-badge-color);
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .ppc-detail-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.4;
+    border-left: 3px solid var(--ppc-accent);
+    padding-left: 11px;
+  }
+
+  /* 배경 블록 */
+  .ppc-detail-bg {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 16px;
+    background: rgba(15,23,42,0.03);
+    border-radius: 8px;
+    margin-bottom: 14px;
+  }
+
+  .ppc-detail-section-label {
+    display: block;
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    margin-bottom: 3px;
+  }
+
+  .ppc-detail-bg-text {
+    font-size: 0.88rem;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  /* 포인트 목록 */
+  .ppc-detail-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 12px;
+  }
+
+  .ppc-detail-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+
+  .ppc-point-bullet {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ppc-accent);
+    margin-top: 9px;
+  }
+
+  /* 결과 블록 */
+  .ppc-detail-result {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 18px;
+    background: var(--ppc-accent-light);
+    border-radius: 8px;
+    border-left: 3px solid var(--ppc-accent);
+    margin-top: 4px;
+  }
+
+  .ppc-detail-result-text {
+    font-size: 0.92rem;
+    color: #1e293b;
+    line-height: 1.75;
+    font-weight: 500;
+  }
+
+  /* ══ 기술 스택 섹션 ══════════════════════════════════════════ */
+  .ppc-section--stack {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ppc-stack-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 5px;
+    margin-top: 0;
   }
 
-  .project-print-chip {
-    font-size: 0.73rem;
-    color: #4f46e5;
-    background: rgba(99, 102, 241, 0.07);
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    border-radius: 4px;
+  .ppc-stack-chip {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--ppc-badge-color);
+    background: var(--ppc-badge-bg);
+    border-radius: 999px;
     padding: 2px 8px;
+    letter-spacing: 0.01em;
   }
 
-  /* ── 이미지 그리드 ──────────────────────────────── */
-  .project-print-card__images {
-    border-top: 1px solid #e2e8f0;
-    padding-top: 10px;
+  /* ══ 느낀점 섹션 ════════════════════════════════════════════
+     섹션 전체 break-inside: avoid 제거 → 아이템이 많을 경우 자연스럽게 다음 페이지로
+     개별 아이템 단위로 break 제어 */
+  .ppc-section--reflection {
+    break-before: auto;
   }
 
-  .project-print-card__image-grid {
+  .ppc-reflection-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ppc-reflection-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 12px;
+    background: rgba(15,23,42,0.025);
+    border-radius: 7px;
+    border: 1px solid rgba(15,23,42,0.07);
+    font-size: 0.84rem;
+    color: #334155;
+    line-height: 1.65;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .ppc-reflection-icon {
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--ppc-accent);
+    margin-top: 8px;
+    opacity: 0.65;
+  }
+
+  /* ══ 이미지 섹션 ════════════════════════════════════════════ */
+  .ppc-section--images {
+    /* 섹션 전체 break-inside: avoid 제거 — 이미지 많으면 페이지 초과 가능
+       개별 ppc-image 단위로 제어 */
+  }
+
+  .ppc-image-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-    margin-top: 6px;
+    gap: 8px;
+    margin-top: 8px;
   }
 
-  .project-print-card__image {
+  .ppc-image {
     margin: 0;
     border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    border-radius: 8px;
     overflow: hidden;
     background: #f8fafc;
-    padding: 6px;
+    padding: 7px;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  .project-print-card__image img {
+  .ppc-image img {
     width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
-    border-radius: 3px;
+    border-radius: 5px;
   }
 
-  .project-print-card__image figcaption {
-    padding: 3px 8px;
-    font-size: 0.78rem;
+  .ppc-image figcaption {
+    padding: 6px 6px 2px;
+    font-size: 0.74rem;
     color: #64748b;
-  }
-
-  /* ── README 섹션 ────────────────────────────────── */
-  .project-print-card__readme {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 10px;
-  }
-
-  /* readme intro 단락 */
-  .project-print-card__intro {
-    font-size: 0.85rem;
-    color: #334155;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .project-print-card__readme-section {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  /* ── 섹션 타이틀 (accent bar) ───────────────────── */
-  .project-print-card__section-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #1e293b;
-    padding-left: 8px;
-    border-left: 3px solid #4f46e5;
-    line-height: 1.3;
-  }
-
-  /* ── README 목록 ────────────────────────────────── */
-  .project-print-card__readme-section ul {
-    padding-left: 18px;
-    color: #475569;
-    font-size: 0.83rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  /* 기술스택: key bold */
-  .project-print-card__readme-section ul li strong {
-    color: #1e293b;
-    margin-right: 2px;
-  }
-
-  /* 구현/도전: 제목 bold */
-  .project-print-card__readme-section ul li .bullet-title {
-    font-weight: 700;
-    color: #1e293b;
-  }
-
-  /* ── 링크 목록 ──────────────────────────────────── */
-  .project-print-card__links {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    font-size: 0.8rem;
-    border-top: 1px dashed #e2e8f0;
-    padding-top: 8px;
-  }
-
-  .project-print-card__link {
-    display: flex;
-    gap: 6px;
-    align-items: baseline;
-  }
-
-  .project-print-card__link span:first-child {
-    font-weight: 600;
-    color: #334155;
-    min-width: 60px;
-  }
-
-  .project-print-card__link span:last-child {
-    color: #4f46e5;
-    word-break: break-all;
-  }
-
-  a[href]:after {
-    content: "";
+    text-align: center;
+    line-height: 1.45;
   }
 }
