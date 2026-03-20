@@ -162,7 +162,7 @@ export function ProjectsSection() {
                           <polyline points="9 11 12 14 22 4"/>
                           <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
                         </svg>
-                        핵심 구현 사항
+                        주요 구현
                       </h4>
                       <ul className="project-panel__features">
                         {(project.readme?.details.map(d => d.title) ?? project.copy.details ?? []).map((detail) => (
@@ -409,7 +409,7 @@ export function ProjectsSection() {
                   </div>
 
                   <div className="rmv2__highlights">
-                    <h4 className="rmv2__sub-title">핵심 구현 사항</h4>
+                    <h4 className="rmv2__sub-title">개발 주요사항</h4>
                     <ol className="rmv2__highlights-list">
                       {readme.details.map((d, i) => (
                         <li key={i} className="rmv2__highlight-item">
