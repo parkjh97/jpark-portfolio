@@ -1,55 +1,53 @@
 /* ── Full Portfolio PDF ────────────────────────────────────────────
    전체 포트폴리오 PDF 출력 스타일
    body.print-full 클래스가 있을 때만 적용됩니다.
+   웹 CSS를 최대한 그대로 사용하고, 인쇄 불가능한 속성만 최소로 override.
    ─────────────────────────────────────────────────────────────── */
 
 @media print {
   @page {
-    margin: 14mm 18mm;
+    margin: 12mm 16mm;
     size: A4 portrait;
   }
 
-  /* ── 기본 리셋 ─────────────────────────────────────── */
+  /* ── 색상 인쇄 강제 + rem 스케일 조정 ─────────────────── */
+  /* A4 인쇄 폭 ≈ 673px, 웹 컨테이너 폭 ≈ 1032px → 약 65% 비율
+     font-size를 11px로 설정하면 모든 rem 단위가 함께 축소되어
+     웹과 동일한 레이아웃 비율로 출력됨 */
   body.print-full {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     background: #ffffff !important;
-    color: #0f172a !important;
-    font-family: var(--font-sans);
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 11px !important;
   }
 
-  /* ── 헤더 / 푸터 / 헤더 높이 마진 숨김 ──────────────── */
+  /* ── 헤더 / 푸터 숨김 ──────────────────────────────────── */
   body.print-full .site-header,
   body.print-full .site-footer {
     display: none !important;
   }
 
-  /* 헤더 높이만큼 생기는 site-main margin-top 제거 */
   body.print-full .site-main {
     margin-top: 0 !important;
   }
 
-  /* ── 인터랙티브 요소 숨김 ──────────────────────────── */
-  body.print-full .masthead__actions,
-  body.print-full .project-card__actions {
+  /* ── 인터랙티브 요소 숨김 ──────────────────────────────── */
+  body.print-full .masthead__actions {
     display: none !important;
   }
 
-  /* ── 모든 섹션 표시 ────────────────────────────────── */
+  /* ── 모든 섹션 표시 ────────────────────────────────────── */
   body.print-full .site-main > * {
     display: block !important;
   }
 
-  /* ── 섹션 공통 — 패딩 축소 ─────────────────────────── */
+  /* ── 섹션 공통: 패딩 최소화로 공백 제거 ───────────────── */
   body.print-full .section {
-    padding: 16px 0 !important;
-    background: #ffffff !important;
+    padding: 20px 0 !important;
   }
 
   body.print-full .section--muted {
-    background: #ffffff !important;
+    background: #f0f5fa !important;
   }
 
   body.print-full .section__container {
@@ -57,17 +55,11 @@
     padding: 0 !important;
   }
 
-  /* SectionTitle 패딩 축소 + 데스크톱 폰트 크기 강제 */
   body.print-full .section-title {
-    padding-bottom: 12px !important;
+    padding-bottom: 14px !important;
   }
 
-  body.print-full .section-title__text h3 {
-    font-size: 1.4rem !important;
-  }
-
-  /* ── 섹션 간 페이지 나누기 ─────────────────────────── */
-  /* about-me 단독 1페이지, skills → 2페이지 시작 */
+  /* ── 페이지 나누기 ──────────────────────────────────────── */
   body.print-full #skills {
     break-before: page;
     page-break-before: always;
@@ -83,248 +75,79 @@
     page-break-before: always;
   }
 
-  /* ══ ABOUT (id="about-me") ════════════════════════════════════ */
+  /* ══ ABOUT (id="about-me") ════════════════════════════════ */
 
   body.print-full .masthead__panel {
-    background: #ffffff !important;
-    box-shadow: none !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 12px !important;
-    padding: 20px !important;
-    gap: 16px !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    background: #ffffff !important;
     overflow: visible !important;
-    break-inside: avoid;
+    /* break-inside: avoid 제거 — 블록 전체를 다음 페이지로 밀어 공백 유발 */
   }
 
-  /* 모바일 breakpoint 무효화 — 데스크톱 레이아웃 강제 */
+  /* 모바일 미디어쿼리 무효화 → 데스크톱 레이아웃 강제 */
   body.print-full .masthead__profile {
     grid-template-columns: auto 1fr !important;
     justify-items: start !important;
     text-align: left !important;
-    gap: 28px !important;
   }
 
   body.print-full .masthead__keyline {
-    font-size: 1.2rem !important;
     text-align: left !important;
     max-width: 100% !important;
   }
 
   body.print-full .masthead__photo {
-    width: 120px !important;
-    height: 120px !important;
+    width: 160px !important;
+    height: 160px !important;
   }
 
   body.print-full .masthead__fields {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     width: 100% !important;
-    gap: 14px 24px !important;
   }
 
-  body.print-full .masthead__detail h2 {
+  body.print-full .masthead__detail h2,
+  body.print-full .masthead__competencies-heading {
     text-align: left !important;
   }
 
-  /* ── 핵심 역량 print ──────────────────────────────── */
-  body.print-full .masthead__competencies-heading {
-    font-size: 1.1rem !important;
-    margin-bottom: 10px !important;
-  }
-
   body.print-full .masthead__competencies-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
 
-  body.print-full .competency-card {
-    padding: 10px 12px !important;
-    border-radius: 8px !important;
-    gap: 4px !important;
-    background: rgba(29, 78, 216, 0.04) !important;
-    border: 1px solid rgba(29, 78, 216, 0.15) !important;
-    break-inside: avoid;
-  }
+  /* ══ SKILLS (id="skills") ══════════════════════════════════ */
 
-  body.print-full .competency-card__title {
-    font-size: 0.8rem !important;
-  }
-
-  body.print-full .competency-card__desc {
-    font-size: 0.74rem !important;
-    color: #475569 !important;
-  }
-
-  body.print-full .masthead__field dt {
-    color: #64748b !important;
-    font-size: 0.78rem !important;
-  }
-
-  body.print-full .masthead__field dd {
-    color: #0f172a !important;
-    font-size: 0.95rem !important;
-  }
-
-  body.print-full .masthead__detail {
-    gap: 12px !important;
-    line-height: 1.7 !important;
-  }
-
-  body.print-full .masthead__detail p {
-    color: #334155 !important;
-    font-size: 0.9rem !important;
-  }
-
-  /* ══ SKILLS (id="skills") ══════════════════════════════════════ */
-
-  body.print-full #skills {
-    background: #ffffff !important;
-  }
-
-  /* 밴드 레이아웃 print 오버라이드 */
-  body.print-full .skills-bands {
-    box-shadow: none !important;
-    border: 1px solid #e2e8f0 !important;
-    break-inside: avoid;
-  }
-
+  /* 모바일 1열 breakpoint 무효화 */
   body.print-full .skill-band {
-    grid-template-columns: 120px 1fr !important;
-  }
-
-  body.print-full .skill-band__category {
-    padding: 10px 12px 10px 16px !important;
-  }
-
-  body.print-full .skill-band__title {
-    font-size: 0.78rem !important;
-  }
-
-  body.print-full .skill-band__content {
-    padding: 10px 16px !important;
-    gap: 7px !important;
-  }
-
-  body.print-full .skill-band__label {
-    width: 80px !important;
-    font-size: 0.58rem !important;
-    padding-top: 4px !important;
-  }
-
-  body.print-full .skill-band__tags {
-    gap: 4px !important;
+    grid-template-columns: 168px 1fr !important;
   }
 
   body.print-full .skill-tag {
-    font-size: 0.72rem !important;
-    padding: 2px 8px !important;
     transition: none !important;
   }
 
-  /* ══ CAREER (id="career") ══════════════════════════════════════ */
-
-  body.print-full .career-list {
-    gap: 20px !important;
-  }
+  /* ══ CAREER (id="career") ══════════════════════════════════ */
 
   body.print-full .career-company {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    box-shadow: none !important;
-    border-radius: 12px !important;
-    break-inside: avoid;
-    page-break-inside: avoid;
     overflow: visible !important;
   }
 
-  body.print-full .career-company__header {
-    padding: 16px 20px !important;
-    gap: 14px !important;
-  }
-
-  body.print-full .career-company__logo {
-    width: 44px !important;
-    height: 44px !important;
-    border-radius: 8px !important;
-  }
-
-  body.print-full .career-company__name {
-    font-size: 1rem !important;
-  }
-
-  body.print-full .career-company__period {
-    font-size: 0.78rem !important;
-  }
-
-  body.print-full .career-company__meta span {
-    font-size: 0.76rem !important;
-  }
-
-  body.print-full .career-company__desc {
-    font-size: 0.84rem !important;
-    margin-bottom: 10px !important;
-  }
-
-  body.print-full .career-company__roles span {
-    font-size: 0.76rem !important;
-    padding: 2px 8px !important;
-    background: #f1f5f9 !important;
-    color: #3730a3 !important;
-    border-color: #c7d2fe !important;
-  }
-
-  body.print-full .career-projects {
-    padding: 14px 20px 18px !important;
-    background: #fafbfc !important;
-  }
-
-  body.print-full .career-projects__grid {
-    gap: 8px !important;
-  }
-
-  body.print-full .career-project {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 8px !important;
-    padding: 12px 14px !important;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  body.print-full .career-project__title {
-    font-size: 0.82rem !important;
-  }
-
-  body.print-full .career-project__period {
-    font-size: 0.66rem !important;
-    background: #ede9fe !important;
-    color: #4338ca !important;
-  }
-
+  /* 기술태그 수평 스크롤 → 줄바꿈으로 전환 */
   body.print-full .career-project__tech {
     flex-wrap: wrap !important;
     overflow: visible !important;
   }
 
-  body.print-full .career-project__tech-tag {
-    font-size: 0.68rem !important;
-    padding: 1px 6px !important;
-    background: #f0f0ff !important;
-    color: #4338ca !important;
-    border-color: #c7d2fe !important;
+  body.print-full .career-project {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
-  body.print-full .career-project__bullets li {
-    font-size: 0.78rem !important;
-    color: #334155 !important;
-  }
+  /* ══ PROJECTS (id="projects") ══════════════════════════════
+     웹 쇼케이스 숨기고 전용 print 레이아웃 표시
+     ─────────────────────────────────────────────────────── */
 
-  /* ══ PROJECTS (id="projects") ══════════════════════════════════
-     기존 projects-print 레이아웃(목차 + 상세카드) 그대로 사용
-     ─────────────────────────────────────────────────────────── */
-
-  /* 웹 쇼케이스 패널 숨기고 print 레이아웃 표시 */
   body.print-full #projects .projects-showcase {
     display: none !important;
   }
