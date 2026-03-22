@@ -36,18 +36,138 @@
     display: none !important;
   }
 
-  /* ── 모든 섹션 표시 ────────────────────────────────────── */
+  /* ── 섹션 선택 출력 ────────────────────────────────────── */
+  /* 기본: 모든 섹션 숨김 */
   body.print-full .site-main > * {
+    display: none !important;
+  }
+
+  /* 선택된 섹션만 표시 */
+  body.print-full.print-about #about-me,
+  body.print-full.print-about #skills {
     display: block !important;
+  }
+
+  body.print-full.print-career #career {
+    display: block !important;
+  }
+
+  body.print-full.print-projects #projects {
+    display: block !important;
+  }
+
+  /* ── 배경색 전체 제거 ───────────────────────────────────── */
+
+  /* 섹션 배경 */
+  body.print-full .section,
+  body.print-full .section--muted,
+  body.print-full .section--light,
+  body.print-full .section--projects {
+    background: #ffffff !important;
+  }
+
+  /* About: 패널·카드 */
+  body.print-full .masthead__panel,
+  body.print-full .competency-card {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+  }
+  body.print-full .competency-card__title {
+    color: #1d4ed8 !important;
+  }
+
+  /* Skills: 카테고리 컬러 배경·태그 배경 */
+  body.print-full .skill-band__category,
+  body.print-full .skill-band--indigo .skill-band__category,
+  body.print-full .skill-band--emerald .skill-band__category,
+  body.print-full .skill-band--cyan .skill-band__category,
+  body.print-full .skill-band--violet .skill-band__category,
+  body.print-full .skill-band--amber .skill-band__category {
+    background: #ffffff !important;
+  }
+  body.print-full .skill-tag,
+  body.print-full .skill-band--indigo .skill-tag,
+  body.print-full .skill-band--emerald .skill-tag,
+  body.print-full .skill-band--cyan .skill-tag,
+  body.print-full .skill-band--violet .skill-tag,
+  body.print-full .skill-band--amber .skill-tag {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #334155 !important;
+  }
+
+  /* Career: 회사·프로젝트 영역 배경 */
+  body.print-full .career-company,
+  body.print-full .career-projects,
+  body.print-full .career-project {
+    background: #ffffff !important;
+  }
+  body.print-full .career-project__period {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+  }
+  body.print-full .career-project__tech-tag {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #334155 !important;
+  }
+
+  /* Projects print: 카드 헤더 컬러 배경 → 흰 배경 + 보더 */
+  body.print-full .project-print-card__header,
+  body.print-full .project-print-card--indigo .project-print-card__header,
+  body.print-full .project-print-card--emerald .project-print-card__header,
+  body.print-full .project-print-card--cyan .project-print-card__header {
+    background: #ffffff !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+  }
+  body.print-full .project-print-card__title {
+    color: #0f172a !important;
+  }
+  body.print-full .project-print-card__period,
+  body.print-full .ppc-header-index,
+  body.print-full .ppc-header-type-badge {
+    color: #475569 !important;
+    background: #f1f5f9 !important;
+  }
+
+  /* Projects print: 각종 accent 컬러 배경 */
+  body.print-full .ppc-section--overview {
+    background: #ffffff !important;
+  }
+  body.print-full .ppc-info-label {
+    background: #f8fafc !important;
+    color: #475569 !important;
+  }
+  body.print-full .ppc-highlight-item {
+    background: #f8fafc !important;
+  }
+  body.print-full .ppc-detail-bg,
+  body.print-full .ppc-detail-result {
+    background: #f8fafc !important;
+    border-left-color: #cbd5e1 !important;
+  }
+  body.print-full .ppc-section__label,
+  body.print-full .ppc-detail-badge,
+  body.print-full .ppc-url-label {
+    background: #f1f5f9 !important;
+    border-color: #e2e8f0 !important;
+    color: #475569 !important;
+  }
+  body.print-full .ppc-stack-chip {
+    background: #f1f5f9 !important;
+    color: #334155 !important;
+  }
+  body.print-full .ppc-highlight-num {
+    background: #475569 !important;
+  }
+  body.print-full .ppc-point-bullet,
+  body.print-full .ppc-reflection-icon {
+    background: #94a3b8 !important;
   }
 
   /* ── 섹션 공통: 패딩 최소화로 공백 제거 ───────────────── */
   body.print-full .section {
     padding: 20px 0 !important;
-  }
-
-  body.print-full .section--muted {
-    background: #f0f5fa !important;
   }
 
   body.print-full .section__container {
