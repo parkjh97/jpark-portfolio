@@ -64,6 +64,20 @@
   background: linear-gradient(to bottom, #0891b2, #22d3ee);
 }
 
+.skill-band--violet .skill-band__category {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(124, 58, 237, 0.01) 100%);
+}
+.skill-band--violet .skill-band__category::before {
+  background: linear-gradient(to bottom, #7c3aed, #a78bfa);
+}
+
+.skill-band--amber .skill-band__category {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.05) 0%, rgba(217, 119, 6, 0.01) 100%);
+}
+.skill-band--amber .skill-band__category::before {
+  background: linear-gradient(to bottom, #d97706, #fbbf24);
+}
+
 .skill-band__title {
   margin: 0;
   font-size: 0.97rem;
@@ -72,52 +86,29 @@
   line-height: 1.35;
 }
 
-.skill-band--indigo .skill-band__title { color: #4338ca; }
+.skill-band--indigo .skill-band__title  { color: #4338ca; }
 .skill-band--emerald .skill-band__title { color: #065f46; }
 .skill-band--cyan .skill-band__title    { color: #0e7490; }
+.skill-band--violet .skill-band__title  { color: #6d28d9; }
+.skill-band--amber .skill-band__title   { color: #b45309; }
 
 /* ── Right: content column ────────────────────── */
+/* 모든 태그를 하나의 흐름으로: 한 줄에 최대한 배치, 넘치면 자연스럽게 줄바꿈 */
 .skill-band__content {
-  padding: 20px 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  justify-content: center;
-}
-
-/* ── Sub-category row ─────────────────────────── */
-.skill-band__row {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-/* 서브카테고리 레이블 */
-.skill-band__label {
-  flex-shrink: 0;
-  width: 110px;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #94a3b8;
-  padding-top: 5px;
-  line-height: 1.3;
-}
-
-/* 서브카테고리 레이블이 1개만 있을 때 (languages) 숨김 */
-.skill-band__row:only-child .skill-band__label {
-  display: none;
-}
-.skill-band__row:only-child .skill-band__tags {
-  padding-left: 0;
-}
-
-/* 태그 컨테이너 */
-.skill-band__tags {
+  padding: 18px 28px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  flex: 1;
+  align-items: center;
+}
+
+/* row/tags 래퍼 투명화 → 태그가 content 직계 자식처럼 흐름 */
+.skill-band__row {
+  display: contents;
+}
+
+.skill-band__tags {
+  display: contents;
 }
 
 /* ── Skill tag ───────────────────────────────── */
@@ -166,6 +157,26 @@
   box-shadow: 0 4px 14px rgba(8, 145, 178, 0.15);
 }
 
+.skill-band--violet .skill-tag {
+  background: rgba(124, 58, 237, 0.08);
+  color: #6d28d9;
+  border: 1px solid rgba(124, 58, 237, 0.18);
+}
+.skill-band--violet .skill-tag:hover {
+  background: rgba(124, 58, 237, 0.13);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.15);
+}
+
+.skill-band--amber .skill-tag {
+  background: rgba(217, 119, 6, 0.08);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.18);
+}
+.skill-band--amber .skill-tag:hover {
+  background: rgba(217, 119, 6, 0.13);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.15);
+}
+
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 760px) {
   .skill-band {
@@ -183,27 +194,12 @@
   }
 
   .skill-band__content {
-    padding: 14px 18px 18px;
-    gap: 12px;
-  }
-
-  .skill-band__label {
-    width: 90px;
-    font-size: 0.65rem;
+    padding: 12px 18px 14px;
+    gap: 5px;
   }
 }
 
 @media (max-width: 480px) {
-  .skill-band__row {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .skill-band__label {
-    width: auto;
-    padding-top: 0;
-  }
-
   .skill-tag {
     font-size: 0.79rem;
     padding: 4px 10px;

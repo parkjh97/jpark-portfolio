@@ -9,7 +9,9 @@ function getGroupColor(id: string): string {
   const colorMap: Record<string, string> = {
     languages: "indigo",
     frontend: "emerald",
-    backendOps: "cyan",
+    backend: "cyan",
+    database: "violet",
+    tools: "amber",
   };
   return colorMap[id] ?? "indigo";
 }

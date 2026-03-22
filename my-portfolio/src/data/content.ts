@@ -61,16 +61,12 @@ export const skillGroups: SkillGroup[] = [
     titleKey: "skills.groups.languages.title",
     items: [
       {
-        id: "core-languages",
+        id: "core",
         titleKey: "skills.groups.languages.items.core.title",
         techs: [
           { name: "Java" },
           { name: "JavaScript" },
           { name: "TypeScript" },
-          { name: "CSS" },
-          { name: "HTML" },
-          { name: "Tailwind CSS" },
-          { name: "JSP" },
         ],
       },
     ],
@@ -80,8 +76,39 @@ export const skillGroups: SkillGroup[] = [
     titleKey: "skills.groups.frontend.title",
     items: [
       {
-        id: "tooling",
-        titleKey: "skills.groups.frontend.items.tooling.title",
+        id: "frameworks",
+        titleKey: "skills.groups.frontend.items.frameworks.title",
+        techs: [
+          { name: "React" },
+          { name: "Next.js" },
+          { name: "Zustand" },
+        ],
+      },
+      {
+        id: "styling",
+        titleKey: "skills.groups.frontend.items.styling.title",
+        techs: [
+          { name: "Tailwind CSS" },
+          { name: "SCSS" },
+          { name: "HTML" },
+          { name: "CSS / SCSS" },
+          { name: "JSP" },
+        ],
+      },
+      {
+        id: "mapping",
+        titleKey: "skills.groups.frontend.items.mapping.title",
+        techs: [
+          { name: "OpenLayers" },
+          { name: "Deck.gl" },
+          { name: "GeoServer" },
+          { name: "D3.js" },
+          { name: "ApexCharts" },
+        ],
+      },
+      {
+        id: "build",
+        titleKey: "skills.groups.frontend.items.build.title",
         techs: [
           { name: "Vite" },
           { name: "Webpack" },
@@ -91,22 +118,57 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    id: "backendOps",
-    titleKey: "skills.groups.backendOps.title",
+    id: "backend",
+    titleKey: "skills.groups.backend.title",
     items: [
       {
         id: "spring",
-        titleKey: "skills.groups.backendOps.items.spring.title",
+        titleKey: "skills.groups.backend.items.spring.title",
         techs: [
           { name: "Spring Framework" },
           { name: "Spring Boot" },
         ],
       },
       {
-        id: "mybatis",
-        titleKey: "skills.groups.backendOps.items.mybatis.title",
+        id: "persistence",
+        titleKey: "skills.groups.backend.items.persistence.title",
         techs: [
           { name: "MyBatis" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "database",
+    titleKey: "skills.groups.database.title",
+    items: [
+      {
+        id: "rdbms",
+        titleKey: "skills.groups.database.items.rdbms.title",
+        techs: [
+          { name: "PostgreSQL" },
+          { name: "MySQL" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "tools",
+    titleKey: "skills.groups.tools.title",
+    items: [
+      {
+        id: "vcs",
+        titleKey: "skills.groups.tools.items.vcs.title",
+        techs: [
+          { name: "Git" },
+          { name: "SVN" },
+        ],
+      },
+      {
+        id: "collab",
+        titleKey: "skills.groups.tools.items.collab.title",
+        techs: [
+          { name: "Notion" },
         ],
       },
     ],
@@ -151,8 +213,6 @@ export const projectEntries: ProjectEntry[] = [
       "Zustand",
       "NextAuth.js",
       "PostgreSQL",
-      
-      
     ],
 
     scaleStats: ["65 API Routes", "30+ 페이지", "15+ DB 테이블", "PWA + Jandi 연동"],

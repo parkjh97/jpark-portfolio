@@ -63,24 +63,37 @@ const en = {
       languages: {
         title: "Languages",
         items: {
-          core: { title: "Programming Languages" },
+          core: { title: "Languages" },
         },
       },
       frontend: {
         title: "Front-End",
         items: {
-          htmlCssJs: { title: "Markup & Language" },
-          tooling: { title: "Build & Tooling" },
+          frameworks: { title: "Frameworks" },
+          styling: { title: "Styling" },
+          mapping: { title: "Map / Viz" },
+          build: { title: "Build & Tooling" },
         },
       },
-      backendOps: {
-        title: "Back-End & Ops",
+      backend: {
+        title: "Back-End",
         items: {
-          spring: { title: "Spring Ecosystem" },
-          mybatis: { title: "Persistence Layer" },
-          databases: { title: "Databases" },
-          collaboration: { title: "Collaboration" },
-          infra: { title: "Ops & Infra" },
+          spring: { title: "Spring" },
+          persistence: { title: "Data Access" },
+        },
+      },
+      database: {
+        title: "Database",
+        items: {
+          rdbms: { title: "Relational DB" },
+          nosql: { title: "NoSQL" },
+        },
+      },
+      tools: {
+        title: "Tools & Etc",
+        items: {
+          vcs: { title: "Version Control" },
+          collab: { title: "Collaboration" },
         },
       },
     },

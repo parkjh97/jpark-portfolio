@@ -1,0 +1,300 @@
+/* ══════════════════════════════════════════════════════════════
+   이력서 전용 CSS — 사람인/잡코리아 스타일 한국 이력서 형식
+   ══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-size: 12px;
+  color: #1e293b;
+  background: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* ── A4 컨테이너 ─────────────────────────────────────────────── */
+.resume-root {
+  width: 210mm;
+  margin: 0 auto;
+}
+
+.resume-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 12mm 15mm 10mm;
+  background: #ffffff;
+}
+
+@media screen {
+  .resume-root { padding: 16px 0; }
+  .resume-page {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.14);
+  }
+}
+
+@media print {
+  body { background: #ffffff; }
+  .resume-root { padding: 0; }
+  .resume-page { margin: 0; box-shadow: none; }
+  .resume-page--break { break-before: page; page-break-before: always; }
+  @page { margin: 0; size: A4 portrait; }
+}
+
+/* ══ 공통 섹션 블록 ════════════════════════════════════════════ */
+.resume-block {
+  margin-bottom: 8px;
+}
+
+/* 섹션 제목 바 */
+.resume-block__title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #ffffff;
+  background: #1e3a5f;
+  padding: 4px 10px;
+  border: 1px solid #1e3a5f;
+  margin-bottom: 0;
+}
+
+/* ══ 공통 테이블 ════════════════════════════════════════════════ */
+.resume-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.resume-table th,
+.resume-table td {
+  border: 1px solid #94a3b8;
+  padding: 5px 9px;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.resume-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ══ HEADER: 이력서 표지 ════════════════════════════════════════ */
+.resume-header {
+  margin-bottom: 8px;
+}
+
+.resume-title {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5em;
+  text-align: center;
+  color: #ffffff;
+  background: #1e3a5f;
+  padding: 8px 0;
+  border: 2px solid #1e3a5f;
+  margin-bottom: 0;
+}
+
+/* 인적사항 테이블 */
+.resume-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.resume-info-table th,
+.resume-info-table td {
+  border: 1px solid #94a3b8;
+  padding: 5px 9px;
+  vertical-align: middle;
+}
+
+.resume-info-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #334155;
+  text-align: center;
+  white-space: nowrap;
+  width: 70px;
+  letter-spacing: 0.08em;
+}
+
+.resume-photo-cell {
+  text-align: center;
+  vertical-align: middle;
+  width: 84px;
+  border: 1px solid #94a3b8;
+}
+
+.resume-photo {
+  width: 72px;
+  height: 90px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ══ 기술스택 ══════════════════════════════════════════════════ */
+.resume-skills__sub {
+  background: #fafafa;
+  color: #475569;
+  font-size: 10.5px;
+  width: 84px;
+  text-align: center;
+}
+
+/* ══ 경력 섹션 내 프로젝트 목록 ════════════════════════════════ */
+.resume-career-header {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #94a3b8;
+  border-top: none;
+}
+
+.resume-career-header__period {
+  width: 130px;
+  flex-shrink: 0;
+  background: #f8fafc;
+  border-right: 1px solid #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 11px;
+  color: #334155;
+  text-align: center;
+  padding: 6px;
+  line-height: 1.5;
+}
+
+.resume-career-header__info {
+  flex: 1;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.resume-career-header__name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.resume-career-header__sub {
+  font-size: 11px;
+  color: #475569;
+}
+
+.resume-career-header__role {
+  display: inline-flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.resume-career-role-chip {
+  font-size: 10px;
+  font-weight: 600;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+
+/* 프로젝트 목록 컨테이너 */
+.resume-career-projects {
+  border: 1px solid #94a3b8;
+  border-top: none;
+}
+
+.resume-career-project {
+  padding: 7px 12px;
+  border-bottom: 1px dashed #cbd5e1;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.resume-career-project:last-child {
+  border-bottom: none;
+}
+
+.resume-career-project__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.resume-career-project__name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.resume-career-project__name::before {
+  content: '▶ ';
+  color: #1e3a5f;
+  font-size: 9px;
+}
+
+.resume-career-project__period {
+  font-size: 10.5px;
+  color: #475569;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.resume-career-project__stack {
+  font-size: 10.5px;
+  color: #475569;
+  margin-bottom: 3px;
+}
+
+.resume-career-project__stack strong {
+  color: #334155;
+  font-weight: 600;
+}
+
+.resume-career-project__desc {
+  font-size: 11px;
+  color: #334155;
+  line-height: 1.65;
+}
+
+/* ══ 자기소개서 ════════════════════════════════════════════════ */
+.resume-selfintro__body {
+  border: 1px solid #94a3b8;
+  border-top: none;
+  padding: 16px 14px;
+  min-height: 240mm;
+  line-height: 2;
+  font-size: 12.5px;
+  color: #1e293b;
+}
+
+.resume-selfintro__body p + p {
+  margin-top: 14px;
+}

@@ -60,24 +60,37 @@ const ko = {
       languages: {
         title: "Languages",
         items: {
-          core: { title: "프로그래밍 언어" },
+          core: { title: "언어" },
         },
       },
       frontend: {
         title: "Front-End",
         items: {
-          htmlCssJs: { title: "마크업/기초 언어" },
-          tooling: { title: "빌드/툴링" },
+          frameworks: { title: "프레임워크" },
+          styling: { title: "스타일링" },
+          mapping: { title: "지도/시각화" },
+          build: { title: "빌드/툴링" },
         },
       },
-      backendOps: {
-        title: "Back-End & etc",
+      backend: {
+        title: "Back-End",
         items: {
-          spring: { title: "스프링" },
-          mybatis: { title: "ORM" },
-          databases: { title: "데이터베이스" },
-          collaboration: { title: "협업" },
-          infra: { title: "운영/인프라" },
+          spring: { title: "Spring" },
+          persistence: { title: "데이터 접근" },
+        },
+      },
+      database: {
+        title: "Database",
+        items: {
+          rdbms: { title: "관계형 DB" },
+          nosql: { title: "NoSQL" },
+        },
+      },
+      tools: {
+        title: "Tools & Etc",
+        items: {
+          vcs: { title: "버전 관리" },
+          collab: { title: "협업" },
         },
       },
     },
@@ -149,7 +162,7 @@ const ko = {
     readmes: {
       erp: {
         overview: {
-          description: "Spring/Java 중심의 팀 환경에서 Next.js 14를 자체 학습해 도입하고, 전자결재·근태·관리자 시스템을 기획·설계·개발·배포·운영까지 전 과정을 단독으로 주도한 풀스택 프로젝트입니다. 팀 내 React 전문가가 없는 상황에서 스스로 아키텍처를 결정하고 운영까지 전담했습니다.",
+          description: "Spring/Java 중심의 팀 환경에서 Next.js 14를 자체 학습해 도입하고, 전자결재·근태·관리자 시스템을 기획·설계·개발·배포·운영까지 전 과정을 단독으로 주도한 풀스택 프로젝트입니다. 팀 내 Next.js 전문가가 없는 상황에서 스스로 아키텍처를 결정하고 운영까지 전담했습니다.",
           team: "웹 개발자 (2명)",
           role: "풀스택 개발 — 기획·설계·개발·배포·운영 전 단계 관여",
         },
