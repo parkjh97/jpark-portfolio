@@ -201,7 +201,6 @@ export const projectEntries: ProjectEntry[] = [
   // },
   {
     id: "erp",
-
     readmeKey: "projects.readmes.erp",
     imagesKey: "projects.images.erp",
     archSrc: "./img/project/erp/erp-arch.svg",
@@ -214,27 +213,7 @@ export const projectEntries: ProjectEntry[] = [
       "NextAuth.js",
       "PostgreSQL",
     ],
-
     scaleStats: ["65 API Routes", "30+ 페이지", "15+ DB 테이블", "PWA + Jandi 연동"],
-  },
-  {
-    id: "si",
-
-    readmeKey: "projects.readmes.si",
-    imagesKey: "projects.images.si",
-    archSrc: "./img/project/si/si-arch.svg",
-    techStack: [
-      "JavaScript",
-      "CSS",
-      "deck.gl",
-      "GeoServer",
-      "Spring",
-      "Java 11",
-      "myBatis",
-      "PostgreSQL",
-    ],
-
-    scaleStats: ["7,531+ Java 라인", "11 분석 보드", "3,963 SQL 라인", "70+ JS 파일"],
   },
   {
     id: "viewT",
@@ -256,8 +235,40 @@ export const projectEntries: ProjectEntry[] = [
     scaleStats: ["300+ 쿼리", "50+ REST API", "40+ DB 테이블", "MySQL + MongoDB 이중 DB"],
   },
   {
+    id: "viewTexportX",
+    repoUrl: "https://github.com/hjcdg1/it-eldorado-blog",
+    readmeKey: "projects.readmes.viewTexportX",
+    imagesKey: "projects.images.viewTexportX",
+    archSrc: "./img/project/view-t-new/view-t-new-arch.svg",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Zustand",
+      "SCSS",
+      "OpenLayers",
+      "GeoServer",
+    ],
+    scaleStats: ["40+ TSX 컴포넌트", "13종 교통 지표", "30+ SCSS 모듈", "GeoServer WMS/VectorTile"],
+  },
+  {
+    id: "si",
+    readmeKey: "projects.readmes.si",
+    imagesKey: "projects.images.si",
+    archSrc: "./img/project/si/si-arch.svg",
+    techStack: [
+      "JavaScript",
+      "CSS",
+      "deck.gl",
+      "GeoServer",
+      "Spring",
+      "Java 11",
+      "myBatis",
+      "PostgreSQL",
+    ],
+    scaleStats: ["7,531+ Java 라인", "11 분석 보드", "3,963 SQL 라인", "70+ JS 파일"],
+  },
+  {
     id: "hs",
-
     readmeKey: "projects.readmes.hs",
     imagesKey: "projects.images.hs",
     archSrc: "./img/project/hs/hs-arch.svg",
@@ -272,42 +283,8 @@ export const projectEntries: ProjectEntry[] = [
       "MySQL",
       "MongoDB",
     ],
-
     scaleStats: ["197 Java 파일", "20,097 Java 라인", "100+ API", "30+ 기능 모듈"],
   },
-  {
-    id: "viewTexportX",
-
-    repoUrl: "https://github.com/hjcdg1/it-eldorado-blog",
-    readmeKey: "projects.readmes.viewTexportX",
-    imagesKey: "projects.images.viewTexportX",
-    archSrc: "./img/project/view-t-new/view-t-new-arch.svg",
-    techStack: [
-      "TypeScript",
-      "React",
-      "Zustand",
-      "SCSS",
-      "OpenLayers",
-      "GeoServer",
-    ],
-
-    scaleStats: ["40+ TSX 컴포넌트", "13종 교통 지표", "30+ SCSS 모듈", "GeoServer WMS/VectorTile"],
-  },
-  // {
-  //   id: "viewTLog",
-  //   readmeKey: "projects.readmes.viewTLog",
-  //   imagesKey: "projects.images.viewTLog",
-  //   archSrc: "./img/project/view-t-log/view-t-log-arch.svg",
-  //   techStack: [
-  //     "TypeScript",
-  //     "Next.js",
-  //     "MySQL",
-  //     "Zustand",
-  //     "Tailwind CSS",
-  //     "ApexCharts",
-  //   ],
-  //   scaleStats: ["10 Route Handlers", "8+ 페이지", "5단계 공정 모니터링", "MySQL Stored Procedures"],
-  // },
   // {
   //   id: "personalityByFriends",
   //   url: "https://personality-test-by-friends.com",
@@ -366,23 +343,29 @@ export const projectEntries: ProjectEntry[] = [
 
 const qbicwareHighlights: CareerHighlight[] = [
   {
-    id: "qbicwareThreeTab",
-    titleKey: "career.companies.qbicware.highlights.erp.title",
-    periodKey: "career.companies.qbicware.highlights.erp.period",
-    descriptionKey: "career.companies.qbicware.highlights.erp.description",
+    id: "erp",
+    projectId: "erp",
+    techStack: ["TypeScript", "Next.js", "React", "Tailwind CSS", "Zustand", "NextAuth.js", "PostgreSQL"],
   },
   {
-    id: "qbicwareviewT",
-    titleKey: "career.companies.qbicware.highlights.viewT.title",
-    periodKey: "career.companies.qbicware.highlights.viewT.period",
-    descriptionKey: "career.companies.qbicware.highlights.viewT.description",
+    id: "viewT",
+    projectId: "viewT",
+    techStack: ["Java 11", "Spring", "MyBatis", "MySQL", "MongoDB", "JavaScript", "OpenLayers"],
   },
   {
-    id: "qbicwareLocalBusiness",
-    titleKey: "career.companies.qbicware.highlights.localBusiness.title",
-    periodKey: "career.companies.qbicware.highlights.localBusiness.period",
-    descriptionKey:
-      "career.companies.qbicware.highlights.localBusiness.description",
+    id: "viewTexportX",
+    projectId: "viewTexportX",
+    techStack: ["TypeScript", "React", "OpenLayers", "GeoServer", "Zustand", "SCSS"],
+  },
+  {
+    id: "si",
+    projectId: "si",
+    techStack: ["Java 11", "Spring", "MyBatis", "PostgreSQL", "deck.gl", "GeoServer", "JavaScript"],
+  },
+  {
+    id: "hs",
+    projectId: "hs",
+    techStack: ["Java 11", "Spring", "MyBatis", "MySQL", "MongoDB", "deck.gl", "JavaScript"],
   },
 ];
 
@@ -430,6 +413,9 @@ export const careerCompanies: CareerCompany[] = [
     logoTextKey: "career.companies.qbicware.logoText",
     periodKey: "career.companies.qbicware.period",
     descriptionKey: "career.companies.qbicware.description",
+    employmentTypeKey: "career.companies.qbicware.employmentType",
+    teamKey: "career.companies.qbicware.team",
+    positionKey: "career.companies.qbicware.position",
     rolesKeys: [
       "career.companies.qbicware.roles.frontend",
       "career.companies.qbicware.roles.backend",

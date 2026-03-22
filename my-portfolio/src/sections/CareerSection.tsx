@@ -12,67 +12,73 @@ export function CareerSection() {
     <section id="career" className="section section--muted">
       <div className="section__container">
         <SectionTitle title={t("career.title")} />
-        <div className="career-grid">
+        <div className="career-list">
           {careerCompanies.map((company) => (
-            <article key={company.id} className="career-card">
-              <div className="career-card__logo">
-                {company.logoSrc ? (
-                  <img
-                    src={company.logoSrc}
-                    alt={
-                      company.logoAltKey
-                        ? t(company.logoAltKey)
-                        : t(company.logoTextKey ?? company.descriptionKey)
-                    }
-                    loading="lazy"
-                  />
-                ) : (
-                  <span>{t(company.logoTextKey ?? company.descriptionKey)}</span>
-                )}
-              </div>
-              <div className="career-card__details">
-                <header className="career-card__header">
-                  <h4>{t(company.logoTextKey ?? company.descriptionKey)}</h4>
-                  <span className="career-card__period">
-                    {t(company.periodKey)}
-                  </span>
-                </header>
-                <p className="career-card__description">
-                  {t(company.descriptionKey)}
-                </p>
-                <div className="career-card__roles">
-                  {company.rolesKeys.map((roleKey) => (
-                    <span key={roleKey}>{t(roleKey)}</span>
-                  ))}
+            <div key={company.id} className="career-company">
+
+              {/* ── 회사 헤더 ── */}
+              <div className="career-company__header">
+                <div className="career-company__logo">
+                  {company.logoSrc ? (
+                    <img
+                      src={company.logoSrc}
+                      alt={company.logoAltKey ? t(company.logoAltKey) : t(company.logoTextKey ?? company.descriptionKey)}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span>{t(company.logoTextKey ?? company.descriptionKey)}</span>
+                  )}
                 </div>
 
-                <div className="career-timeline">
-                  {company.highlights.map((highlight, index) => (
-                    <div key={highlight.id} className="career-timeline__item">
-                      <div className="career-timeline__marker">
-                        <span className="career-timeline__dot" />
-                        {index < company.highlights.length - 1 && (
-                          <span className="career-timeline__line" />
-                        )}
+                <div className="career-company__info">
+                  <div className="career-company__name-row">
+                    <h4 className="career-company__name">
+                      {t(company.logoTextKey ?? company.descriptionKey)}
+                    </h4>
+                    <span className="career-company__period">{t(company.periodKey)}</span>
+                  </div>
+
+                  <div className="career-company__meta">
+                    <span>{t(company.employmentTypeKey)}</span>
+                    <span>{t(company.teamKey)}</span>
+                    <span>{t(company.positionKey)}</span>
+                  </div>
+
+                  <p className="career-company__desc">{t(company.descriptionKey)}</p>
+                </div>
+              </div>
+
+              {/* ── 프로젝트 목록 ── */}
+              <div className="career-projects">
+                <div className="career-projects__grid">
+                  {company.highlights.map((highlight) => (
+                    <div key={highlight.id} className="career-project">
+                      <div className="career-project__header">
+                        <h5 className="career-project__title">{t(`projects.items.${highlight.projectId}.name`)}</h5>
+                        <span className="career-project__period">{t(`projects.items.${highlight.projectId}.period`)}</span>
                       </div>
-                      <div className="career-timeline__content">
-                        <div className="career-timeline__header">
-                          <h5 className="career-timeline__title">
-                            {t(highlight.titleKey)}
-                          </h5>
-                          <span className="career-timeline__period">
-                            {t(highlight.periodKey)}
-                          </span>
+
+                      <div className="career-project__body">
+                        <div className="career-project__tech">
+                          {highlight.techStack.map((tech) => (
+                            <span key={tech} className="career-project__tech-tag">{tech}</span>
+                          ))}
                         </div>
-                        <p className="career-timeline__description">
-                          {t(highlight.descriptionKey)}
-                        </p>
+
+                        <ul className="career-project__bullets">
+                          {(
+                            t(`projects.readmes.${highlight.projectId}.details`, { returnObjects: true }) as Array<{ title: string }>
+                          ).map((detail, i) => (
+                            <li key={i}>{detail.title}</li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-            </article>
+
+            </div>
           ))}
         </div>
       </div>

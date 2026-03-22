@@ -110,9 +110,9 @@ export interface ProjectImageGallery {
 
 export interface CareerHighlight {
   id: string;
-  titleKey: TranslationKey;
-  periodKey: TranslationKey;
-  descriptionKey: TranslationKey;
+  /** projects.names/readmes.{projectId} 에서 title·period·description·details 를 자동 참조 */
+  projectId: string;
+  techStack: string[];
 }
 
 export interface CareerCompany {
@@ -122,6 +122,9 @@ export interface CareerCompany {
   logoSrc?: string;
   periodKey: TranslationKey;
   descriptionKey: TranslationKey;
+  employmentTypeKey: TranslationKey;
+  teamKey: TranslationKey;
+  positionKey: TranslationKey;
   rolesKeys: TranslationKey[];
   highlights: CareerHighlight[];
 }

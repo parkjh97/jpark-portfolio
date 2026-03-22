@@ -157,10 +157,6 @@ printTitle: "Projects Portfolio",
         name: "Siheung City public transit analytics system",
         period: "2023.07 ~ 2023.12",
       },
-      viewTLog: {
-        name: "Big data processing log dashboard",
-        period: "2024.11 ~ 2025.01",
-      },
       personalityByFriends: {
         name: "How do friends see my personality?",
         period: "2021.05 - 2021.06 (2-person team)",
@@ -563,59 +559,6 @@ printTitle: "Projects Portfolio",
           "The OptComponent pattern made me appreciate declarative programming — reducing duplication while flexibly expressing each indicator's individual characteristics.",
         ],
       },
-      viewTLog: {
-        overview: {
-          description: "An internal operations monitoring system that collects, queries, and visualizes processing counts, errors, and timing logs across the R0→R1→S0→S1→P1 five-stage big data pipeline.",
-          team: "Solo development (requirements · design · dev)",
-          role: "Full-stack — Next.js BFF pattern, MySQL direct connection, ApexCharts visualization",
-        },
-        details: [
-          {
-            title: "Next.js Route Handlers BFF Pattern",
-            background: "The project needed DB access and data processing without spinning up a separate Spring backend server.",
-            points: [
-              "10 Route Handlers connect directly to DB via mysql2 Pool (connectionLimit:10, keepAlive)",
-              "Stored Procedures (ProcessTablesForProcessCd, pGetProcessConditonInfoData) delegate complex aggregations to the DB layer",
-              "ApexCharts rendered client-only via next/dynamic + ssr:false to avoid window reference errors in SSR",
-            ],
-            result: "Full service built with Next.js alone — no separate backend server, simplified infrastructure",
-          },
-          {
-            title: "information_schema Dynamic Column Metadata",
-            background: "Every DB schema change required manual frontend code updates, creating maintenance overhead.",
-            points: [
-              "API queries information_schema.columns at runtime to get column names and Korean comments",
-              "Frontend auto-generates table headers and column filter UI — no code change needed when DB schema evolves",
-              "dynamicMapDataToCode batch-converts numeric DB codes to Korean labels via a code table",
-            ],
-            result: "Frontend adapts automatically to DB column changes with zero code modifications",
-          },
-          {
-            title: "Client-Side Yearly/Monthly Data Aggregation",
-            background: "Changing the aggregation granularity (daily → monthly → yearly) required API re-calls, slowing the UI response.",
-            points: [
-              "Initial load fetches all daily raw data; client reduces it to monthly/yearly on the fly",
-              "process_time averages while count columns sum — aggregation logic branches correctly",
-              "Switching granularity is instantaneous — no API re-call required",
-            ],
-            result: "Instant aggregation-level switching with no additional API calls",
-          },
-          {
-            title: "requestAnimationFrame-Based Accurate Notification Timer",
-            background: "setTimeout is throttled in inactive browser tabs, causing notification dismissal to be delayed or missed.",
-            points: [
-              "performance.now()-based rAF loop accurately detects 4-second elapsed time",
-              "Works correctly regardless of browser tab activity state",
-            ],
-            result: "Accurate notification timer regardless of tab visibility",
-          },
-        ],
-        reflection: [
-          "Using Next.js as a BFF for the first time showed me just how productive a full-stack framework can be — shipping a complete service without a separate backend server was genuinely fast.",
-          "The information_schema approach felt over-engineered at first, but when a DB column was added and the frontend just adapted with zero code change, I understood the real value of that flexibility in production.",
-          "Having coworkers as users meant direct, fast feedback loops — which sharpened my instinct for what a real user actually needs versus what I assumed they needed.",
-        ],
-      },
     },
     images: {
       erp: {
@@ -739,19 +682,6 @@ printTitle: "Projects Portfolio",
           },
         ],
       },
-      viewTLog: {
-        title: "Big data processing log dashboard",
-        items: [
-          {
-            src: "./img/project/view-t-log/view-t-log-001.webp",
-            caption: "Condition builder and multi-alert settings screen",
-          },
-          {
-            src: "./img/project/view-t-log/view-t-log-002.webp",
-            caption: "Condition builder and multi-alert settings screen",
-          },
-        ],
-      },
     },
   },
   career: {
@@ -762,29 +692,12 @@ printTitle: "Projects Portfolio",
         period: "2022.10 - 2025.10 (3 years)",
         description:
           '"An IT company developing traffic solutions using transportation big data and GIS"',
+        employmentType: "Full-time",
+        team: "Web Development Team",
+        position: "Member",
         roles: {
           frontend: "Frontend development",
           backend: "Backend development",
-        },
-        highlights: {
-          erp: {
-            title: "In-house ERP System Development",
-            period: "2024.11 ~ 2025.01",
-            description:
-              "Designed, built, and operated an ERP on Next.js 14 App Router — electronic approval (draft · approve · reject), attendance & leave management, and admin module (Full-stack)",
-          },
-          viewT: {
-            title: "View-T System Maintenance",
-            period: "2024.01 ~ 2025.10",
-            description:
-              "Developed a big-data processing monitoring dashboard and improved the annual spatial-data refresh pipeline (Full-stack)",
-          },
-          localBusiness: {
-            title: "Traffic Big-Data Visualization Solutions",
-            period: "2022.10 ~ 2025.10",
-            description:
-              "Built traffic visualization systems for local governments — signal monitoring for Hwaseong-si and public transit analytics for Siheung-si (Full-stack)",
-          },
         },
       },
     },

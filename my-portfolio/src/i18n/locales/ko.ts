@@ -154,10 +154,6 @@ const ko = {
         name: "시흥시 대중교통 분석 서비스",
         period: "2023.07 ~ 2023.12",
       },
-      viewTLog: {
-        name: "빅데이터 가공 로그 모니터링 (view-t-log-viewer)",
-        period: "2024.11 ~ 2025.01",
-      },
     },
     readmes: {
       erp: {
@@ -323,40 +319,6 @@ const ko = {
             "멀티맵 환경, 레이어 순서 제어, 스타일 편집 등 다양한 인터랙션 요구를 구현하면서, UI 상태와 실제 데이터/렌더링 결과를 일관되게 유지하는 설계의 중요성을 깊이 이해하게 되었습니다.",
         ],
       },
-      viewTLog: {
-        overview: {
-          description: "교통 빅데이터 가공 파이프라인의 처리 현황을 모니터링하는 내부 도구로, Next.js App Router BFF 패턴을 처음 도입해 별도 Spring 백엔드 없이 단독 구축한 풀스택 프로젝트입니다. information_schema 동적 메타 조회 패턴으로 DB 컬럼 변경이 프론트 코드 수정으로 이어지는 반복 문제를 구조적으로 해결했습니다.",
-          team: "1인 개발 (기획·설계·개발 전담)",
-          role: "풀스택 개발 — Next.js BFF 패턴, MySQL 직접 연동, ApexCharts 시각화 구현",
-        },
-        details: [
-          {
-            title: "Next.js Route Handlers BFF 패턴 첫 도입",
-            background: "내부 모니터링 도구라 별도 Spring 백엔드 서버를 구축하기보다 빠르게 단독으로 구성하고 싶었습니다. Next.js App Router의 Route Handler를 BFF 레이어로 쓰는 방식을 처음 시도했고, Spring Controller+Service+Repository 역할을 Route Handler 하나로 대체할 수 있는지 직접 설계하며 검증했습니다.",
-            result: "별도 백엔드 서버 없이 Next.js 단독으로 서비스 구성, 인프라 구성 단순화",
-          },
-          {
-            title: "information_schema 동적 메타 조회로 DB 컬럼 변경이 프론트 코드 수정으로 이어지는 반복 문제를 구조적으로 해결",
-            background: "DB 컬럼이 추가될 때마다 프론트 테이블 헤더와 필터 UI를 함께 수정해야 하는 반복 작업이 생긴다는 것을 개발 단계에서 미리 파악했습니다. DB 스키마 변경이 프론트 코드 수정으로 연결되는 구조적 문제를 근본적으로 없앨 방법을 스스로 고민해 information_schema 동적 조회 패턴을 선택했습니다.",
-            result: "DB 컬럼 변경 시 프론트 코드 수정 불필요, 유지보수 비용 대폭 감소",
-          },
-          {
-            title: "집계 단위 변경마다 API를 재호출하는 반복 요청 문제를 클라이언트 집계로 해결 — 즉각적인 UI 반응",
-            background: "일별 원시 데이터를 년/월 단위로 집계하는 기능에서 집계 단위가 바뀔 때마다 API를 재호출하면 응답 속도가 느렸습니다.",
-            result: "집계 단위 전환 시 API 재호출 없이 즉시 반응, 사용자 경험 개선",
-          },
-          {
-            title: "setTimeout 타이머 지연 현상을 직접 발견하고 rAF 기반 타이머로 교체",
-            background: "알림 타이머를 setTimeout으로 구현했는데, 브라우저 탭을 비활성 상태로 두었다가 돌아왔을 때 알림이 예상보다 늦게 사라지는 현상을 직접 발견했습니다. setTimeout의 탭 비활성 시 throttling 동작을 확인하고, requestAnimationFrame + performance.now() 기반으로 직접 교체했습니다.",
-            result: "브라우저 탭 상태와 무관하게 정확한 알림 타이머 동작 구현",
-          },
-        ],
-        reflection: [
-          "Next.js BFF 패턴을 처음 도입하면서 Route Handler 하나가 Spring Controller + Service + Repository 역할을 대신할 수 있다는 것을 체감했습니다. 이 경험이 ERP 설계 시 BFF 구조를 자신 있게 선택할 수 있는 근거가 됐습니다.",
-          "information_schema 동적 메타 조회는 처음에는 과한 설계처럼 느껴졌지만, DB 컬럼이 실제로 추가됐을 때 코드 수정 없이 자동 반영되는 것을 경험했습니다. 반복되는 유지보수 문제를 구조적으로 없애는 것이 기능 구현만큼 중요한 설계 결정이라는 것을 배웠습니다.",
-          "내부 도구라 사용자가 동료들이었고, 직접 피드백을 빠르게 받을 수 있었습니다. 실사용자의 니즈가 기획 단계에서 예상했던 것과 다를 수 있다는 것을 경험했고, 이후 개발할 때 먼저 사용 흐름을 그려보는 습관이 생겼습니다.",
-        ],
-      },
     },
 
     images: {
@@ -470,19 +432,6 @@ const ko = {
         ],
       },
 
-      viewTLog: {
-        title: "빅데이터 가공 로그 대시보드",
-        items: [
-          {
-            src: "./img/project/view-t-log/view-t-log-001.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
-          },
-          {
-            src: "./img/project/view-t-log/view-t-log-002.webp",
-            caption: "조건 조합과 다중 알림 설정 화면",
-          },
-        ],
-      },
     },
   },
   career: {
@@ -490,33 +439,12 @@ const ko = {
     companies: {
       qbicware: {
         logoText: "큐빅웨어",
-        period: "2022.10 - 2025.10 (3년)",
+        period: "2022.09 - 2025.10 (3년 1개월)",
         description:
           '"교통 빅데이터와 GIS를 활용해 교통 솔루션을 개발하는 IT 기업"',
-        roles: {
-          frontend: "Frontend 개발",
-          backend: "Backend 개발",
-        },
-        highlights: {
-          erp: {
-            title: "사내 ERP 시스템 개발",
-            period: "2024.11 ~ 2025.10",
-            description:
-              "전자결재(기안·결재·반려), 근태·휴가 관리, 관리자 모듈을 Next.js 14 App Router 기반으로 설계·개발·배포·운영 (풀스택)",
-          },
-          viewT: {
-            title: "View-T 시스템 유지보수",
-            period: "2024.01 ~ 2025.10",
-            description:
-              "빅데이터 가공 프로세스 모니터링 대시보드 개발 및 연도별 공간 데이터 갱신 파이프라인 개선 (풀스택)",
-          },
-          localBusiness: {
-            title: "교통 빅데이터 시각화 솔루션 개발",
-            period: "2022.10 ~ 2024.12",
-            description:
-              "화성시 신호 모니터링, 시흥시 대중교통 분석 등 지자체 맞춤 교통 시각화 시스템 개발 (풀스택)",
-          },
-        },
+        employmentType: "정규직",
+        team: "웹개발팀",
+        position: "주임",
       },
     },
   },

@@ -29,7 +29,6 @@ type ProjectCardData = (typeof projectEntries)[number] & {
 function getProjectAccentColor(id: string): string {
   const colorMap: Record<string, string> = {
     erp: "indigo",
-    viewTLog: "indigo",
     si: "emerald",
     hs: "emerald",
     viewT: "emerald",
