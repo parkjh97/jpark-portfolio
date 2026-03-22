@@ -222,6 +222,7 @@ export const projectEntries: ProjectEntry[] = [
     archSrc: "./img/project/view-t/view-t-arch.svg",
     techStack: [
       "JavaScript",
+      "Jsp",
       "CSS",
       "OpenLayers",
       "GeoServer",
@@ -229,7 +230,7 @@ export const projectEntries: ProjectEntry[] = [
       "Java 11",
       "myBatis",
       "MySQL",
-      "MongoDB",
+      
     ],
     url: "https://viewt.ktdb.go.kr/cong/map/page.do",
     scaleStats: ["300+ 쿼리", "50+ REST API", "40+ DB 테이블", "MySQL + MongoDB 이중 DB"],
@@ -257,6 +258,7 @@ export const projectEntries: ProjectEntry[] = [
     archSrc: "./img/project/si/si-arch.svg",
     techStack: [
       "JavaScript",
+      "Jsp",
       "CSS",
       "deck.gl",
       "GeoServer",
@@ -274,6 +276,7 @@ export const projectEntries: ProjectEntry[] = [
     archSrc: "./img/project/hs/hs-arch.svg",
     techStack: [
       "JavaScript",
+      "Jsp",
       "CSS",
       "deck.gl",
       "GeoServer",
@@ -281,7 +284,6 @@ export const projectEntries: ProjectEntry[] = [
       "Java 11",
       "myBatis",
       "MySQL",
-      "MongoDB",
     ],
     scaleStats: ["197 Java 파일", "20,097 Java 라인", "100+ API", "30+ 기능 모듈"],
   },
