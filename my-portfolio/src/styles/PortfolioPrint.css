@@ -67,7 +67,12 @@
   }
 
   /* ── 섹션 간 페이지 나누기 ─────────────────────────── */
-  /* #about-me + #skills → 같은 페이지 */
+  /* about-me 단독 1페이지, skills → 2페이지 시작 */
+  body.print-full #skills {
+    break-before: page;
+    page-break-before: always;
+  }
+
   body.print-full #career {
     break-before: page;
     page-break-before: always;
@@ -120,6 +125,35 @@
 
   body.print-full .masthead__detail h2 {
     text-align: left !important;
+  }
+
+  /* ── 핵심 역량 print ──────────────────────────────── */
+  body.print-full .masthead__competencies-heading {
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  body.print-full .masthead__competencies-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  body.print-full .competency-card {
+    padding: 10px 12px !important;
+    border-radius: 8px !important;
+    gap: 4px !important;
+    background: rgba(29, 78, 216, 0.04) !important;
+    border: 1px solid rgba(29, 78, 216, 0.15) !important;
+    break-inside: avoid;
+  }
+
+  body.print-full .competency-card__title {
+    font-size: 0.8rem !important;
+  }
+
+  body.print-full .competency-card__desc {
+    font-size: 0.74rem !important;
+    color: #475569 !important;
   }
 
   body.print-full .masthead__field dt {
@@ -183,8 +217,8 @@
   }
 
   body.print-full .skill-tag {
-    font-size: 0.67rem !important;
-    padding: 2px 7px !important;
+    font-size: 0.72rem !important;
+    padding: 2px 8px !important;
     transition: none !important;
   }
 
@@ -224,16 +258,16 @@
   }
 
   body.print-full .career-company__meta span {
-    font-size: 0.72rem !important;
+    font-size: 0.76rem !important;
   }
 
   body.print-full .career-company__desc {
-    font-size: 0.8rem !important;
+    font-size: 0.84rem !important;
     margin-bottom: 10px !important;
   }
 
   body.print-full .career-company__roles span {
-    font-size: 0.72rem !important;
+    font-size: 0.76rem !important;
     padding: 2px 8px !important;
     background: #f1f5f9 !important;
     color: #3730a3 !important;
@@ -274,15 +308,15 @@
   }
 
   body.print-full .career-project__tech-tag {
-    font-size: 0.62rem !important;
-    padding: 1px 5px !important;
+    font-size: 0.68rem !important;
+    padding: 1px 6px !important;
     background: #f0f0ff !important;
     color: #4338ca !important;
     border-color: #c7d2fe !important;
   }
 
   body.print-full .career-project__bullets li {
-    font-size: 0.74rem !important;
+    font-size: 0.78rem !important;
     color: #334155 !important;
   }
 
