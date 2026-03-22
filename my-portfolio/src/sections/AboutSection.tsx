@@ -33,6 +33,8 @@ export function AboutSection() {
     fields: Array.isArray(profileRaw.fields) ? profileRaw.fields : [],
   } satisfies MastheadProfile;
   const hasPhotoSrc = Boolean(profile.photo.src);
+  const competenciesHeading = t("masthead.competenciesHeading");
+  const competencies = t("masthead.competencies", { returnObjects: true }) as { title: string; desc: string }[];
   const detailHeading = t("masthead.detailHeading");
   const hasDetailHeading = detailHeading.trim().length > 0;
   const detailParagraphs = (
@@ -74,6 +76,18 @@ export function AboutSection() {
                 </div>
               ))}
             </dl>
+          </div>
+
+          <div className="masthead__competencies">
+            <h2 className="masthead__competencies-heading">{competenciesHeading}</h2>
+            <div className="masthead__competencies-grid">
+              {competencies.map((item) => (
+                <div key={item.title} className="competency-card">
+                  <strong className="competency-card__title">{item.title}</strong>
+                  <p className="competency-card__desc">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="masthead__detail">
